@@ -1,0 +1,14 @@
+{
+  "spec_dir": "dist",
+  "spec_files": [
+    "**/*[sS]pec.?(m)js"
+  ],
+  "helpers": [
+    "helpers/**/*.?(m)js",
+    "spec/support/jasmine_helper.js"
+  ],
+  "env": {
+    "stopSpecOnExpectationFailure": false,
+    "random": true
+  }
+}

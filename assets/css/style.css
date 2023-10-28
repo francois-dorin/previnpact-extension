@@ -1,0 +1,107 @@
+:root {
+    --primary-background-color: #0b0b0d;
+    --secondary-background-color: #1f2528;
+    --header-background-color: #05384a;
+    --dark-light-background-color: #2a3135;
+
+    --header-text-color: white;
+    --primary-text-color: #dae5e9;
+    --secondary-text-color: #748388;
+
+    --light-background-color: #dae5e9;
+}
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme footer .main-footer {
+    background-color: var(--header-background-color);    
+    border-bottom: 0;
+}
+
+body.dark-theme div#talk {
+    background-color: var(--secondary-background-color);
+}
+
+body.dark-theme {
+    background: var(--primary-background-color);
+    color: var(--primary-text-color) !important;
+}
+
+body.dark-theme #connexion {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .list-heart-article > li .author p {
+    color: var(--secondary-text-color);
+}
+
+body.dark-theme .list-heart-article > li div h2 a {    
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .block-article h2 > a,
+body.dark-theme .block-article h2 > a:hover {
+    color: var(--primary-text-color);    
+}
+
+body.dark-theme .contenu-continu,
+body.dark-theme .article-contenu {
+    background-color: var(--secondary-background-color);
+    padding: 15px;
+}
+
+body.dark-theme .footer-moji-message {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .footer-title {
+    color: var(--header-text-color);
+}
+
+body.dark-theme .categories-button,
+body.dark-theme .button-footer {
+    background-color: var(--light-background-color) !important;
+}
+
+body.dark-theme .container-date-header p {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme #list-brief {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-text-color);
+}
+
+body.dark-theme #list-brief p {
+    color: var(--primary-text-color);
+}
+
+
+body.dark-theme select#brief {
+    background-color: var(--light-background-color);
+}
+
+body.dark-theme .list-heart-article > li > span {
+    color: var(--secondary-text-color);
+}
+
+body.dark-theme main#article-single main {
+    background-color: var(--dark-light-background-color);
+    padding: 15px;
+}
+
+
+body.dark-theme .block-brief,
+body.dark-theme .block-brief h2 a,
+body.dark-theme #moreInfo #list-brief a,
+body.dark-theme #moreInfo #list-continu a {
+    color: var(--primary-text-color);
+}
+
+
+body.dark-theme #other-article h2 {    
+    color: var(--primary-text-color);
+}
+
+body.dark-theme svg path{
+    fill: var(--primary-text-color) !important;
+}
