@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jasmine",
-    "build": "node node_modules/typescript/bin/tsc"
+    "build": "node node_modules/typescript/bin/tsc --nuild scripts/content_script scripts/popup"
   },
   "author": "",
   "license": "ISC",
