@@ -29,6 +29,10 @@ extensionRuntime.onChanged((changes) => {
     if (key == 'ecranLarge') {
       setClass('ecran-large', newValue);  
     }
+
+    if (key == 'taillePolice') {
+      setClass('taille-police', newValue);
+    }
   }
 }); 
 
@@ -41,6 +45,7 @@ const loadState = () => {
       setClass('texte-justifie', settings.texteJustifie);      
       setClass('avec-cesure', settings.avecCesure);
       setClass('ecran-large', settings.ecranLarge);
+      setClass('taille-police', settings.taillePolice);
     })
 };
 

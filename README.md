@@ -7,6 +7,8 @@ Les personnalisations possibles sont cochées, les autres sont prévues dans les
 - [x] l'activation / désactivation de la justification
 - [x] l'activation / désactivation de la gestion de la césure lors la justification est activée
 - [x] changement de police (mode avec / sans Sérif)
+- [x] gestion des écrans larges
+- [x] changement de la taille de la police (15px comme sur l'ancien site)
 
 Il pourrait y en avoir d'autres. Mais pour l'instant, c'est la feuille de route.
 
