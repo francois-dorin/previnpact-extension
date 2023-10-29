@@ -11,7 +11,10 @@
     },
     "content_scripts": [{
       "js": ["dist/scripts/custom-theme.js"],
-      "css": ["assets/css/style.css"],
+      "css": [
+        "assets/css/dark-theme.css",
+        "assets/css/font-sans-serif.css"
+      ],
       "matches": [
         "https://beta.next.ink/*"
       ]

@@ -1,7 +1,6 @@
-import { cp } from "fs";
-
 const body = document.querySelector('body');
 body.classList.add('dark-theme');
+body.classList.add('font-sans-serif');
 
 console.log('custom-theme.js loaded', (chrome ?? browser));
 
@@ -22,3 +21,4 @@ console.log('custom-theme.js loaded', (chrome ?? browser));
       }
     }
   });
+
