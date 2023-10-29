@@ -105,3 +105,20 @@ body.dark-theme #other-article h2 {
 body.dark-theme svg path{
     fill: var(--primary-text-color) !important;
 }
+
+body.dark-theme #comment-header-title {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .comment-author-name {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .comment-content {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .vertical-separator:not(.nothing-ever-to-hide) {
+    border-color: var(--secondary-background-color);
+    background-color: white;
+}

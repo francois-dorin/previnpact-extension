@@ -1,0 +1,20 @@
+body.ecran-large #article-single {
+    max-width: none;
+    width: 80%;
+}
+
+body.ecran-large #article-single .article-contenu {
+    max-width: none;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+}
+
+body.ecran-large #article-single main {
+    min-width: 294px;
+}
+
+body.ecran-large #article-single main div#aside {
+    right: inherit !important;
+}
+

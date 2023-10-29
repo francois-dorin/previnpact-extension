@@ -2,6 +2,7 @@ const darkModeCheckBox = document.querySelector('input[name="dark-mode"]') as HT
 const policeSansSerifCheckBox = document.querySelector('input[name="police-sans-serif"]') as HTMLInputElement;
 const texteJustifieCheckBox = document.querySelector('input[name="texte-justifie"]') as HTMLInputElement;
 const avecCesureCheckBox = document.querySelector('input[name="avec-cesure"]') as HTMLInputElement;
+const ecranLargeCheckBox = document.querySelector('input[name="ecran-large"]') as HTMLInputElement;
 
 const setDarkMode = () => {
     const value = darkModeCheckBox.checked;
@@ -24,13 +25,19 @@ const setAvecCesure = () => {
     extensionRuntime.setSettings({avecCesure: value});
 }
 
+const setEcranLarge = () => {
+    const value = ecranLargeCheckBox.checked;
+    extensionRuntime.setSettings({ecranLarge: value});
+}
+
 darkModeCheckBox.addEventListener('change', setDarkMode);
 policeSansSerifCheckBox.addEventListener('change', setPoliceSansSerif);
 texteJustifieCheckBox.addEventListener('change',setTexteJustifie);
 avecCesureCheckBox.addEventListener('change', setAvecCesure);
+ecranLargeCheckBox.addEventListener('change', setEcranLarge);
 
 const restoreOptions = () => {
-    extensionRuntime.getSettings(['darkMode', 'policeSansSerif']).then((values) => {
+    extensionRuntime.getAllSettings().then((values) => {
         if (values.darkMode === undefined) {
             darkModeCheckBox.checked = true;
             setDarkMode();
@@ -48,13 +55,24 @@ const restoreOptions = () => {
         if (values.texteJustifie === undefined) {
             texteJustifieCheckBox.checked = true;
             setTexteJustifie();
+        } else {
+            texteJustifieCheckBox.checked = values.texteJustifie;
+            setTexteJustifie();
         }
 
         if (values.avecCesure === undefined) {
             avecCesureCheckBox.checked = true;
             setAvecCesure();
+        } else {
+            avecCesureCheckBox.checked = values.avecCesure;
         }
 
+        if (values.ecranLarge === undefined) {
+            ecranLargeCheckBox.checked = true;
+            setEcranLarge();
+        } else {
+            ecranLargeCheckBox.checked = values.ecranLarge;
+        }
     });
 }
 

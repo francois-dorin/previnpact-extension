@@ -25,17 +25,22 @@ extensionRuntime.onChanged((changes) => {
     if (key == 'avecCesure') {
       setClass('avec-cesure', newValue);
     }
+
+    if (key == 'ecranLarge') {
+      setClass('ecran-large', newValue);  
+    }
   }
 }); 
 
 const loadState = () => {
   extensionRuntime
-    .getSettings(['darkMode', 'policeSansSerif'])
+    .getAllSettings()
     .then(settings => {
       setClass('dark-theme', settings.darkMode);
       setClass('font-sans-serif', settings.policeSansSerif);      
       setClass('texte-justifie', settings.texteJustifie);      
       setClass('avec-cesure', settings.avecCesure);
+      setClass('ecran-large', settings.ecranLarge);
     })
 };
 

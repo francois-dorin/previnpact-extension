@@ -11,12 +11,23 @@ class ExtensionRuntime {
 
     public getSettings(keys: string[]): Promise<{[index: string]: any}> {
         const callback = (resolve: (v: any) => void, values: {[index: string]: any}) => {
-            console.log('settings', values);
             resolve(values);
         };
 
         const promise = new Promise<{[index: string]: any}>((resolve) => {
             this.browser.storage.local.get(keys).then((values: {[index: string]: any}) => callback(resolve, values));
+        });
+
+        return promise;        
+    }
+
+    public getAllSettings(): Promise<{[index: string]: any}> {
+        const callback = (resolve: (v: any) => void, values: {[index: string]: any}) => {
+            resolve(values);
+        };
+
+        const promise = new Promise<{[index: string]: any}>((resolve) => {
+            this.browser.storage.local.get().then((values: {[index: string]: any}) => callback(resolve, values));
         });
 
         return promise;        

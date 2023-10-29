@@ -14,7 +14,8 @@
       "css": [
         "modules/content_script/assets/css/dark-theme.css",
         "modules/content_script/assets/css/font-sans-serif.css",
-        "modules/content_script/assets/css/texte-justifie.css"
+        "modules/content_script/assets/css/texte-justifie.css",
+        "modules/content_script/assets/css/ecran-large.css"
       ],
       "matches": [
         "https://beta.next.ink/*"
