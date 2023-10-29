@@ -25,25 +25,27 @@ class ExtensionRuntime {
 }
 const extensionRuntime = new ExtensionRuntime();
 const body = document.querySelector('body');
-//body.classList.add('dark-theme');
-//body.classList.add('font-sans-serif');
+const setClass = (className, condition) => {
+    if (condition) {
+        body.classList.add(className);
+    }
+    else {
+        body.classList.remove(className);
+    }
+};
 extensionRuntime.onChanged((changes) => {
     for (let [key, { newValue }] of Object.entries(changes)) {
         if (key == 'darkMode') {
-            if (newValue) {
-                body.classList.add('dark-theme');
-            }
-            else {
-                body.classList.remove('dark-theme');
-            }
+            setClass('dark-theme', newValue);
         }
         if (key == 'policeSansSerif') {
-            if (newValue) {
-                body.classList.add('font-sans-serif');
-            }
-            else {
-                body.classList.remove('font-sans-serif');
-            }
+            setClass('font-sans-serif', newValue);
+        }
+        if (key == 'texteJustifie') {
+            setClass('texte-justifie', newValue);
+        }
+        if (key == 'avecCesure') {
+            setClass('avec-cesure', newValue);
         }
     }
 });
@@ -51,19 +53,10 @@ const loadState = () => {
     extensionRuntime
         .getSettings(['darkMode', 'policeSansSerif'])
         .then(settings => {
-        if (settings.darkMode) {
-            body.classList.add('dark-theme');
-        }
-        else {
-            body.classList.remove('dark-theme');
-        }
-        if (settings.policeSansSerif) {
-            body.classList.add('font-sans-serif');
-        }
-        else {
-            body.classList.remove('font-sans-serif');
-        }
+        setClass('dark-theme', settings.darkMode);
+        setClass('font-sans-serif', settings.policeSansSerif);
+        setClass('texte-justifie', settings.texteJustifie);
+        setClass('avec-cesure', settings.avecCesure);
     });
 };
-//document.addEventListener('DOMContentLoaded', loadState);
 loadState();

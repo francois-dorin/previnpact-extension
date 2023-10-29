@@ -1,6 +1,6 @@
 const darkModeCheckBox = document.querySelector('input[name="dark-mode"]') as HTMLInputElement;
 const policeSansSerifCheckBox = document.querySelector('input[name="police-sans-serif"]') as HTMLInputElement;
-const texteJustifieCheckBox = document.querySelector('input[name="texte-justifie') as HTMLInputElement;
+const texteJustifieCheckBox = document.querySelector('input[name="texte-justifie"]') as HTMLInputElement;
 const avecCesureCheckBox = document.querySelector('input[name="avec-cesure"]') as HTMLInputElement;
 
 const setDarkMode = () => {

@@ -4,8 +4,8 @@ Beaucoup le demandais, le voici sous forme d'une extension !
 
 Les personnalisations possibles sont cochées, les autres sont prévues dans les jours qui viennent (et si j'en ai le courage) :
 - [x] l'activation / désactivation du mode sombre
-- [ ] l'activation / désactivation de la justification
-- [ ] l'activation / désactivation de la gestion de la césure lors la justification est activée
+- [x] l'activation / désactivation de la justification
+- [x] l'activation / désactivation de la gestion de la césure lors la justification est activée
 - [x] changement de police (mode avec / sans Sérif)
 
 Il pourrait y en avoir d'autres. Mais pour l'instant, c'est la feuille de route.

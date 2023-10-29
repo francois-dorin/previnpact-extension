@@ -18,11 +18,11 @@ extensionRuntime.onChanged((changes) => {
       setClass('font-sans-serif', newValue)      
     }
 
-    if (key == 'texte-justifie') {
+    if (key == 'texteJustifie') {
       setClass('texte-justifie', newValue);
     }
 
-    if (key == 'avec-cesure') {
+    if (key == 'avecCesure') {
       setClass('avec-cesure', newValue);
     }
   }
