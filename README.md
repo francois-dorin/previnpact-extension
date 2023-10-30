@@ -12,6 +12,18 @@ Les personnalisations possibles sont cochées, les autres sont prévues dans les
 
 Il pourrait y en avoir d'autres. Mais pour l'instant, c'est la feuille de route.
 
+# Screenshots
+
+Quelques captures d'écran :
+## Page d'accueil
+![page d'accueil](assets/screenshots/page-accueil.webp)
+
+## Visualisation d'un article
+![article](assets/screenshots/article.webp)
+
+## Liste des commentaires
+![commentaires](assets/screenshots/commentaire.webp)
+
 # Installation
 ## Via le store
 Je viens de faire une publication sur le store. Il faut maintenant attendre la validation pour qu'il soit utilisable. Donc pour l'instant... Ce n'est pas possible et il faut juste attendre.
