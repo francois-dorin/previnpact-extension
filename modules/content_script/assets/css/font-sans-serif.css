@@ -1,3 +1,5 @@
-body.font-sans-serif #article-single .article-content p {
+body.font-sans-serif #article-single .article-content p,
+body.font-sans-serif #article-single .article-contenu ul li,
+body.font-sans-serif #article-single .article-contenu ol li {
     font-family: RubikRegular;
 }

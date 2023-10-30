@@ -9,6 +9,10 @@
     --secondary-text-color: #748388;
 
     --light-background-color: #dae5e9;
+
+    --link-color: #69bfe7;
+    --link-color-hover: #068bc9;
+
 }
 body.dark-theme header,
 body.dark-theme footer,
@@ -41,6 +45,11 @@ body.dark-theme .list-heart-article > li div h2 a {
 body.dark-theme .block-article h2 > a,
 body.dark-theme .block-article h2 > a:hover {
     color: var(--primary-text-color);    
+}
+
+body.dark-theme .block-article h3,
+body.dark-theme .block-article p {
+    color: var(--secondary-text-color);    
 }
 
 body.dark-theme .contenu-continu,
@@ -121,4 +130,14 @@ body.dark-theme .comment-content {
 body.dark-theme .vertical-separator:not(.nothing-ever-to-hide) {
     border-color: var(--secondary-background-color);
     background-color: white;
+}
+
+body.dark-theme #article-single a {
+    color: var(--link-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body.dark-theme #article-single a:hover {
+    color: var(--link-color-hover);    
 }

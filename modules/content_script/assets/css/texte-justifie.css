@@ -1,7 +1,11 @@
+body:not(.texte-justifie) #article-single .article-content p {
+    text-align: left;
+}
+
 body.texte-justifie #article-single .article-content p {
     text-align: justify;
 }
 
-body.avec-cesure #article-single .article-content p {
+body.texte-justifie.avec-cesure #article-single .article-content p {
     hyphens: auto;
 }
