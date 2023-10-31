@@ -18,7 +18,8 @@
         "modules/content_script/assets/css/ecran-large.css",
         "modules/content_script/assets/css/taille-police.css",
         "modules/content_script/assets/css/agora.css",
-        "modules/content_script/assets/css/liste-article-condensee.css"
+        "modules/content_script/assets/css/liste-article-condensee.css",
+        "modules/content_script/assets/css/404.css"
       ],
       "matches": [
         "https://beta.next.ink/*"
@@ -29,5 +30,9 @@
     },
     "permissions": [
       "storage"
-    ]
+    ],
+    "web_accessible_resources": [{
+      "resources": ["modules/content_script/assets/images/*"],
+      "matches": ["<all_urls>"]
+    }]  
 }

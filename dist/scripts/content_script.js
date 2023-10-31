@@ -27,6 +27,9 @@ class ExtensionRuntime {
     onChanged(callback) {
         this.browser.storage.local.onChanged.addListener(callback);
     }
+    getUrlOfResource(resource) {
+        return this.browser.runtime.getURL(resource);
+    }
     getBrowser() {
         return (chrome ?? browser);
     }
@@ -83,4 +86,20 @@ const loadState = () => {
         setClass('liste-article-condensee', settings.listeArticleCondensee);
     });
 };
+const init404 = () => {
+    const main = body.querySelector('main');
+    if (main.innerText == '' && main.id != 'video-travolta-404') {
+        const video = document.createElement('video');
+        const source = document.createElement('source');
+        source.setAttribute('type', 'video/mp4');
+        source.setAttribute('src', extensionRuntime.getUrlOfResource("/modules/content_script/assets/images/travolta_404_nxi_sombre.mp4"));
+        main.id = "video-travolta-404";
+        video.appendChild(source);
+        video.autoplay = true;
+        video.loop = true;
+        video.muted = true;
+        main.appendChild(video);
+    }
+};
 loadState();
+init404();

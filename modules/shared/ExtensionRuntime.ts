@@ -37,6 +37,10 @@ class ExtensionRuntime {
         this.browser.storage.local.onChanged.addListener(callback);
     }
 
+    public getUrlOfResource(resource: string): string {
+        return this.browser.runtime.getURL(resource);
+    }
+
     private getBrowser() {
         return (chrome ?? browser);
     }
