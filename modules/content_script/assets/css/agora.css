@@ -1,0 +1,11 @@
+body.agora-condense .heart-talk {
+    padding: 5px 0 15px 0;    
+}
+
+body.agora-condense .list-heart-article {
+    margin-top: 0px;    
+}
+
+body.agora-condense .list-heart-article > li > div:first-child {
+    display: none;
+}

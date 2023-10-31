@@ -16,7 +16,8 @@
         "modules/content_script/assets/css/font-sans-serif.css",
         "modules/content_script/assets/css/texte-justifie.css",
         "modules/content_script/assets/css/ecran-large.css",
-        "modules/content_script/assets/css/taille-police.css"
+        "modules/content_script/assets/css/taille-police.css",
+        "modules/content_script/assets/css/agora.css"
       ],
       "matches": [
         "https://beta.next.ink/*"

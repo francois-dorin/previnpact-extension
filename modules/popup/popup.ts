@@ -4,6 +4,7 @@ const texteJustifieCheckBox = document.querySelector('input[name="texte-justifie
 const avecCesureCheckBox = document.querySelector('input[name="avec-cesure"]') as HTMLInputElement;
 const ecranLargeCheckBox = document.querySelector('input[name="ecran-large"]') as HTMLInputElement;
 const taillePoliceCheckBox = document.querySelector('input[name="taille-police"]') as HTMLInputElement;
+const agoraCondenseCheckBox = document.querySelector('input[name="agora-condense"]') as HTMLInputElement;
 
 const setDarkMode = () => {
     const value = darkModeCheckBox.checked;
@@ -36,12 +37,18 @@ const setTaillePolice = () => {
     extensionRuntime.setSettings({taillePolice: value});
 }
 
+const setAgoraCondense = () => {
+    const value = agoraCondenseCheckBox.checked;
+    extensionRuntime.setSettings({agoraCondense: value});
+}
+
 darkModeCheckBox.addEventListener('change', setDarkMode);
 policeSansSerifCheckBox.addEventListener('change', setPoliceSansSerif);
 texteJustifieCheckBox.addEventListener('change',setTexteJustifie);
 avecCesureCheckBox.addEventListener('change', setAvecCesure);
 ecranLargeCheckBox.addEventListener('change', setEcranLarge);
 taillePoliceCheckBox.addEventListener('change', setTaillePolice);
+agoraCondenseCheckBox.addEventListener('change', setAgoraCondense);
 
 const restoreOptions = () => {
     extensionRuntime.getAllSettings().then((values) => {
@@ -86,6 +93,13 @@ const restoreOptions = () => {
             setTaillePolice();
         } else {
             taillePoliceCheckBox.checked = values.taillePolice;
+        }
+
+        if (values.agoraCondense === undefined) {
+            agoraCondenseCheckBox.checked = true;
+            setAgoraCondense();
+        } else {
+            agoraCondenseCheckBox.checked = values.agoraCondense;
         }
     });
 }

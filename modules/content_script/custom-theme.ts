@@ -33,6 +33,10 @@ extensionRuntime.onChanged((changes) => {
     if (key == 'taillePolice') {
       setClass('taille-police', newValue);
     }
+
+    if (key == 'agoraCondense') {
+      setClass('agora-condense', newValue);
+    }
   }
 }); 
 
@@ -46,6 +50,7 @@ const loadState = () => {
       setClass('avec-cesure', settings.avecCesure);
       setClass('ecran-large', settings.ecranLarge);
       setClass('taille-police', settings.taillePolice);
+      setClass('agora-condense', settings.agoraCondense);
     })
 };
 
