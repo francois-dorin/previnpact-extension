@@ -5,6 +5,7 @@ const avecCesureCheckBox = document.querySelector('input[name="avec-cesure"]');
 const ecranLargeCheckBox = document.querySelector('input[name="ecran-large"]');
 const taillePoliceCheckBox = document.querySelector('input[name="taille-police"]');
 const agoraCondenseCheckBox = document.querySelector('input[name="agora-condense"]');
+const listeArticleCondenseeCheckBox = document.querySelector('input[name="liste-article-condensee"]');
 const setDarkMode = () => {
     const value = darkModeCheckBox.checked;
     extensionRuntime.setSettings({ darkMode: value });
@@ -34,6 +35,10 @@ const setAgoraCondense = () => {
     const value = agoraCondenseCheckBox.checked;
     extensionRuntime.setSettings({ agoraCondense: value });
 };
+const setListeArticleCondensee = () => {
+    const value = listeArticleCondenseeCheckBox.checked;
+    extensionRuntime.setSettings({ listeArticleCondensee: value });
+};
 darkModeCheckBox.addEventListener('change', setDarkMode);
 policeSansSerifCheckBox.addEventListener('change', setPoliceSansSerif);
 texteJustifieCheckBox.addEventListener('change', setTexteJustifie);
@@ -41,6 +46,7 @@ avecCesureCheckBox.addEventListener('change', setAvecCesure);
 ecranLargeCheckBox.addEventListener('change', setEcranLarge);
 taillePoliceCheckBox.addEventListener('change', setTaillePolice);
 agoraCondenseCheckBox.addEventListener('change', setAgoraCondense);
+listeArticleCondenseeCheckBox.addEventListener('change', setListeArticleCondensee);
 const restoreOptions = () => {
     extensionRuntime.getAllSettings().then((values) => {
         if (values.darkMode === undefined) {
@@ -92,6 +98,13 @@ const restoreOptions = () => {
         }
         else {
             agoraCondenseCheckBox.checked = values.agoraCondense;
+        }
+        if (values.listeArticleCondensee === undefined) {
+            listeArticleCondenseeCheckBox.checked = true;
+            setListeArticleCondensee();
+        }
+        else {
+            listeArticleCondenseeCheckBox.checked = values.listeArticleCondensee;
         }
     });
 };

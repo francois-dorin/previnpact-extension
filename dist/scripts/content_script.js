@@ -64,6 +64,9 @@ extensionRuntime.onChanged((changes) => {
         if (key == 'agoraCondense') {
             setClass('agora-condense', newValue);
         }
+        if (key == 'listeArticleCondensee') {
+            setClass('liste-article-condensee', newValue);
+        }
     }
 });
 const loadState = () => {
@@ -77,6 +80,7 @@ const loadState = () => {
         setClass('ecran-large', settings.ecranLarge);
         setClass('taille-police', settings.taillePolice);
         setClass('agora-condense', settings.agoraCondense);
+        setClass('liste-article-condensee', settings.listeArticleCondensee);
     });
 };
 loadState();

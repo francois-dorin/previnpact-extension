@@ -1,0 +1,30 @@
+body.liste-article-condensee .block-article > .thumbnail {
+    min-width: 168px;
+    width: 168px;
+    height: 120px;
+}
+
+body.liste-article-condensee .block-article > div:last-child{
+    display: grid;
+    grid-template: "a b" minmax(20px, auto) "c c " auto "d d" auto;
+}
+
+body.liste-article-condensee .block-article > div:last-child main {
+    grid-area: a;
+}
+
+body.liste-article-condensee .block-article > div:last-child h2 {
+    grid-area: c;
+}
+
+body.liste-article-condensee .block-article > div:last-child h3 {
+    grid-area: d;
+}
+
+body.liste-article-condensee .block-article > div:last-child div.article-text-comment {
+    grid-area: b;
+}
+
+body.liste-article-condensee .block-article .author {
+    padding-top: 4px;
+}

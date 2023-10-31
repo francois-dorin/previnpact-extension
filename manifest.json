@@ -17,7 +17,8 @@
         "modules/content_script/assets/css/texte-justifie.css",
         "modules/content_script/assets/css/ecran-large.css",
         "modules/content_script/assets/css/taille-police.css",
-        "modules/content_script/assets/css/agora.css"
+        "modules/content_script/assets/css/agora.css",
+        "modules/content_script/assets/css/liste-article-condensee.css"
       ],
       "matches": [
         "https://beta.next.ink/*"
