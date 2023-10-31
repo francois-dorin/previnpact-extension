@@ -9,12 +9,16 @@ Les personnalisations possibles sont cochées, les autres sont prévues dans les
 - [x] changement de police (mode avec / sans Sérif)
 - [x] gestion des écrans larges
 - [x] changement de la taille de la police (15px comme sur l'ancien site)
-
+- [x] le retour de Travolta
+- [x] condensation de l'Agora
+- [x] condensation de la liste des articles
+  
 Il pourrait y en avoir d'autres. Mais pour l'instant, c'est la feuille de route.
 
 # Screenshots
 
 Quelques captures d'écran :
+
 ## Page d'accueil
 ![page d'accueil](assets/screenshots/page-accueil.webp)
 
