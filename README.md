@@ -33,7 +33,7 @@ Je viens de faire une publication sur le store. Il faut maintenant attendre la v
 Les informations sont disponibles ici : https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing
 
 Rapidement :
-- ouvrir l'url "about:config"
+- ouvrir l'url "about:debugging"
 - cliquer sur "Ce firefox"
 - cliquer sur "Charger une extension temporaire"
 - Sélectionner le fichier "manifest.json"
