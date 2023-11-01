@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Prev INpact",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "description": "Next INpact Dark mode pour la beta",
     "icons": {
         "16": "assets/icons/nextinpact-16x16.png",
@@ -34,5 +34,11 @@
     "web_accessible_resources": [{
       "resources": ["modules/content_script/assets/images/*"],
       "matches": ["<all_urls>"]
-    }]  
+    }],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "extension.previnpact@custom-dev.fr"
+      }
+    }
+    
 }

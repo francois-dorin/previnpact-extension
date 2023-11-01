@@ -30,7 +30,9 @@ Quelques captures d'écran :
 
 # Installation
 ## Via le store
-Je viens de faire une publication sur le store. Il faut maintenant attendre la validation pour qu'il soit utilisable. Donc pour l'instant... Ce n'est pas possible et il faut juste attendre.
+Vous pouvez installer les applications en passant par les stores :
+- Chrome : https://chrome.google.com/webstore/detail/prev-inpact/bbodaagihddcjoiomghmcfllkppkcjoj (attention, il faut utiliser le lien car l'extension n'apparait pas volontaire dans les résultats de recherche)
+- Firefox : en attente de publication
 
 ## Manuellement 
 ### Sous Firefox
