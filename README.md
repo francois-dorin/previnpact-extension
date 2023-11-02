@@ -32,7 +32,7 @@ Quelques captures d'écran :
 ## Via le store
 Vous pouvez installer les applications en passant par les stores :
 - Chrome : https://chrome.google.com/webstore/detail/prev-inpact/bbodaagihddcjoiomghmcfllkppkcjoj (attention, il faut utiliser le lien car l'extension n'apparait pas volontaire dans les résultats de recherche)
-- Firefox : en attente de publication
+- Firefox : https://addons.mozilla.org/fr/firefox/addon/prev-inpact/ (j'ai publié volontairement aussi l'extension en mode expérimental, à défaut de ne pas pouvoir choisir de ne pas le publier sur le moteur de recherche)
 
 ## Manuellement 
 ### Sous Firefox
