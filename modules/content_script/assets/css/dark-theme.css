@@ -1,6 +1,7 @@
 :root {
     --primary-background-color: #0b0b0d;
     --secondary-background-color: #1f2528;
+    --other-background-color: #4d565c;
     --header-background-color: #05384a;
     --dark-light-background-color: #2a3135;
 
@@ -13,6 +14,7 @@
     --link-color: #69bfe7;
     --link-color-hover: #068bc9;
 
+    --orange: #FF9A3D;
 }
 body.dark-theme header,
 body.dark-theme footer,
@@ -140,4 +142,38 @@ body.dark-theme #article-single a {
 
 body.dark-theme #article-single a:hover {
     color: var(--link-color-hover);    
+}
+
+body.dark-theme #sommaire > div {   
+    background: none;   
+    color: var(--primary-text-color) !important;
+}
+
+body.dark-theme .title-sommaire-actif {
+    background-color: var(--other-background-color);
+    color: var(--primary-text-color);    
+}
+
+body.dark-theme #sommaire > div > div > h2,
+body.dark-theme #sommaire > div > div > h3,
+body.dark-theme #sommaire > div > div > h4,
+body.dark-theme #sommaire > div > div > h5,
+body.dark-theme #sommaire > div > div > h6 {
+    color: var(--primary-text-color);    
+}
+
+body.dark-theme .title-sommaire-actif h2,
+body.dark-theme .title-sommaire-actif h3,
+body.dark-theme .title-sommaire-actif h4,
+body.dark-theme .title-sommaire-actif h5,
+body.dark-theme .title-sommaire-actif h6 {
+    color: var(--primary-text-color) !important;    
+}
+
+body.dark-theme .thumbnail svg path:first-child{
+    fill: var(--orange) !important;
+}
+
+body.dark-theme .thumbnail svg path:last-child{
+    fill: white !important;
 }
