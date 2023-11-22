@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Prev INpact",
-    "version": "1.0.5",
+    "version": "1.0.8",
     "description": "Next INpact Dark mode pour la beta",
     "icons": {
         "16": "assets/icons/nextinpact-16x16.png",
@@ -19,10 +19,12 @@
         "modules/content_script/assets/css/taille-police.css",
         "modules/content_script/assets/css/agora.css",
         "modules/content_script/assets/css/liste-article-condensee.css",
-        "modules/content_script/assets/css/404.css"
+        "modules/content_script/assets/css/404.css",
+        "modules/content_script/assets/css/navigation-commentaire.css"
       ],
       "matches": [
-        "https://beta.next.ink/*"
+        "https://beta.next.ink/*",
+        "https://next.ink/*"
       ]
     }],
     "action": {

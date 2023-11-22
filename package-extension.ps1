@@ -5,7 +5,7 @@ Remove-Item $zip;
 New-Item -ItemType Directory $outputDirectory;
 Copy-Item ./* -Destination $outputDirectory -Recurse;
 Remove-Item $outputDirectory/node_modules -Recurse -Force;
-Remove-Item $outputDirectory/doc -Recurse -Force;
+Remove-Item $outputDirectory/docs -Recurse -Force;
 Remove-Item $outputDirectory/spec -Recurse -Force;
 Remove-Item $outputDirectory/assets/screenshots -Recurse -Force;
 Remove-Item $outputDirectory/package.json;

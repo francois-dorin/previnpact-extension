@@ -6,6 +6,7 @@ const ecranLargeCheckBox = document.querySelector('input[name="ecran-large"]');
 const taillePoliceCheckBox = document.querySelector('input[name="taille-police"]');
 const agoraCondenseCheckBox = document.querySelector('input[name="agora-condense"]');
 const listeArticleCondenseeCheckBox = document.querySelector('input[name="liste-article-condensee"]');
+const navigationCommentairesCheckBox = document.querySelector('input[name="navigation-commentaires"]');
 const setDarkMode = () => {
     const value = darkModeCheckBox.checked;
     extensionRuntime.setSettings({ darkMode: value });
@@ -39,6 +40,10 @@ const setListeArticleCondensee = () => {
     const value = listeArticleCondenseeCheckBox.checked;
     extensionRuntime.setSettings({ listeArticleCondensee: value });
 };
+const setNavigationCommentaires = () => {
+    const value = navigationCommentairesCheckBox.checked;
+    extensionRuntime.setSettings({ navigationCommentaires: value });
+};
 darkModeCheckBox.addEventListener('change', setDarkMode);
 policeSansSerifCheckBox.addEventListener('change', setPoliceSansSerif);
 texteJustifieCheckBox.addEventListener('change', setTexteJustifie);
@@ -47,6 +52,7 @@ ecranLargeCheckBox.addEventListener('change', setEcranLarge);
 taillePoliceCheckBox.addEventListener('change', setTaillePolice);
 agoraCondenseCheckBox.addEventListener('change', setAgoraCondense);
 listeArticleCondenseeCheckBox.addEventListener('change', setListeArticleCondensee);
+navigationCommentairesCheckBox.addEventListener('change', setNavigationCommentaires);
 const restoreOptions = () => {
     extensionRuntime.getAllSettings().then((values) => {
         if (values.darkMode === undefined) {
@@ -105,6 +111,13 @@ const restoreOptions = () => {
         }
         else {
             listeArticleCondenseeCheckBox.checked = values.listeArticleCondensee;
+        }
+        if (values.navigationCommentaires === undefined) {
+            navigationCommentairesCheckBox.checked = true;
+            setNavigationCommentaires();
+        }
+        else {
+            navigationCommentairesCheckBox.checked = values.navigationCommentaires;
         }
     });
 };

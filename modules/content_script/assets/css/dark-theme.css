@@ -55,7 +55,9 @@ body.dark-theme .block-article p {
 }
 
 body.dark-theme .contenu-continu,
-body.dark-theme .article-contenu {
+body.dark-theme .article-contenu,
+body.dark-theme #briefs .brief-article-info,
+body.dark-theme .comments-list > div {
     background-color: var(--secondary-background-color);
     padding: 15px;
 }
@@ -176,4 +178,57 @@ body.dark-theme .thumbnail svg path:first-child{
 
 body.dark-theme .thumbnail svg path:last-child{
     fill: white !important;
+}
+
+body.dark-theme #list-brief > div {
+    background-color: inherit;
+}
+
+body.dark-theme #background-article {
+    background-color: inherit;
+}
+
+body.dark-theme #background-article {
+    background-color: inherit;
+}
+
+body.dark-theme #moreInfo {
+    background-color: inherit;
+}
+
+body.dark-theme .quote-container {
+ background-color: var(--other-background-color);   
+ color: var(--primary-text-color);
+}
+
+body.dark-theme .quote-container .quote-commente,
+body.dark-theme .quote-container .reply-comment-content {
+ color: var(--primary-text-color);
+}
+
+body.dark-theme .comment-main .comment-info-pseudo .pseudo-comment {
+    color: inherit;
+}
+
+body.dark-theme #comment-editor-wrapper {
+    background-color: var(--secondary-background-color);
+}
+
+body.dark-theme textarea, 
+body.dark-theme input {
+    background-color: var(--other-background-color);
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .cancel-button {
+    background-color: var(--primary-background-color);
+}
+
+body.dark-theme .textera-open {
+    background-color: var(--other-background-color);
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .comment-main.selected {
+    background-color: var(--header-background-color);
 }

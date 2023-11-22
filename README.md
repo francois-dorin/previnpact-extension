@@ -7,13 +7,18 @@ Les personnalisations possibles sont cochées, les autres sont prévues dans les
 - [x] l'activation / désactivation de la justification
 - [x] l'activation / désactivation de la gestion de la césure lors la justification est activée
 - [x] changement de police (mode avec / sans Sérif)
-- [x] gestion des écrans larges
+- [ ] gestion des écrans larges
 - [x] changement de la taille de la police (15px comme sur l'ancien site)
 - [x] le retour de Travolta
 - [x] condensation de l'Agora
 - [x] condensation de la liste des articles
-  
+- [x] navigation dans les commentaires non-lu en utilisant les flèches gauche et droite
+
 Il pourrait y en avoir d'autres. Mais pour l'instant, c'est la feuille de route.
+
+# Note sur la version v1.0.8
+
+J'ai désactivé la gestion des écrans larges, car la mise en page était cassée suite aux dernières mises à jour du site. Il faut donc que je prenne un peu de temps pour regarder cela de plus près et faire les adaptations nécessaires.
 
 # Screenshots
 

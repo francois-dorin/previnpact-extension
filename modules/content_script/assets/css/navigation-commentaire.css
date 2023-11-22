@@ -1,0 +1,8 @@
+.comment-main {
+    scroll-margin: 150px;
+}
+
+.comment-main.selected {
+    background-color: lightsalmon;
+}
+
