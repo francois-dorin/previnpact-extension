@@ -232,3 +232,25 @@ body.dark-theme .textera-open {
 body.dark-theme .comment-main.selected {
     background-color: var(--header-background-color);
 }
+
+body.dark-theme #briefs .brief-article-title h1 > a,
+body.dark-theme #briefs .brief-article-info a {
+    color: inherit;
+}
+
+body.dark-theme #background-brief-article {
+    background: inherit;
+}
+
+body.dark-theme #brief-article .brief-article-content p, 
+body.dark-theme #brief-article .brief-article-content strong,
+body.dark-theme #brief-article .brief-article-content p em,
+
+body.dark-theme #brief-article .brief-article-content ul li {
+    color: inherit;
+}
+
+body.dark-theme #brief-article .brief-article-content ul li a,
+body.dark-theme #brief-article .brief-article-content a   {
+    color: var(--link-color);
+}

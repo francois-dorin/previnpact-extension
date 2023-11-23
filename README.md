@@ -13,10 +13,11 @@ Les personnalisations possibles sont cochées, les autres sont prévues dans les
 - [x] condensation de l'Agora
 - [x] condensation de la liste des articles
 - [x] navigation dans les commentaires non-lu en utilisant les flèches gauche et droite
+- [x] navigation dans les commentaires par ordre chronologique en utilisant les touches < et >
 
 Il pourrait y en avoir d'autres. Mais pour l'instant, c'est la feuille de route.
 
-# Note sur la version v1.0.8
+# Note sur la version v1.0.8 et supérieure
 
 J'ai désactivé la gestion des écrans larges, car la mise en page était cassée suite aux dernières mises à jour du site. Il faut donc que je prenne un peu de temps pour regarder cela de plus près et faire les adaptations nécessaires.
 

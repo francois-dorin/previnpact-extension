@@ -107,7 +107,9 @@ const init404 = () => {
 };
 const commentairesState = {
     enabled: true,
+    currentNonLuIndex: -1,
     currentIndex: -1,
+    commentairesNonLus: null,
     commentaires: null
 };
 const isInInputElement = () => {
@@ -118,23 +120,68 @@ const initNavigationCommentaires = () => {
         if (commentairesState.enabled && isInInputElement() == false) {
             switch (event.key) {
                 case 'ArrowRight':
-                    commentairesNext();
+                    commentairesNextNonLu();
                     break;
                 case 'ArrowLeft':
+                    commentairesPrevNonLu();
+                    break;
+                case '>':
+                    commentairesNext();
+                    break;
+                case '<':
                     commentairesPrev();
                     break;
             }
         }
     });
-    commentairesState.commentaires = document.getElementsByClassName('new-comment');
+    commentairesState.commentairesNonLus = document.getElementsByClassName('new-comment');
+    commentairesState.commentaires = document.getElementsByClassName('single-comment');
 };
 const selectCommentaire = (commentaire) => {
     const container = commentaire.closest('.comment-main');
     for (let i = 0; i < commentairesState.commentaires.length; i++) {
-        commentairesState.commentaires[i].closest('.comment-main').classList.remove('selected');
+        commentairesState.commentaires[i].querySelector('.comment-main').classList.remove('selected');
     }
     container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     container.classList.add('selected');
+};
+const commentairesNextNonLu = () => {
+    if (commentairesState.commentairesNonLus && commentairesState.commentairesNonLus.length > 0) {
+        if (commentairesState.currentNonLuIndex < commentairesState.commentairesNonLus.length - 1) {
+            commentairesState.currentNonLuIndex++;
+        }
+        else {
+            commentairesState.currentNonLuIndex = 0;
+        }
+        selectCommentaire(commentairesState.commentairesNonLus[commentairesState.currentNonLuIndex]);
+    }
+};
+const commentairesPrevNonLu = () => {
+    if (commentairesState.commentairesNonLus && commentairesState.commentairesNonLus.length > 0) {
+        if (commentairesState.currentNonLuIndex > 0) {
+            commentairesState.currentNonLuIndex--;
+        }
+        else {
+            commentairesState.currentNonLuIndex = commentairesState.commentairesNonLus.length - 1;
+        }
+        selectCommentaire(commentairesState.commentairesNonLus[commentairesState.currentNonLuIndex]);
+    }
+};
+const getID = (commentaire) => {
+    const idAttr = commentaire.getAttribute('id');
+    const id = idAttr ? idAttr.replace('comment-', '') : '';
+    return parseInt(id);
+};
+const sortCommentaires = (commentaires) => {
+    return commentaires.sort((a, b) => {
+        const aID = getID(a);
+        const bID = getID(b);
+        if (aID > bID)
+            return 1;
+        if (aID < bID)
+            return -1;
+        return 0;
+    });
 };
 const commentairesNext = () => {
     if (commentairesState.commentaires && commentairesState.commentaires.length > 0) {
@@ -144,7 +191,9 @@ const commentairesNext = () => {
         else {
             commentairesState.currentIndex = 0;
         }
-        selectCommentaire(commentairesState.commentaires[commentairesState.currentIndex]);
+        let commentaires = [...commentairesState.commentaires];
+        commentaires = sortCommentaires(commentaires);
+        selectCommentaire(commentaires[commentairesState.currentIndex].querySelector('div.comment-main'));
     }
 };
 const commentairesPrev = () => {
@@ -155,7 +204,9 @@ const commentairesPrev = () => {
         else {
             commentairesState.currentIndex = commentairesState.commentaires.length - 1;
         }
-        selectCommentaire(commentairesState.commentaires[commentairesState.currentIndex]);
+        let commentaires = [...commentairesState.commentaires];
+        commentaires = sortCommentaires(commentaires);
+        selectCommentaire(commentaires[commentairesState.currentIndex].querySelector('div.comment-main'));
     }
 };
 loadState();
