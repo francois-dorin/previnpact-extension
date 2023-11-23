@@ -229,7 +229,7 @@ body.dark-theme .textera-open {
     color: var(--primary-text-color);
 }
 
-body.dark-theme .comment-main.selected {
+body.dark-theme .single-comment.selected {
     background-color: var(--header-background-color);
 }
 

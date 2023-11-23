@@ -1,8 +1,8 @@
-.comment-main {
+.single-comment {
     scroll-margin: 150px;
 }
 
-.comment-main.selected {
+.single-comment.selected {
     background-color: lightsalmon;
 }
 

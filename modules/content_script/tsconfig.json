@@ -1,7 +1,8 @@
 {
   "files": [
     "../shared/ExtensionRuntime.ts",
-    "custom-theme.ts",
+    "navigation-commentaires.ts",
+    "custom-theme.ts"
   ],
   "compilerOptions": {
     "outFile": "../../dist/scripts/content_script.js",
