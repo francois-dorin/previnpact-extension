@@ -37,11 +37,13 @@ class ExtensionRuntime {
 const extensionRuntime = new ExtensionRuntime();
 const commentairesState = {
     enabled: true,
-    currentNonLuIndex: -1,
-    currentIndex: -1,
     commentairesNonLus: null,
     commentaires: null
 };
+/**
+ * Retourne true si l'élément actif est un input ou un textarea.
+ * @returns
+ */
 const isInInputElement = () => {
     return document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA';
 };
@@ -64,22 +66,22 @@ const initNavigationCommentaires = () => {
             }
         }
     });
-    /*
-     * On récupère les commentaires non lus et les commentaires via getElementsByClassName,
-     * qui retourne une HTMLCollection live, c'est-à-dire qui est mis à jour
-     * automatique en cas de changement dans le DOM.
-     *
-     * Pratique lors du rechargement des comentaires via AJAX par exemple.
-     */
-    commentairesState.commentairesNonLus = document.getElementsByClassName('new-comment');
-    commentairesState.commentaires = document.getElementsByClassName('single-comment');
+    commentairesState.commentairesNonLus = {
+        getCommentaires: getCommentairesNonLu,
+        currentIndex: -1
+    };
+    commentairesState.commentaires = {
+        getCommentaires: getCommentaires,
+        currentIndex: -1
+    };
 };
 /**
  * Récupère un tableau des commentaires non lu
  * @returns
  */
 const getCommentairesNonLu = () => {
-    const commentaires = [...commentairesState.commentairesNonLus].map(x => x.closest('.single-comment'));
+    const nonLus = document.getElementsByClassName('new-comment');
+    const commentaires = [...nonLus].map(x => x.closest('.single-comment'));
     return commentaires;
 };
 /**
@@ -90,7 +92,8 @@ const getCommentairesNonLu = () => {
  * @returns
  */
 const getCommentaires = () => {
-    const commentaires = [...commentairesState.commentaires];
+    const coms = document.getElementsByClassName('single-comment');
+    const commentaires = [...coms];
     sortCommentaires(commentaires);
     console.log('commentaires', commentaires, commentairesState);
     return commentaires;
@@ -99,8 +102,9 @@ const getCommentaires = () => {
  * Retire la classe "selected" de tous les commentaires.
  */
 const clearSelection = () => {
-    for (let i = 0; i < commentairesState.commentaires.length; i++) {
-        commentairesState.commentaires[i].classList.remove('selected');
+    const commentaires = getCommentaires();
+    for (let i = 0; i < commentaires.length; i++) {
+        commentaires[i].classList.remove('selected');
     }
 };
 /**
@@ -169,52 +173,54 @@ const sortCommentaires = (commentaires) => {
     });
 };
 /**
+ * Sélectionne le commentaire suivant dans le tableau de commentaires.
+ * @param state
+ */
+const selectNextCommentaire = (state) => {
+    const commentaires = state.getCommentaires();
+    if (commentaires.length > 0) {
+        let commentaire;
+        state.currentIndex = getNextIndex(commentaires, state.currentIndex);
+        commentaire = commentaires[state.currentIndex];
+        selectCommentaire(commentaire);
+    }
+};
+/**
+ * Sélectionne le commentaire précédent dans le tableau de commentaires.
+ * @param state
+ */
+const selectPrevCommentaire = (state) => {
+    const commentaires = state.getCommentaires();
+    if (commentaires.length > 0) {
+        let commentaire;
+        state.currentIndex = getPrevIndex(commentaires, state.currentIndex);
+        commentaire = commentaires[state.currentIndex];
+        selectCommentaire(commentaire);
+    }
+};
+/**
  * Sélectionne le commentaire suivant non lu.
  */
 const commentairesNextNonLu = () => {
-    const commentaires = getCommentairesNonLu();
-    if (commentaires.length > 0) {
-        let commentaire;
-        commentairesState.currentNonLuIndex = getNextIndex(commentaires, commentairesState.currentNonLuIndex);
-        commentaire = commentaires[commentairesState.currentNonLuIndex];
-        selectCommentaire(commentaire);
-    }
+    selectNextCommentaire(commentairesState.commentairesNonLus);
 };
 /**
  * Sélectionne le commentaire précédent non lu.
  */
 const commentairesPrevNonLu = () => {
-    const commentaires = getCommentairesNonLu();
-    if (commentaires.length > 0) {
-        let commentaire;
-        commentairesState.currentNonLuIndex = getPrevIndex(commentaires, commentairesState.currentNonLuIndex);
-        commentaire = commentaires[commentairesState.currentNonLuIndex];
-        selectCommentaire(commentaire);
-    }
+    selectPrevCommentaire(commentairesState.commentairesNonLus);
 };
 /**
  * Sélectionne le commentaire suivant.
  */
 const commentairesNext = () => {
-    const commentaires = getCommentaires();
-    if (commentaires.length > 0) {
-        let commentaire;
-        commentairesState.currentIndex = getNextIndex(commentaires, commentairesState.currentIndex);
-        commentaire = commentaires[commentairesState.currentIndex];
-        selectCommentaire(commentaire);
-    }
+    selectNextCommentaire(commentairesState.commentaires);
 };
 /**
  * Sélectionne le commentaire précédent.
  */
 const commentairesPrev = () => {
-    const commentaires = getCommentaires();
-    if (commentaires.length > 0) {
-        let commentaire;
-        commentairesState.currentIndex = getPrevIndex(commentaires, commentairesState.currentIndex);
-        commentaire = commentaires[commentairesState.currentIndex];
-        selectCommentaire(commentaire);
-    }
+    selectPrevCommentaire(commentairesState.commentaires);
 };
 const menuTalk = () => {
     const litsheart = document.getElementById('list-heart');
