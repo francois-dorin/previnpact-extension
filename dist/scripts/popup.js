@@ -2,11 +2,12 @@ const darkModeCheckBox = document.querySelector('input[name="dark-mode"]');
 const policeSansSerifCheckBox = document.querySelector('input[name="police-sans-serif"]');
 const texteJustifieCheckBox = document.querySelector('input[name="texte-justifie"]');
 const avecCesureCheckBox = document.querySelector('input[name="avec-cesure"]');
-const ecranLargeCheckBox = document.querySelector('input[name="ecran-large"]');
+//const ecranLargeCheckBox = document.querySelector('input[name="ecran-large"]') as HTMLInputElement;
 const taillePoliceCheckBox = document.querySelector('input[name="taille-police"]');
 const agoraCondenseCheckBox = document.querySelector('input[name="agora-condense"]');
 const listeArticleCondenseeCheckBox = document.querySelector('input[name="liste-article-condensee"]');
 const navigationCommentairesCheckBox = document.querySelector('input[name="navigation-commentaires"]');
+const agoraReplieCheckBox = document.querySelector('input[name="agora-replie"]');
 const setDarkMode = () => {
     const value = darkModeCheckBox.checked;
     extensionRuntime.setSettings({ darkMode: value });
@@ -24,10 +25,10 @@ const setAvecCesure = () => {
     const value = avecCesureCheckBox.checked;
     extensionRuntime.setSettings({ avecCesure: value });
 };
-const setEcranLarge = () => {
-    const value = ecranLargeCheckBox.checked;
-    extensionRuntime.setSettings({ ecranLarge: value });
-};
+// const setEcranLarge = () => {
+//     const value = ecranLargeCheckBox.checked;
+//     extensionRuntime.setSettings({ecranLarge: value});
+// }
 const setTaillePolice = () => {
     const value = taillePoliceCheckBox.checked;
     extensionRuntime.setSettings({ taillePolice: value });
@@ -44,15 +45,20 @@ const setNavigationCommentaires = () => {
     const value = navigationCommentairesCheckBox.checked;
     extensionRuntime.setSettings({ navigationCommentaires: value });
 };
+const setAgoraReplie = () => {
+    const value = agoraReplieCheckBox.checked;
+    extensionRuntime.setSettings({ agoraReplie: value });
+};
 darkModeCheckBox.addEventListener('change', setDarkMode);
 policeSansSerifCheckBox.addEventListener('change', setPoliceSansSerif);
 texteJustifieCheckBox.addEventListener('change', setTexteJustifie);
 avecCesureCheckBox.addEventListener('change', setAvecCesure);
-ecranLargeCheckBox.addEventListener('change', setEcranLarge);
+//ecranLargeCheckBox.addEventListener('change', setEcranLarge);
 taillePoliceCheckBox.addEventListener('change', setTaillePolice);
 agoraCondenseCheckBox.addEventListener('change', setAgoraCondense);
 listeArticleCondenseeCheckBox.addEventListener('change', setListeArticleCondensee);
 navigationCommentairesCheckBox.addEventListener('change', setNavigationCommentaires);
+agoraReplieCheckBox.addEventListener('change', setAgoraReplie);
 const restoreOptions = () => {
     extensionRuntime.getAllSettings().then((values) => {
         if (values.darkMode === undefined) {
@@ -84,13 +90,12 @@ const restoreOptions = () => {
         else {
             avecCesureCheckBox.checked = values.avecCesure;
         }
-        if (values.ecranLarge === undefined) {
-            ecranLargeCheckBox.checked = true;
-            setEcranLarge();
-        }
-        else {
-            ecranLargeCheckBox.checked = values.ecranLarge;
-        }
+        // if (values.ecranLarge === undefined) {
+        //     ecranLargeCheckBox.checked = true;
+        //     setEcranLarge();
+        // } else {
+        //     ecranLargeCheckBox.checked = values.ecranLarge;
+        // }
         if (values.taillePolice === undefined) {
             taillePoliceCheckBox.checked = false;
             setTaillePolice();
@@ -118,6 +123,13 @@ const restoreOptions = () => {
         }
         else {
             navigationCommentairesCheckBox.checked = values.navigationCommentaires;
+        }
+        if (values.agoraReplie === undefined) {
+            agoraReplieCheckBox.checked = false;
+            setAgoraReplie();
+        }
+        else {
+            agoraReplieCheckBox.checked = values.agoraReplie;
         }
     });
 };

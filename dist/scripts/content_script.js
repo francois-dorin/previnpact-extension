@@ -35,6 +35,12 @@ class ExtensionRuntime {
     }
 }
 const extensionRuntime = new ExtensionRuntime();
+const menuTalk = () => {
+    const litsheart = document.getElementById('list-heart');
+    litsheart.classList.toggle("close-talk");
+    const talk = document.getElementById('talk');
+    talk.classList.toggle('close-heart-talk');
+};
 const body = document.querySelector('body');
 const setClass = (className, condition) => {
     if (condition) {
@@ -88,6 +94,9 @@ const loadState = () => {
         setClass('agora-condense', settings.agoraCondense);
         setClass('liste-article-condensee', settings.listeArticleCondensee);
         commentairesState.enabled = settings.navigationCommentaires;
+        if (settings.agoraReplie) {
+            menuTalk();
+        }
     });
 };
 const init404 = () => {

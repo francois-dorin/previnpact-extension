@@ -19,6 +19,78 @@ table {
     font-size: 0.8rem;
 }
 
+h1 {
+    font-size: 1.2rem;
+}
+
 .center {
     text-align: center;
+}
+
+li.option {
+    padding: 5px;
+}
+
+.checkbox.input {
+    float: right;
+    display: block;
+    width: 50px;
+
+}
+
+.checkbox.input input {
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    transform: translate(0);
+    margin: 0;
+    padding: 0;;
+}
+
+
+.toggle:before {
+    content: "";
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 14px;
+    display: block;
+    background-color: #293237;
+    border-radius: 8px;
+}
+
+.checkbox.input input:checked ~ .toggle:before {
+    background-color: #1cc38a
+}
+
+.checkbox.input input:checked ~ .toggle span {
+    background-color: #C8D7DC;    
+}
+
+.toggle span {
+    background: #293237;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15;
+    display: block;
+    transition: all .2s ease;
+    border: 3px solid #7A8891;
+    border-radius: 30px;
+    box-sizing: unset;
+    margin: 0;
+    padding: 0;
+}
+
+.checkbox.input input:checked ~ .toggle span {
+    background-color: #C8D7DC;
+    transform: translate(20px);
 }

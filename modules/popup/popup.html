@@ -5,62 +5,109 @@
     <link rel="stylesheet" href="popup.css" type="text/css"/>
   </head>
   <body>
+    <h1>Thème</h1>
     <ul>
-      <li>
-        <label>
-          <input type="checkbox" name="dark-mode">
+      <li class="option">        
           Dark mode
-        </label>
-      </li>
-      <li>
-        <label>
-          <input type="checkbox" name="police-sans-serif">
-          Police sans sérif
-        </label>
-      </li>
-      <li>
-        <label>
-          <input type="checkbox" name="texte-justifie">
-          Texte justifié
-        </label>
-        <ul>
-          <li>
-            <label>
-              <input type="checkbox" name="avec-cesure">
-              Avec césure 
+
+          <div class="checkbox input">
+            <input type="checkbox" name="dark-mode" id="option-dark-mode">
+            <label for="option-dark-mode" class="toggle">
+              <span></span>
             </label>
-          </li>
-        </ul>
-      </li>  
-      <li>
+          </div>        
+      </li>
+    </ul>
+
+    <h1>Police</h1>
+    <ul>
+      <li class="option">
+        Police sans sérif
+        <div class="checkbox input">
+          <input type="checkbox" name="police-sans-serif" id="option-police-sans-serif">
+          <label for="option-police-sans-serif" class="toggle">
+            <span></span>
+          </label>
+        </div>     
+      </li>
+      <li class="option">
+        Ancienne taille police
+        <div class="checkbox input">
+          <input type="checkbox" name="taille-police" id="option-taille-police">
+          <label for="option-taille-police" class="toggle">
+            <span></span>
+          </label>
+        </div>    
+      </li> 
+      <li class="option">
+        Texte justifié
+        <div class="checkbox input">
+          <input type="checkbox" name="texte-justifie" id="option-texte-justifie">
+          <label for="option-texte-justifie" class="toggle">
+            <span></span>
+          </label>
+        </div>     
+      </li>
+      <li class="option">
+        Avec césure 
+        <div class="checkbox input">
+          <input type="checkbox" name="avec-cesure" id="option-avec-cesure">
+          <label for="option-avec-cesure" class="toggle">
+            <span></span>
+          </label>
+        </div>     
+      </li>
+                
+      <!-- <li>
         <label>
           <input type="checkbox" name="ecran-large" disabled>
           <span title="désactivé temporairement le temps de réparer la mise en page">Ecran large</span>
         </label>
+      </li>     -->
+    </ul>
+    <h1>Agora</h1>
+    <ul>
+      <li class="option">
+        Agora replié par défaut
+        <div class="checkbox input">
+          <input type="checkbox" name="agora-replie" id="option-agora-replie">
+          <label for="option-agora-replie" class="toggle">
+            <span></span>
+          </label>
+        </div>    
       </li>    
-      <li>
-        <label>
-          <input type="checkbox" name="taille-police">
-          Ancienne taille police
-        </label>
-      </li> 
-      <li>
-        <label>
-          <input type="checkbox" name="agora-condense">
-          Agora condensé
-        </label>
+      <li class="option">
+        Agora condensé
+        <div class="checkbox input">
+          <input type="checkbox" name="agora-condense" id="option-agora-condense">
+          <label for="option-agora-condense" class="toggle">
+            <span></span>
+          </label>
+        </div>    
       </li>    
-      <li>
-        <label>
-          <input type="checkbox" name="liste-article-condensee">
-          Liste des articles condensée
-        </label>
+    </ul>
+    <h1>Page d'accueil</h1>
+    <ul>
+      <li class="option">
+        Liste des articles condensée
+        <div class="checkbox input">
+          <input type="checkbox" name="liste-article-condensee" id="option-liste-article-condensee">
+          <label for="option-liste-article-condensee" class="toggle">
+            <span></span>
+          </label>
+        </div>    
       </li>   
-      <li>
-        <label>
-          <input type="checkbox" name="navigation-commentaires">
-          Navigation dans les nouveaux commentaires via les flèches          
-        </label>              
+    </ul>
+    <ul>
+      <h1>Fonctionnalités supplémentaires</h1>
+      <li class="option">
+        Navigation dans les nouveaux commentaires via les flèches          
+        <div class="checkbox input">
+          <input type="checkbox" name="navigation-commentaires" id="option-navigation-commentaires">
+          <label for="option-navigation-commentaires" class="toggle">
+            <span></span>
+          </label>
+        </div>                
       </li>     
     </ul>
     <hr>

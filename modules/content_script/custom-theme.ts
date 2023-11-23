@@ -1,3 +1,10 @@
+const menuTalk = () => {
+  const litsheart = document.getElementById('list-heart');
+  litsheart.classList.toggle("close-talk");
+  const talk = document.getElementById('talk');
+  talk.classList.toggle('close-heart-talk')
+}
+
 const body = document.querySelector('body');
 
 const setClass = (className: string, condition: boolean): void => {
@@ -61,6 +68,10 @@ const loadState = () => {
       setClass('agora-condense', settings.agoraCondense);
       setClass('liste-article-condensee', settings.listeArticleCondensee);
       commentairesState.enabled = settings.navigationCommentaires;
+
+      if (settings.agoraReplie) {
+        menuTalk();
+      }
     })
 };
 

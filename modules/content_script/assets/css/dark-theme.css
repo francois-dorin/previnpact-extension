@@ -254,3 +254,8 @@ body.dark-theme #brief-article .brief-article-content ul li a,
 body.dark-theme #brief-article .brief-article-content a   {
     color: var(--link-color);
 }
+
+body.dark-theme .focused-comment {
+    background-color: var(--header-background-color);
+}
+
