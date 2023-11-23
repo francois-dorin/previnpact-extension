@@ -1,6 +1,7 @@
 body {
     width: 250px;
     font-family: 'Arial';
+    color: #606368;
 }
 
 body > ul {
@@ -62,20 +63,16 @@ li.option {
     width: 34px;
     height: 14px;
     display: block;
-    background-color: #293237;
+    background-color: #bec1c6;
     border-radius: 8px;
 }
 
 .checkbox.input input:checked ~ .toggle:before {
-    background-color: #1cc38a
-}
-
-.checkbox.input input:checked ~ .toggle span {
-    background-color: #C8D7DC;    
+    background-color: #9ab9ef
 }
 
 .toggle span {
-    background: #293237;
+    background: #ffffff;
     position: absolute;
     top: 0;
     left: 0;
@@ -91,6 +88,6 @@ li.option {
 }
 
 .checkbox.input input:checked ~ .toggle span {
-    background-color: #C8D7DC;
+    background-color: #3674e0;
     transform: translate(20px);
 }
