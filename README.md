@@ -41,6 +41,13 @@ Vous pouvez installer les applications en passant par les stores :
 - Firefox : https://addons.mozilla.org/fr/firefox/addon/prev-inpact/ (j'ai publié volontairement aussi l'extension en mode expérimental, à défaut de ne pas pouvoir choisir de ne pas le publier sur le moteur de recherche)
 
 ## Manuellement 
+
+### Télécharger l'extension
+
+Si vous avez Git sur votre poste, utilisez l'option 1 "git clone" dans le répertoire de votre choix. A défaut, utilisez l'option 2 "Download Zip" pour récupérer le code.
+
+![image](/assets/screenshots/download.png)
+
 ### Sous Firefox
 Les informations sont disponibles ici : https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing
 
@@ -61,6 +68,6 @@ Rapidement :
 - ouvrir l'url "chrome://extensions"
 - activer le mode développeur
 - cliquer sur "Charger l'extension non empaquetée"
-- sélectionner le répertoire où se trouve l'extension
+- sélectionner le répertoire où se trouve l'extension (cf étape Télécharger l'extension)
 
 Et voilà !
