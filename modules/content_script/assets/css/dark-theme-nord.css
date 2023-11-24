@@ -1,0 +1,301 @@
+:root {
+    --primary-background-color: #2E3440;
+    --secondary-background-color: #3B4252;
+    --other-background-color: #434C5E;
+    --header-background-color: #2E3440;
+    --footer-background-color: #3B4252;
+    --dark-light-background-color: #2a3135;
+
+    --header-text-color: #E5E9F0;
+    --primary-text-color: #E5E9F0;
+    --secondary-text-color: #D8DEE9;
+
+    --light-background-color: #dae5e9;
+
+    --link-color: #D08770;
+    --link-color-hover: #BF616A;
+
+    --orange: #FF9A3D;
+
+    --section-color-social: #88C0D0;
+    --section-color-droit: #B48EAD;
+    --section-color-economie: #81A1C1;
+
+
+}
+body.dark-theme header {
+    background-color: var(--header-background-color);    
+    /* border-bottom: 0; */
+}
+
+body.dark-theme footer,
+body.dark-theme footer .main-footer {
+    background-color: var(--footer-background-color);    
+    /* border-bottom: 0; */
+}
+
+body.dark-theme div#talk {
+    background-color: var(--secondary-background-color);
+}
+
+body.dark-theme {
+    background: var(--primary-background-color);
+    color: var(--primary-text-color) !important;
+}
+
+body.dark-theme #connexion {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .list-heart-article > li .author p {
+    color: var(--secondary-text-color);
+}
+
+body.dark-theme .list-heart-article > li div h2 a {    
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .block-article h2 > a,
+body.dark-theme .block-article h2 > a:hover {
+    color: var(--primary-text-color);    
+}
+
+body.dark-theme .block-article h3,
+body.dark-theme .block-article p {
+    color: var(--secondary-text-color);    
+}
+
+body.dark-theme .contenu-continu,
+body.dark-theme .article-contenu,
+body.dark-theme #briefs .brief-article-info,
+body.dark-theme .comments-list > div {
+    background-color: var(--secondary-background-color);
+    padding: 15px;
+}
+
+body.dark-theme #list-continu .block-article .article-text-comment .time-post, #list-brief .block-brief .article-text-comment .time-post, .block-article .article-text-comment .time-post {
+    color: var(--secondary-text-color);
+}
+
+body.dark-theme #list-continu .block-article .article-text-comment > span:last-child span, #list-brief .block-brief .article-text-comment > span:last-child span, .block-article .article-text-comment > span:last-child span {
+    color: var(--secondary-text-color);
+}
+
+body.dark-theme .footer-moji-message {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .footer-title {
+    color: var(--header-text-color);
+}
+
+body.dark-theme .categories-button,
+body.dark-theme .button-footer {
+    background-color: var(--light-background-color) !important;
+}
+
+body.dark-theme .container-date-header p {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme #list-brief {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-text-color);
+}
+
+body.dark-theme #list-brief p {
+    color: var(--primary-text-color);
+}
+
+
+body.dark-theme select#brief {
+    background-color: var(--light-background-color);
+}
+
+body.dark-theme .list-heart-article > li > span {
+    color: var(--secondary-text-color);
+}
+
+body.dark-theme main#article-single main {
+    background-color: var(--dark-light-background-color);
+    padding: 15px;
+}
+
+
+body.dark-theme .block-brief,
+body.dark-theme .block-brief h2 a,
+body.dark-theme #moreInfo #list-brief a,
+body.dark-theme #moreInfo #list-continu a {
+    color: var(--primary-text-color);
+}
+
+
+body.dark-theme #other-article h2 {    
+    color: var(--primary-text-color);
+}
+
+body.dark-theme svg path{
+    fill: var(--primary-text-color) !important;
+}
+
+body.dark-theme #comment-header-title {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .comment-author-name {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .comment-content {
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .vertical-separator:not(.nothing-ever-to-hide) {
+    border-color: var(--secondary-background-color);
+    background-color: white;
+}
+
+body.dark-theme #article-single a {
+    color: var(--link-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body.dark-theme #article-single a:hover {
+    color: var(--link-color-hover);    
+}
+
+body.dark-theme #sommaire > div {   
+    background: none;   
+    color: var(--primary-text-color) !important;
+}
+
+body.dark-theme .title-sommaire-actif {
+    background-color: var(--other-background-color);
+    color: var(--primary-text-color);    
+}
+
+body.dark-theme #sommaire > div > div > h2,
+body.dark-theme #sommaire > div > div > h3,
+body.dark-theme #sommaire > div > div > h4,
+body.dark-theme #sommaire > div > div > h5,
+body.dark-theme #sommaire > div > div > h6 {
+    color: var(--primary-text-color);    
+}
+
+body.dark-theme .title-sommaire-actif h2,
+body.dark-theme .title-sommaire-actif h3,
+body.dark-theme .title-sommaire-actif h4,
+body.dark-theme .title-sommaire-actif h5,
+body.dark-theme .title-sommaire-actif h6 {
+    color: var(--primary-text-color) !important;    
+}
+
+body.dark-theme .thumbnail svg path:first-child{
+    fill: var(--orange) !important;
+}
+
+body.dark-theme .thumbnail svg path:last-child{
+    fill: white !important;
+}
+
+body.dark-theme #list-brief > div {
+    background-color: inherit;
+}
+
+body.dark-theme #background-article {
+    background-color: inherit;
+}
+
+body.dark-theme #background-article {
+    background-color: inherit;
+}
+
+body.dark-theme #moreInfo {
+    background-color: inherit;
+}
+
+body.dark-theme .quote-container {
+ background-color: var(--other-background-color);   
+ color: var(--primary-text-color);
+}
+
+body.dark-theme .quote-container .quote-commente,
+body.dark-theme .quote-container .reply-comment-content {
+ color: var(--primary-text-color);
+}
+
+body.dark-theme .comment-main .comment-info-pseudo .pseudo-comment {
+    color: inherit;
+}
+
+body.dark-theme #comment-editor-wrapper {
+    background-color: var(--secondary-background-color);
+}
+
+body.dark-theme textarea, 
+body.dark-theme input {
+    background-color: var(--other-background-color);
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .cancel-button {
+    background-color: var(--primary-background-color);
+}
+
+body.dark-theme .textera-open {
+    background-color: var(--other-background-color);
+    color: var(--primary-text-color);
+}
+
+body.dark-theme .single-comment.selected {
+    background-color: var(--header-background-color);
+}
+
+body.dark-theme #briefs .brief-article-title h1 > a,
+body.dark-theme #briefs .brief-article-info a {
+    color: inherit;
+}
+
+body.dark-theme #background-brief-article {
+    background: inherit;
+}
+
+body.dark-theme #brief-article .brief-article-content p, 
+body.dark-theme #brief-article .brief-article-content strong,
+body.dark-theme #brief-article .brief-article-content p em,
+
+body.dark-theme #brief-article .brief-article-content ul li {
+    color: inherit;
+}
+
+body.dark-theme #brief-article .brief-article-content ul li a,
+body.dark-theme #brief-article .brief-article-content a   {
+    color: var(--link-color);
+}
+
+body.dark-theme .focused-comment {
+    background-color: var(--header-background-color);
+}
+
+body.dark-theme .heart-talk > div > div p {
+    color: var(--header-text-color);
+}
+
+body.dark-theme .list-heart-article > li .article-text-comment > span:last-child span, .list-heart-article > li .article-text-comment > span:last-child span {
+    color: var(--header-text-color);
+}
+
+body.dark-theme header.social {
+    border-bottom: 3px solid var(--section-color-social);
+}
+
+body.dark-theme header.droit {
+    border-bottom: 3px solid var(--section-color-droit);
+}
+
+body.dark-theme header.economie {
+    border-bottom: 3px solid var(--section-color-economie);
+}
+
+
