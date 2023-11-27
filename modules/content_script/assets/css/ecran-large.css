@@ -37,6 +37,7 @@
     }
 
     body.ecran-large #list-brief.fixed-brief {
+        position: sticky;
         right: 25px !important;
     }
 
