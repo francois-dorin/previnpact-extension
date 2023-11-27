@@ -1,0 +1,253 @@
+@import '_partials/_variables.scss';
+
+.mobile-burger-container {
+    background: $white-biafine;
+    body.biafine-theme & {
+        background: $white-biafine;
+    }
+    
+    body.dracula-theme & {
+        background: $background-dracula;
+    }
+    
+    body.giganoir-theme & {
+        background: $background-bat;
+    } 
+}
+
+.mobile-burger-container-show {
+    background: $white-biafine;
+    body.biafine-theme & {
+        background: $white-biafine;
+    }
+    
+    body.dracula-theme & {
+        background: $background-dracula;
+    }
+    
+    body.giganoir-theme & {
+        background: $background-bat;
+    }
+}
+
+.mobile-burger-container-show .le-brief,
+.mobile-burger-container .le-brief {
+}
+
+.mobile-burger-container-show .le-brief svg,
+.mobile-burger-container .le-brief svg {
+}
+
+.mobile-burger-container-middle {
+}
+
+.mobile-burger-container-middle svg path {
+    stroke: $text-biafine;
+    body.biafine-theme & {
+        stroke: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        stroke: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        stroke: $text-bat;
+    }
+}
+
+.mobile-burger-category,
+.mobile-burger-follow-us,
+.mobile-burger-about-us {
+}
+
+.burger-category-title {
+}
+
+.burger-category-title>h2:first-child {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.burger-menu-categories {
+}
+
+.burger-menu-categories button:nth-child(-n+3) {
+}
+
+.burger-menu-categories .categories-button {
+}
+
+.burger-menu-social-network {
+}
+
+.burger-menu-contact-forum {
+}
+
+.burger-menu-moderation {
+}
+
+.burger-menu-moderation button {
+}
+
+.burger-menu-element-show {
+}
+
+.burger-menu-element-hide {
+}
+
+.burger-category-title div svg {
+}
+
+.burger-category-title-rotate div svg {
+}
+
+.mobile-burger-container-bottom {
+}
+
+#subscription-connexion {
+}
+
+#subscription-connexion a {
+
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#subscription-connexion .profil_contenaire {
+
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.mobile-burger-container #burger-connexion {
+}
+
+.mobile-burger-container #burger-connexion a {
+
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+/* search input */
+
+.inactiveMobile {
+    background: $category-tag-biafine;
+    body.biafine-theme & {
+        background: $category-tag-biafine;
+    }
+    
+    body.dracula-theme & {
+        background: $category-tag-dracula;
+    }
+    
+    body.giganoir-theme & {
+        background: $category-tag-bat;
+    }
+}
+
+.activeMobile {
+}
+
+#search-mobile {
+}
+
+#search-mobile svg path {
+    stroke: $bold-biafine;
+    body.biafine-theme & {
+        stroke: $bold-biafine;
+    }
+    
+    body.dracula-theme & {
+        stroke: $bold-dracula;
+    }
+    
+    body.giganoir-theme & {
+        stroke: $bold-bat;
+    }
+}
+
+#search-mobile .search-form {
+}
+
+.search-submit-mobile {
+}
+
+#input-mobile {
+}
+
+#input-mobile:focus {
+}
+
+#input-mobile::placeholder {
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#input-mobile.search-field {
+}
+
+#input-mobile:focus::placeholder {
+}
+
+#input-mobile::-webkit-search-results-button{
+}
+
+#input-mobile::-webkit-textfield-decoration-container {
+}
+
+#input-mobile::-webkit-search-cancel-button {
+}
+
+#input-mobile:-webkit-autofill:focus {
+}
+

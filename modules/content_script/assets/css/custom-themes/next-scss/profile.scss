@@ -1,0 +1,558 @@
+@import '_partials/_variables.scss';
+
+body.page-template-profile.biafine-theme {
+}
+
+body.page-template-profile.dracula-theme {
+    background: $background-dracula;
+}
+
+body.page-template-profile.giganoir-theme {
+    background: $background-bat;
+}
+
+#profile {
+
+    body.biafine-theme & {
+    }
+
+    body.dracula-theme & {
+        background: $background-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $background-bat;
+    }
+}
+
+#profile > div:first-child {
+    background: $white-biafine;
+
+    body.biafine-theme & {
+        background: $white-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $white-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $white-bat;
+    }
+}
+
+#profile > div:first-child > div {
+}
+
+#profile > div:first-child > div:first-child > h1 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        background: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $text-bat;
+    }
+}
+
+#profile > div:first-child > div:first-child > ul {
+}
+
+#profile > div:first-child > div:first-child > ul > li {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#profile > div:first-child > div:first-child > ul > li:last-child {
+}
+
+#profile > div:first-child > div:first-child > ul > li div {
+}
+
+#profile > div:first-child > div:first-child > ul > li p {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#profile > div:first-child > div:first-child > ul > li svg {
+}
+
+#profile > div:first-child > div:first-child > ul > li svg path {
+    stroke: $text-biafine;
+
+    body.biafine-theme & {
+        stroke: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        stroke: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        stroke: $text-bat;
+    }
+}
+
+#profile > div:last-child {
+}
+
+#profile > div:last-child > div {
+}
+
+.nav-profile-list > li > span {
+}
+
+.nav-profile-list > li:first-child.not-actif-profile > span {
+    // transition-duration: 0.5s;
+    // transition-property: transform;
+}
+
+.nav-profile-list > li:first-child.actif-profile > span {
+    // transition-duration: 0.5s;
+    // transition-property: transform;
+}
+
+.nav-profile-list > li:nth-child(2).not-actif-profile > span {
+    // transition-duration: 0.5s;
+    // transition-property: transform;
+}
+
+.nav-profile-list > li:nth-child(2).actif-profile > span {
+    // transition-duration: 0.5s;
+    // transition-property: transform;
+}
+
+.nav-profile-list > li:last-child.not-actif-profile > span {
+    // transition-duration: 0.5s;
+    // transition-property: transform;
+}
+
+.nav-profile-list > li:last-child.actif-profile > span {
+    // transition-duration: 0.5s;
+    // transition-property: transform;
+}
+
+#profile #is_not_abo {
+}
+
+#profile #is_not_abo > div:first-child {
+}
+
+#profile #is_not_abo > div:first-child > div,
+#profile #is_not_abo > div:first-child > form {
+}
+
+#profile #is_not_abo > div:first-child > div:first-child {
+}
+
+#profile #is_not_abo > div:first-child > div {
+}
+
+#profile #is_not_abo > div:first-child > form > div:last-child {
+}
+
+#profile #is_not_abo > div:first-child > form > div > div {
+}
+
+
+#profile #is_not_abo > div:first-child > div:last-child {
+}
+
+#profile #is_not_abo svg {
+}
+
+#profile #is_not_abo h2,
+#profile #is_not_abo h3 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#profile #is_not_abo p {
+}
+
+#profile #is_not_abo > div:first-child > div:first-child p {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#profile #is_not_abo > div:first-child > div > div {
+}
+
+#profile #is_not_abo .select-price {
+    color: $text-biafine;
+    background: $category-tag-biafine;
+    body.biafine-theme & {
+        background: $category-tag-biafine;
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $category-tag-dracula;
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $category-tag-bat;
+        color: $text-dracula;
+    }
+}
+
+#profile #is_not_abo .select-price > input {
+}
+
+#profile #is_not_abo .actif-select-price {
+}
+
+#profile #is_not_abo .select-price > label {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-dracula;
+    }
+}
+
+#profile #is_not_abo > div:first-child > div > div:last-child {
+}
+
+#profile #is_not_abo > div:first-child > div > div button {
+}
+
+#profile #is_not_abo > div:first-child > form button {
+}
+
+#profile #is_not_abo > div:last-child {
+}
+
+#profile #is_not_abo > div:last-child > div {
+}
+
+#profile #is_not_abo > div:last-child > div h3 {
+}
+
+/* aaaaabbbbooooooo */
+
+#profile #is_abo {
+}
+
+#profile #is_abo {
+}
+
+#profile #is_abo > div > div {
+}
+
+#profile #is_abo > div {
+    /* border-right: 0.5px solid #B0B0B0; */
+}
+
+#profile #is_abo > div > div > div {
+}
+
+#profile #is_abo > div > div > div:first-child {
+}
+
+#profile #is_abo > div > div > div:first-child svg {
+}
+
+#profile #is_abo > div > div > div p {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#profile #is_abo > div > div > div:not(:first-child) p:last-child {
+}
+
+#profile #is_abo .text-cgu {
+}
+
+#profile #is_abo > div > div > div h3 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#profile #is_abo .stop-abo-button {
+}
+
+#profile #is_abo .stop-abo-button:hover {
+}
+
+#profile #is_abo > div #pop-up-abo {
+}
+
+#profile #is_abo > div #pop-up-abo h3 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#profile #is_abo > div #pop-up-abo p {
+
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#profile #is_abo > div #pop-up-abo div > div {
+}
+
+#profile #is_abo > div #pop-up-abo div .cancel-stop-abo {
+
+    body.biafine-theme & {
+        background: $category-tag-biafine;
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $category-tag-dracula;
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $category-tag-bat;
+        color: $text-dracula;
+    }
+}
+
+#profile #is_abo > div #pop-up-abo div .cancel-confirm-abo {
+
+    body.biafine-theme & {
+        background: $category-tag-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $category-tag-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $category-tag-bat;
+    }
+}
+
+#profile #is_abo > div #pop-up-abo > div {
+
+    background: $white-biafine;
+    body.biafine-theme & {
+        background: $white-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $white-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $white-bat;
+    }
+}
+
+#profile #is_abo > div .pop-up-abo-close {
+}
+
+#profile .info-profile-actif {
+}
+
+#profile .info-abo-actif {
+}
+
+#profile .info-profile-not-actif,
+#profile .info-abo-not-actif,
+#profile .info-parameter-not-actif {
+}
+
+@media(max-width: 1200px) {
+
+    #profile {
+    }
+
+    #profile > div:first-child {
+    }
+
+    #profile > div:last-child {
+    }
+
+    #profile #is_not_abo {
+    }
+
+    #profile #is_not_abo > div:first-child {
+    }
+
+    #profile #is_not_abo > div:last-child {
+    }
+
+    #profile #is_abo > div {
+        /* border-right: 0.5px solid #B0B0B0; */
+    }
+
+}
+
+@media(max-width: 900px) {
+
+    #profile {
+    }
+
+    #profile #is_abo > div #pop-up-abo > div {
+    }
+
+}
+
+.profile_info_container {
+}
+
+.button_container {
+}
+
+.profile_input {
+}
+
+.profile_button {
+
+    color: $text-biafine;
+    background: $category-tag-biafine;
+    body.biafine-theme & {
+        background: $category-tag-biafine;
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $category-tag-dracula;
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $category-tag-bat;
+        color: $text-dracula;
+    }
+}
+
+.profile_update_button:hover {
+}
+
+.profile_update_button {
+}
+
+.profile_save_button {
+}
+
+@keyframes slideLeft {
+    0% {
+    }
+    100% {
+    }
+}
+
+.update_button {
+}
+
+.update_button_success {
+}
+
+.update_button_fail {
+}
+
+.update_button_animate {
+}
+
+.update_text {
+}
+
+.rss_container {
+}
+
+.regenerate_button {
+}

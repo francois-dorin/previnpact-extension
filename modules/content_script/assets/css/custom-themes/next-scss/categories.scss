@@ -1,0 +1,218 @@
+@import '_partials/_variables.scss';
+
+.categories-button {
+    background-color: $category-tag-biafine;
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        background-color: $category-tag-biafine;
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        background-color: $category-tag-dracula;
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        background-color: $category-tag-bat;
+        color: $bold-bat;
+    }
+}
+
+.category-page-title>.categories-button {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#footer-categories .categories-button {
+    background-color: $category-tag-biafine;
+
+    body.biafine-theme & {
+        background-color: $category-tag-biafine;
+    }
+
+    body.dracula-theme & {
+        background-color: $category-tag-dracula;
+    }
+
+    body.giganoir-theme & {
+        background-color: $category-tag-bat;
+    }
+}
+
+span.categories-button {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.article-text-comment>span.categories-button {
+}
+
+#other-article .article-text-comment.short-button>span.categories-button {
+}
+
+.public_categories>span.categories-button,
+.article-text-comment>span.categories-button,
+.category-page-title>span.categories-button {
+    background-color: $category-tag-biafine;
+
+    body.biafine-theme & {
+        background-color: $category-tag-biafine;
+    }
+
+    body.dracula-theme & {
+        background-color: $category-tag-dracula;
+    }
+
+    body.giganoir-theme & {
+        background-color: $category-tag-bat;
+    }
+}
+
+.categories-button span:last-child {
+
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.categories-puce {
+}
+
+.categories-puce-droit {
+}
+
+.categories-puce-logical {
+}
+
+.categories-puce-security {
+}
+
+.categories-puce-social {
+}
+
+.categories-puce-numerique {
+}
+
+.categories-puce-economie {
+}
+
+.categories-puce-hardware {
+}
+
+.categories-puce-ia {
+}
+
+.categories-puce-web {
+}
+
+.categories-puce-space {
+}
+
+.categories-puce-flock {
+}
+
+.categories-puce-next {
+}
+
+#droit:hover,
+#category-filter #droit.active-filter {
+}
+
+#logical:hover,
+#category-filter #logical.active-filter {
+}
+
+#security:hover,
+#category-filter #security.active-filter {
+}
+
+#social:hover,
+#category-filter #social.active-filter {
+}
+
+#numerique:hover,
+#category-filter #numerique.active-filter {
+}
+
+#economie:hover,
+#category-filter #economie.active-filter {
+}
+
+#hardware:hover,
+#category-filter #hardware.active-filter {
+}
+
+#ia:hover,
+#category-filter #ia.active-filter {
+}
+
+#web:hover,
+#category-filter #web.active-filter {
+}
+
+#space:hover,
+#category-filter #space.active-filter {
+}
+
+#flock:hover,
+#category-filter #flock.active-filter {
+}
+
+#next:hover,
+#category-filter #next.active-filter {
+}
+
+/* activate button */
+
+#category-filter #droit.active-filter,
+#category-filter #logical.active-filter,
+#category-filter #security.active-filter,
+#category-filter #social.active-filter,
+#category-filter #numerique.active-filter,
+#category-filter #economie.active-filter,
+#category-filter #hardware.active-filter,
+#category-filter #ia.active-filter,
+#category-filter #web.active-filter,
+#category-filter #space.active-filter,
+#category-filter #flock.active-filter,
+#category-filter #next.active-filter {
+}
+
+@media (max-width: 400px) {
+    .block-article>div .categories-button {
+    }
+}

@@ -1,0 +1,31 @@
+#talk {
+    &.heart-talk {
+        background: 10% no-repeat url("https://next.ink/wp-content/themes/wordpress-theme/asset/media/svg/next-background-debat.svg"), var(--agora-background-color) !important;
+    }
+
+    .list-heart-article > li .article-text-comment > span:last-child svg path {
+        fill: transparent;
+    }
+    
+    .list-heart-article > li > div:first-child > span {
+        color: var(--agora-highlight-color);
+    }
+
+    & > span > svg > circle,
+    #list-heart > li > div:first-child > span > svg > path {
+        fill: var(--agora-highlight-color) !important;
+    }
+
+    & svg > path[fill="black"] {
+        fill: var(--agora-highlight-color) !important;
+    }
+
+    & svg > path[stroke="black"] {
+        stroke: var(--agora-highlight-color) !important;
+    }
+
+    .list-heart-article > li > div:first-child > span svg path {
+        stroke: var(--agora-background-color) !important;
+    }
+
+}

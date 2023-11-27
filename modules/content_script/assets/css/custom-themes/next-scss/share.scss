@@ -1,0 +1,235 @@
+@import '_partials/_variables.scss';
+
+.dropdown-button {
+}
+
+.dropdown-button {
+}
+
+.top-share, .share-bottom {
+}
+
+.top-share .share-button,
+.share-bottom .share-button {
+}
+
+.share-button {
+}
+
+.top-share span:last-child,
+.top-share span:last-child,
+.author-partage div:last-child {
+}
+
+.top-share svg path,
+#share-bottom svg path {
+    stroke: $bold-biafine;
+    body.biafine-theme & {
+        stroke: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        stroke: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        stroke: $bold-bat;
+    }
+}
+
+#share-bottom .share-bottom span:nth-child(2) > svg path,
+#share-bottom .share-bottom span:nth-child(4) > svg path,
+#share-bottom .share-bottom span:nth-child(5) > svg path {
+    fill: $bold-biafine;
+    body.biafine-theme & {
+        fill: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        fill: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        fill: $bold-bat;
+    }
+}
+
+#share-bottom .share-bottom span.twitter > svg path {
+    fill: $bold-biafine;
+    body.biafine-theme & {
+        fill: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        fill: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        fill: $bold-bat;
+    }
+}
+
+
+.top-share svg circle,
+.share-bottom svg circle {
+    fill: $bold-biafine;
+    body.biafine-theme & {
+        fill: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        fill: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        fill: $bold-bat;
+    }
+}
+
+
+.top-share span:last-child span,
+.top-share span:last-child span,
+.author-partage div:last-child span {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.dropdown-content {
+    background: $citation-biafine;
+
+    body.biafine-theme & {
+        background: $citation-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $citation-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $citation-bat;
+    }
+}
+
+#dropdown-content {
+    background: $citation-biafine;
+
+    body.biafine-theme & {
+        background: $citation-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $citation-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $citation-bat;
+    }
+}
+
+.dropdown-content > a > svg path {
+    stroke: $bold-biafine;
+    body.biafine-theme & {
+        stroke: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        stroke: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        stroke: $bold-bat;
+    }
+}
+
+.dropdown-content a {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.dropdown-content > a > svg {
+}
+
+.dropdown-content>a:first-child {
+}
+
+.share-mobile {
+}
+
+#copie-message {
+
+    background: $citation-biafine;
+    color: $text-biafine;
+    body.biafine-theme & {
+        background: $citation-biafine;
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $citation-dracula;
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $citation-bat;
+        color: $text-dracula;
+    }
+}
+
+.dropdown-content-show {
+}
+
+@media (max-width: 900px) {
+
+    .share-mobile {
+        background: $citation-biafine;
+
+        body.biafine-theme & {
+            background: $citation-biafine;
+        }
+    
+        body.dracula-theme & {
+            background: $citation-dracula;
+        }
+    
+        body.giganoir-theme & {
+            background: $citation-bat;
+        }
+    }
+
+    #copie-message {
+    }
+
+    .share-mobile-hidden {
+    }
+
+    .share-mobile > div {
+    }
+
+    .share-mobile > div .dropdown-content {
+    }
+
+    .top-share .share-button, .top-share .tick, .top-share .dropdown-button, .top-share span:last-child {
+    }
+}

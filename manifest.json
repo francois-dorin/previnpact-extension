@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Prev INpact",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "Next INpact Dark mode pour la beta",
     "icons": {
         "16": "assets/icons/nextinpact-16x16.png",
@@ -12,7 +12,7 @@
     "content_scripts": [{
       "js": ["dist/scripts/content_script.js"],
       "css": [
-        "modules/content_script/assets/css/dark-theme.css",
+        "modules/content_script/assets/css/extra-themes.css",
         "modules/content_script/assets/css/font-sans-serif.css",
         "modules/content_script/assets/css/texte-justifie.css",
         "modules/content_script/assets/css/ecran-large.css",

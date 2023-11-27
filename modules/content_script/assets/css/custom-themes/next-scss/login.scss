@@ -1,0 +1,179 @@
+@import '_partials/_variables.scss';
+
+.page-template-react footer,
+.page-template-react header {
+}
+.page-template-react {
+}
+
+body.page-template-react.biafine-theme {
+    background: $background-biafine;
+}
+
+body.page-template-react.dracula-theme {
+    background: $background-dracula;
+}
+
+body.page-template-react.giganoir-theme {
+    background: $background-bat;
+}
+
+body.page-template-react div svg path {
+    fill: $text-biafine;
+}
+
+body.page-template-react.biafine-theme div svg path {
+    fill: $text-biafine;
+}
+
+body.page-template-react.dracula-theme div svg path {
+    fill: $text-dracula;
+}
+
+body.page-template-react.giganoir-theme div svg path {
+    fill: $text-bat;
+}
+
+body.page-template-react div div input {
+    color: $bold-biafine;
+    background: $category-tag-biafine;
+}
+
+body.page-template-react.biafine-theme div div input {
+    color: $bold-biafine;
+    background: $category-tag-biafine;
+}
+
+body.page-template-react.dracula-theme div div input {
+    color: $bold-dracula;
+    background: $category-tag-dracula;
+}
+
+body.page-template-react.giganoir-theme div div input {
+    color: $bold-bat;
+    background: $category-tag-bat;
+}
+
+body.page-template-react div > form > div:first-child span:first-child {
+    background-color: $category-tag-biafine;
+}
+
+body.page-template-react.biafine-theme div > form > div:first-child span:first-child {
+    background-color: $category-tag-biafine;
+}
+
+body.page-template-react.dracula-theme div > form > div:first-child span:first-child {
+    background-color: $category-tag-dracula;
+}
+
+body.page-template-react.giganoir-theme div > form > div:first-child span:first-child {
+    background-color: $category-tag-bat;
+}
+
+body.page-template-react div > form > div:first-child span:last-child {
+    background-color: $category-tag-biafine;
+}
+
+body.page-template-react.biafine-theme div > form > div:first-child span:last-child {
+    background-color: $category-tag-biafine;
+}
+
+body.page-template-react.dracula-theme div > form > div:first-child span:last-child {
+    background-color: $category-tag-dracula;
+}
+
+body.page-template-react.giganoir-theme div > form > div:first-child span:last-child {
+    background-color: $category-tag-bat;
+}
+
+body.page-template-react div div input {
+    color: $bold-biafine;
+    background: $category-tag-biafine;
+}
+
+body.page-template-react.biafine-theme div div input {
+    color: $bold-biafine;
+    background: $category-tag-biafine;
+}
+
+body.page-template-react.dracula-theme div div input {
+    color: $bold-dracula;
+    background: $category-tag-dracula;
+}
+
+body.page-template-react.giganoir-theme div div input {
+    color: $bold-bat;
+    background: $category-tag-bat;
+}
+
+body.page-template-react .login-bottom .resetPassword {
+    color: $text-biafine;
+}
+
+body.page-template-react.biafine-theme .login-bottom .resetPassword {
+    color: $text-biafine;
+}
+
+body.page-template-react.dracula-theme .login-bottom .resetPassword {
+    color: $text-dracula;
+}
+
+body.page-template-react.giganoir-theme .login-bottom .resetPassword {
+    color: $text-bat;
+}
+
+body.page-template-react .back-home {
+    color: $text-biafine;
+    border: 0.5px solid $text-biafine;
+}
+
+body.page-template-react.biafine-theme .back-home {
+    color: $text-biafine;
+    border: 0.5px solid $text-biafine;
+}
+
+body.page-template-react.dracula-theme .back-home {
+    color: $text-dracula;
+    border: 0.5px solid $text-dracula;
+}
+
+body.page-template-react.giganoir-theme .back-home {
+    color: $text-bat;
+    border: 0.5px solid $text-bat;
+}
+
+body.page-template-react .login-bottom p {
+    color: $text-biafine;
+}
+
+body.page-template-react.biafine-theme .login-bottom p {
+    color: $text-biafine;
+}
+
+body.page-template-react.dracula-theme .login-bottom p {
+    color: $text-dracula;
+}
+
+body.page-template-react.giganoir-theme .login-bottom p {
+    color: $text-bat;
+}
+
+body.page-template-react .login-bottom .signUp {
+    color: $text-biafine;
+    background: $category-tag-biafine;
+}
+
+body.page-template-react.biafine-theme .login-bottom .signUp {
+    color: $text-biafine;
+    background: $category-tag-biafine;
+}
+
+body.page-template-react.dracula-theme .login-bottom .signUp {
+    color: $text-dracula;
+    background: $category-tag-dracula;
+}
+
+body.page-template-react.giganoir-theme .login-bottom .signUp {
+    color: $text-bat;
+    background: $category-tag-bat;
+}

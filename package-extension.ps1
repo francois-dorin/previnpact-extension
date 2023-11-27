@@ -13,6 +13,7 @@ Remove-Item $outputDirectory/package-lock.json;
 Get-ChildItem $outputDirectory -Include "*.ts" -Recurse | Remove-Item;
 Get-ChildItem $outputDirectory -Include "*.ps1" -Recurse | Remove-Item;
 Get-ChildItem $outputDirectory -Include "*.md" -Recurse | Remove-Item;
+Get-ChildItem $outputDirectory -Include "*.scss" -Recurse | Remove-Item;
 Get-ChildItem $outputDirectory -Include "*.spec.data" -Recurse | Remove-Item;
 Get-ChildItem $outputDirectory -Include "tsconfig.json" -Recurse | Remove-Item;
 

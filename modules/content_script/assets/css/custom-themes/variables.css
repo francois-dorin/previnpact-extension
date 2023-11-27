@@ -1,0 +1,19 @@
+:root body#previnpact-extension.previnpact-theme {
+    --white-color: #FFFFFF;                /* white-biafine */
+    --black-color: #242424;                /* black-biafine */
+    --primary-background-color: #FBFCFF;                /* background-biafine */
+    --secondary-background-color: #EAECFF;                /* background-biafine */
+    --bold-color: #6B6B6B;                 /* bold-biafine */
+
+    --header-background-color: var(--white-color);         /* header-biafine */
+    --sommaire-background-color: var(--white-color);       /* background-sommaire-biafine */
+    --article-home-background-color: var(--primary-background-color);   /* background-article-home-biafine */
+    --sommaire-highlight-color: #4F62FF26;      /* sommairehighlight-biafine */
+    --text-color: var(--black-color);                      /* text-biafine */
+    --category-tag-color: #F2F2F2;              /* category-tag-biafine */
+    --article-info-color: var(--bold-color);              /* info-article-biafine */
+    --citation-color: var(--white-color);                  /* citation-biafine */
+    
+    --agora-background-color: var(--secondary-background-color);          /* background-agora-biafine */
+    --agora-highlight-color: #4F62FF26;        /* AJOUT */
+}

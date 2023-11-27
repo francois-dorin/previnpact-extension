@@ -1,0 +1,48 @@
+@import '_partials/_variables.scss';
+
+.banner-container{
+    /* height: 100%;
+    height: 400px; */
+}
+
+#not-found-page h1 {
+    /* margin: 20px; */
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+
+    /* width: 100%; */
+}
+
+#not-found-page p {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+
+}
+
+.img-404 {
+    /* 
+    height: 100%;
+    background-color: #FDF9E6; */
+}

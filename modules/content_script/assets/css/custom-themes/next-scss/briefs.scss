@@ -1,0 +1,631 @@
+@import '_partials/_variables.scss';
+
+.briefs-template-default  {
+}
+
+body.briefs-template-default.biafine-theme{
+}
+
+body.briefs-template-default.dracula-theme {
+    background: $background-dracula;
+}
+
+body.briefs-template-default.giganoir-theme {
+    background: $background-bat;
+}
+
+.main_briefs {
+}
+
+#briefs {
+}
+
+#briefs > div:first-child {
+}
+
+#briefs .briefs-date {
+}
+
+#briefs .briefs-date > p {
+}
+
+#briefs .briefs-date svg {
+}
+
+#briefs .briefs-date svg path {
+    fill: $text-biafine;
+
+    body.biafine-theme & {
+        fill: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        fill: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        fill: $text-bat;
+    }
+}
+
+#briefs .briefs-article {
+}
+
+#briefs .brief-article-info {
+
+    background: $white-biafine;
+    body.biafine-theme & {
+        background: $white-biafine;
+    }
+    
+    body.dracula-theme & {
+        background: $white-dracula;
+    }
+    
+    body.giganoir-theme & {
+        background: $white-bat;
+    }
+}
+
+#briefs .brief-article-info.droit  {
+}
+
+#briefs .brief-article-info.logical  {
+}
+
+#briefs .brief-article-info.security  {
+}
+
+#briefs .brief-article-info.social  {
+}
+
+#briefs .brief-article-info.web  {
+}
+
+#briefs .brief-article-info.numerique  {
+}
+
+#briefs .brief-article-info.economie  {
+}
+
+#briefs .brief-article-info.hardware  {
+}
+
+#briefs .brief-article-info.ia  {
+}
+
+#briefs .brief-article-info.web  {
+}
+
+#briefs .brief-article-info.space  {
+}
+
+#briefs .brief-article-info.flock  {
+}
+
+#briefs .brief-article-info.next  {
+}
+
+#briefs .briefs-article .brief-article-info:last-child {
+}
+
+#briefs .brief-article-partage > div:first-child {
+}
+
+#briefs .brief-article-partage > div:first-child .categories-button {
+}
+
+#briefs .brief-article-partage > div p:first-child {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#briefs .brief-article-partage,
+#briefs .brief-article-partage-bottom {
+}
+
+#briefs .brief-article-partage svg,
+#briefs .brief-article-partage-bottom svg {
+}
+
+#briefs .brief-article-partage {
+}
+
+#briefs .brief-article-partage-bottom {
+}
+
+#briefs .brief-article-partage > div .tick,
+#briefs .brief-article-partage-bottom > div .tick {
+    background: $text-biafine;
+    body.biafine-theme & {
+        background: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        background: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        background: $text-bat;
+    }
+
+}
+
+#briefs .brief-article-info a {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+
+/* #briefs .brief-article-info .droit a {
+    color: #595151;
+}
+
+#briefs .brief-article-info .logical a {
+    color: #11BFAA;
+}
+
+#briefs .brief-article-info .security a {
+    color: #FBBA00;
+}
+
+#briefs .brief-article-info .social a {
+    color: #0075FF;
+}
+
+#briefs .brief-article-info .web a {
+    color: #50C5EA;
+}
+
+#briefs .brief-article-info .numerique a {
+    color: #74D676;
+}
+
+#briefs .brief-article-info .economie a {
+    color: #C7B7A8;
+}
+
+#briefs .brief-article-info .hardware a {
+    color: #FF4569;
+}
+
+#briefs .brief-article-info .ia a {
+    color: #BE6AFF;
+}
+
+#briefs .brief-article-info .web a {
+    color: #50C5EA;
+}
+
+#briefs .brief-article-info .space a {
+    color: #7000FF;
+}
+
+#briefs .brief-article-info .flock a {
+    color: #FF5ABD;
+}
+
+#briefs .brief-article-info .next a {
+    color: #4F62FF;
+} */
+
+#briefs .brief-article-info .droit h2:before,
+#briefs .brief-article-info .droit h3:before,
+#briefs .brief-article-info .droit h4:before,
+#briefs .brief-article-info .droit h5:before,
+#briefs .brief-article-info .droit h6:before {
+}
+
+#briefs .brief-article-info .logical h2:before,
+#briefs .brief-article-info .logical h3:before,
+#briefs .brief-article-info .logical h4:before,
+#briefs .brief-article-info .logical h5:before,
+#briefs .brief-article-info .logical h6:before {
+}
+
+#briefs .brief-article-info .security h2:before,
+#briefs .brief-article-info .security h3:before,
+#briefs .brief-article-info .security h4:before,
+#briefs .brief-article-info .security h5:before,
+#briefs .brief-article-info .security h6:before {
+}
+
+#briefs .brief-article-info .social h2:before,
+#briefs .brief-article-info .social h3:before,
+#briefs .brief-article-info .social h4:before,
+#briefs .brief-article-info .social h5:before,
+#briefs .brief-article-info .social h6:before {
+}
+
+#briefs .brief-article-info .web h2:before,
+#briefs .brief-article-info .web h3:before,
+#briefs .brief-article-info .web h4:before,
+#briefs .brief-article-info .web h5:before,
+#briefs .brief-article-info .web h6:before {
+}
+
+#briefs .brief-article-info .numerique h2:before,
+#briefs .brief-article-info .numerique h3:before,
+#briefs .brief-article-info .numerique h4:before,
+#briefs .brief-article-info .numerique h5:before,
+#briefs .brief-article-info .numerique h6:before {
+}
+
+#briefs .brief-article-info .economie h2:before,
+#briefs .brief-article-info .economie h3:before,
+#briefs .brief-article-info .economie h4:before,
+#briefs .brief-article-info .economie h5:before,
+#briefs .brief-article-info .economie h6:before {
+}
+
+#briefs .brief-article-info .hardware h2:before,
+#briefs .brief-article-info .hardware h3:before,
+#briefs .brief-article-info .hardware h4:before,
+#briefs .brief-article-info .hardware h5:before,
+#briefs .brief-article-info .hardware h6:before {
+}
+
+#briefs .brief-article-info .ia h2:before,
+#briefs .brief-article-info .ia h3:before,
+#briefs .brief-article-info .ia h4:before,
+#briefs .brief-article-info .ia h5:before,
+#briefs .brief-article-info .ia h6:before {
+}
+
+#briefs .brief-article-info .web h2:before,
+#briefs .brief-article-info .web h3:before,
+#briefs .brief-article-info .web h4:before,
+#briefs .brief-article-info .web h5:before,
+#briefs .brief-article-info .web h6:before {
+}
+
+#briefs .brief-article-info .space h2:before,
+#briefs .brief-article-info .space h3:before,
+#briefs .brief-article-info .space h4:before,
+#briefs .brief-article-info .space h5:before,
+#briefs .brief-article-info .space h6:before {
+}
+
+#briefs .brief-article-info .flock h2:before,
+#briefs .brief-article-info .flock h3:before,
+#briefs .brief-article-info .flock h4:before,
+#briefs .brief-article-info .flock h5:before,
+#briefs .brief-article-info .flock h6:before {
+}
+
+#briefs .brief-article-info .next h2:before,
+#briefs .brief-article-info .next h3:before,
+#briefs .brief-article-info .next h4:before,
+#briefs .brief-article-info .next h5:before,
+#briefs .brief-article-info .next h6:before {
+}
+
+#briefs .brief-article-info .droit h2,
+#briefs .brief-article-info .droit h3,
+#briefs .brief-article-info .droit h4,
+#briefs .brief-article-info .droit h5,
+#briefs .brief-article-info .droit h6,
+#briefs .brief-article-info .logical h2,
+#briefs .brief-article-info .logical h3,
+#briefs .brief-article-info .logical h4,
+#briefs .brief-article-info .logical h5,
+#briefs .brief-article-info .logical h6,
+#briefs .brief-article-info .security h1,
+#briefs .brief-article-info .security h2,
+#briefs .brief-article-info .security h3,
+#briefs .brief-article-info .security h4,
+#briefs .brief-article-info .security h5,
+#briefs .brief-article-info .security h6,
+#briefs .brief-article-info .social h1,
+#briefs .brief-article-info .social h2,
+#briefs .brief-article-info .social h3,
+#briefs .brief-article-info .social h4,
+#briefs .brief-article-info .social h5,
+#briefs .brief-article-info .social h6,
+#briefs .brief-article-info .web h1,
+#briefs .brief-article-info .web h2,
+#briefs .brief-article-info .web h3,
+#briefs .brief-article-info .web h4,
+#briefs .brief-article-info .web h5,
+#briefs .brief-article-info .web h6,
+#briefs .brief-article-info .web h1,
+#briefs .brief-article-info .numerique h2,
+#briefs .brief-article-info .numerique h3,
+#briefs .brief-article-info .numerique h4,
+#briefs .brief-article-info .numerique h5,
+#briefs .brief-article-info .numerique h6,
+#briefs .brief-article-info .economie h2,
+#briefs .brief-article-info .economie h3,
+#briefs .brief-article-info .economie h4,
+#briefs .brief-article-info .economie h5,
+#briefs .brief-article-info .economie h6,
+#briefs .brief-article-info .hardware h2,
+#briefs .brief-article-info .hardware h3,
+#briefs .brief-article-info .hardware h4,
+#briefs .brief-article-info .hardware h5,
+#briefs .brief-article-info .hardware h6,
+#briefs .brief-article-info .ia h2,
+#briefs .brief-article-info .ia h3,
+#briefs .brief-article-info .ia h4,
+#briefs .brief-article-info .ia h5,
+#briefs .brief-article-info .ia h6,
+#briefs .brief-article-info .web h2,
+#briefs .brief-article-info .web h3,
+#briefs .brief-article-info .web h4,
+#briefs .brief-article-info .web h5,
+#briefs .brief-article-info .web h6, 
+#briefs .brief-article-info .space h2,
+#briefs .brief-article-info .space h3,
+#briefs .brief-article-info .space h4,
+#briefs .brief-article-info .space h5,
+#briefs .brief-article-info .space h6,
+#briefs .brief-article-info .flock h2,
+#briefs .brief-article-info .flock h3,
+#briefs .brief-article-info .flock h4,
+#briefs .brief-article-info .flock h5,
+#briefs .brief-article-info .flock h6,
+#briefs .brief-article-info .next h2,
+#briefs .brief-article-info .next h3,
+#briefs .brief-article-info .next h4,
+#briefs .brief-article-info .next h5,
+#briefs .brief-article-info .next h6 {
+
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#briefs .brief-article-partage svg,
+#briefs .brief-article-partage-bottom div:first-child svg,
+#briefs .brief-article-partage-bottom div:first-child svg:last-child {
+}
+
+#briefs .brief-article-partage svg:last-child {
+}
+
+#briefs .brief-article-title {
+}
+
+#briefs .brief-article-title h1 {
+
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#briefs .brief-article-title h1 > a {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#briefs .brief-article-title .thumbnail {
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#briefs .brief-article-title .thumbnail img {
+}
+
+#briefs .brief-article-content p {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#briefs .brief-article-content p strong {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#briefs .brief-article-content p em {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#briefs .brief-article-content p em > strong,
+#briefs .brief-article-content p strong > em {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#briefs .brief-article-content ul li,
+#briefs .brief-article-content ol li {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+
+#briefs .brief-article-content ul {
+}
+
+#briefs .brief-article-content ol {
+}
+
+#briefs .brief-article-tags {
+}
+
+#briefs .brief-article-tags li {
+}
+
+#briefs #aside {
+}
+
+#briefs #aside.fixed-aside {
+}
+
+#briefs #moreInfo {
+}
+
+#briefs #moreInfo #continu {
+}
+
+#briefs #moreInfo #continu span {
+}
+
+#briefs #moreInfo #brief {
+}
+
+@media (max-width: 1200px) {
+    #briefs {
+    }
+
+    #briefs > div:first-child {
+    }
+}
+
+@media (max-width: 1000px) {
+    #briefs {
+    }
+
+    #briefs .briefs-article {
+    }
+
+    #briefs > div:first-child {
+    }
+}
+
+@media (max-width: 900px) {
+    #briefs {
+    }
+
+    #briefs > div:first-child {
+    }
+
+    #briefs .brief-article-title .thumbnail {
+    }
+
+    #briefs .brief-article-title h1 {
+    }
+    
+    #briefs .brief-article-title > h2 {
+    }
+
+    /* #briefs .brief-article-content p {
+        font: normal normal normal 17px/25px SourceSerifProRegular;
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+    
+    #briefs .brief-article-content p strong {
+        font: normal normal normal 17px/25px SourceSerifProSemiBold;
+        text-align: justify;
+    }
+    
+    #briefs .brief-article-content p em {
+        font: normal normal normal 17px/25px SourceSerifProIt;
+        text-align: justify;
+    }
+    
+    #briefs .brief-article-content p em > strong,
+    #briefs .brief-article-content p strong > em {
+        font: normal normal normal 17px/25px SourceSerifProSemiBoldIt;
+        text-align: justify;
+    }     */
+}

@@ -1,0 +1,48 @@
+@import '_partials/_variables.scss';
+
+#info-parameter {
+}
+
+#info-parameter > div:first-child {
+}
+
+#info-parameter #themeform label {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-dracula;
+    }
+}
+
+#info-parameter #themeform {
+}
+
+#info-parameter #themeform div {
+}
+
+#info-parameter button {
+
+    color: $text-biafine;
+    background: $category-tag-biafine;
+    body.biafine-theme & {
+        background: $category-tag-biafine;
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $category-tag-dracula;
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $category-tag-bat;
+        color: $text-dracula;
+    }
+}

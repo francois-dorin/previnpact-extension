@@ -1,0 +1,867 @@
+@import '_partials/_variables.scss';
+
+body.home.biafine-theme {
+    background: $background-biafine;
+}
+
+body.home.dracula-theme {
+    background: $background-dracula;
+}
+
+body.home.giganoir-theme {
+    background: $background-bat;
+}
+
+.nav-tab-header {
+}
+
+.list-mobile-article-choose {
+}
+
+.contenu-continu {
+}
+
+.contenu-continu > div {
+}
+
+.block-article {
+}
+
+.list-mobile-article-choose > li {
+}
+
+.not-img {
+}
+
+.list-content {
+}
+
+.fixed-brief {
+    /* background: white; */
+}
+
+.page-nav-article {
+}
+
+.page-nav-article > span {
+}
+
+.page-nav-article > span:first-child svg {
+}
+
+.page-nav-article > span:last-child svg {
+}
+
+#category-filter {
+}
+
+#category-filter .categories-button {
+}
+
+#category-filter .categories-button .categories-puce {
+}
+
+#category-filter .categories-button:last-child {
+}
+
+.container-date-header {
+}
+
+div > .container-date-header:first-child {
+}
+
+.container-date-header > span:first-child {
+}
+
+.container-date-header > span.lastDate {
+    background: $black-biafine;
+
+    body.biafine-theme & {
+        background: $black-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $black-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $black-bat;
+    }
+}
+
+.container-date-header p {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $black-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $black-bat;
+    }
+}
+
+.container-date-header > span:last-child {
+    background: $bold-biafine;
+
+    body.biafine-theme & {
+        background: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $black-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $black-bat;
+    }
+}
+
+.container-date-header > span.today {
+}
+
+#home-article {
+}
+
+#home-articles {
+}
+
+#list-continu {
+}
+
+.block-article .article-text-comment,
+#list-brief .block-brief .article-text-comment,
+#list-hearts .block-brief .article-text-comment {
+}
+
+.article-text-comment .count-new-comment {
+}
+
+.article-text-comment .count-new-comment > span {
+}
+
+.article-text-comment .count-new-comment > span:last-child {
+}
+
+#list-brief .block-brief .article-text-comment {
+}
+
+#list-continu .block-article .article-text-comment .time-post,
+#list-brief .block-brief .article-text-comment .time-post,
+.block-article .article-text-comment .time-post {
+    color: $info-article-biafine;
+
+    body.biafine-theme & {
+        color: $info-article-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $info-article-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $info-article-bat;
+    }
+}
+
+#list-continu .block-article .article-text-comment > span:last-child,
+#list-brief .block-brief .article-text-comment > span:last-child,
+#list-hearts .block-brief .article-text-comment > span:last-child,
+.block-article .article-text-comment > span:last-child {
+}
+
+#list-continu .block-article .article-text-comment svg path,
+#list-brief .block-brief .article-text-comment svg path,
+#list-hearts .block-brief .article-text-comment svg path,
+.block-article .article-text-comment svg path {
+    stroke: $black-biafine;
+    body.biafine-theme & {
+        stroke: $black-biafine;
+    }
+
+    body.dracula-theme & {
+        stroke: $black-dracula;
+    }
+
+    body.giganoir-theme & {
+        stroke: $black-bat;
+    }
+}
+
+#list-continu .block-article .article-text-comment > span:last-child span,
+#list-brief .block-brief .article-text-comment > span:last-child span,
+.block-article .article-text-comment > span:last-child span {
+    color: $info-article-biafine;
+
+    body.biafine-theme & {
+        color: $info-article-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $info-article-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $info-article-bat;
+    }
+}
+
+#list-brief .block-brief .article-text-comment .categories-button,
+#list-hearts .block-brief .article-text-comment .categories-button {
+}
+
+#list-brief {
+}
+
+#list-brief::-webkit-scrollbar,
+#list-brief::-webkit-scrollbar {
+}
+
+
+#list-brief > div:first-child > div:last-child {
+    /* height: calc(70vh - 90px); */
+}
+
+#list-brief > div > div:first-child > div:first-child {
+}
+
+#list-brief > div {
+    background: $header-biafine;
+
+    body.biafine-theme & {
+        background: $header-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $background-sommaire-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $background-sommaire-bat;
+    }
+}
+
+#list-brief > div:first-child > div:first-child.week_brief {
+}
+
+#list-brief > div:first-child > div:first-child.week_brief > div {
+}
+
+// #list-brief > div:first-child > div:first-child svg {
+//     width: 100px;
+//     height: 54px;
+// }
+
+#list-brief > div:first-child > div:first-child > div:first-child svg path {
+    fill: $black-biafine;
+    body.biafine-theme & {
+        fill: $black-biafine;
+    }
+
+    body.dracula-theme & {
+        fill: $black-dracula;
+    }
+
+    body.giganoir-theme & {
+        fill: $black-bat;
+    }
+}
+
+.block-article h2 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.block-article > div:nth-child(2) {
+}
+
+.block-article > .thumbnail {
+}
+
+.block-article > .thumbnail > a {
+}
+
+.block-article > .thumbnail img {
+}
+
+.block-article > .thumbnail svg {
+}
+
+.not-img {
+}
+
+.text-article-description > p,
+.text-article-description {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.text-article-description {
+}
+
+.block-article {
+    /* box-shadow: 0px 10px 30px #00000010; */
+
+    background: $background-article-home-biafine;
+
+    body.biafine-theme & {
+        background: $background-article-home-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $background-article-home-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $background-article-home-bat;
+    }
+}
+
+.block-article > div .categories-button {
+}
+
+.block-article .author {
+}
+
+.block-article .author img {
+}
+
+.block-article .author p {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.block-article > div:nth-child(2) {
+}
+
+.block-article h3 {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.block-article h2 > a,
+.block-article h2 > a:hover {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.page-nav-article span {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+
+}
+
+.page-nav-article .not-displaying {
+}
+
+.list-hearts,
+.list-hearts-actif {
+}
+
+.home #pagination_link,
+.search #pagination_link  {
+}
+
+.home #pagination_link i,
+.search #pagination_link i {
+}
+
+#pagination_link span,
+#pagination_link a,
+#pagination_link span,
+#pagination_link a {
+}
+
+#pagination_link a,
+#pagination_link a {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.home #pagination_link span,
+.search #pagination_link span {
+}
+
+.home #pagination_link a.prev,
+.search #pagination_link a.prev {
+}
+
+.home #pagination_link .previous-page svg,
+.search #pagination_link .previous-page svg {
+}
+
+.home #pagination_link .next,
+.search #pagination_link .next {
+}
+
+.home #pagination_link svg,
+.search #pagination_link svg {
+}
+
+@media (max-width: 1200px) {
+    .list-content {
+    }
+
+    #list-continu {
+    }    
+}
+
+@media (max-width: 1100px) {
+
+    #home-articles {
+    }
+
+    #category-filter {
+    }
+
+    .nav-tab-header {
+    }
+
+    .home-categories {
+    }
+
+    .block-article {
+    
+        body.biafine-theme & {
+        }
+    
+        body.dracula-theme & {
+        }
+    
+        body.giganoir-theme & {
+        }
+    }
+
+    .scroll-mobile {
+    }
+
+    .list-mobile-article-choose {
+        background: $background-agora-biafine;
+
+        body.biafine-theme & {
+            background: $background-agora-biafine;
+        }
+    
+        body.dracula-theme & {
+            background: $background-agora-dracula;
+        }
+    
+        body.giganoir-theme & {
+            background: $background-agora-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li {
+    }
+
+    .list-mobile-article-choose > li:first-child > span {
+    }
+
+    .list-mobile-article-choose > li:nth-child(2) > span {
+    }
+
+    .list-mobile-article-choose > li:nth-child(3) > span {
+    }
+
+    .list-mobile-article-choose > li:nth-child(1) > svg {
+    }
+
+    .list-mobile-article-choose > li:nth-child(2) > svg {
+    }
+
+    .list-mobile-article-choose > li:nth-child(3) > svg {
+    }
+
+    .list-mobile-article-choose > li:first-child.not-actif > span {
+        /* transition-duration: 0.5s; */
+        /* transition-property: transform; */
+    }
+
+    .list-mobile-article-choose > li:first-child.not-actif > svg path {
+        fill: $bold-biafine;
+
+        body.biafine-theme & {
+            fill: $bold-biafine;
+        }
+    
+        body.dracula-theme & {
+            fill: $bold-dracula;
+        }
+    
+        body.giganoir-theme & {
+            fill: $bold-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li:first-child.actif > svg path {
+        fill: $text-biafine;
+
+        body.biafine-theme & {
+            fill: $text-biafine;
+        }
+    
+        body.dracula-theme & {
+            fill: $text-dracula;
+        }
+    
+        body.giganoir-theme & {
+            fill: $text-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li:first-child.actif > span {
+        /* transition-duration: 0.5s; */
+        /* transition-property: transform; */
+    }
+
+    .list-mobile-article-choose > li:nth-child(2).not-actif > span {
+        /* transition-duration: 0.5s; */
+        /* transition-property: transform; */
+    }
+
+    .list-mobile-article-choose > li:nth-child(2).not-actif > svg path {
+        fill: $bold-biafine;
+
+        body.biafine-theme & {
+            fill: $bold-biafine;
+        }
+    
+        body.dracula-theme & {
+            fill: $bold-dracula;
+        }
+    
+        body.giganoir-theme & {
+            fill: $bold-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li:nth-child(2).actif > svg path {
+        fill: $text-biafine;
+
+        body.biafine-theme & {
+            fill: $text-biafine;
+        }
+    
+        body.dracula-theme & {
+            fill: $text-dracula;
+        }
+    
+        body.giganoir-theme & {
+            fill: $text-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li:nth-child(2).actif > span {
+        /* transition-duration: 0.5s; */
+        /* transition-property: transform; */
+    }
+
+    .list-mobile-article-choose > li:nth-child(2).actif > svg path {
+        fill: $text-biafine;
+
+        body.biafine-theme & {
+            fill: $text-biafine;
+        }
+    
+        body.dracula-theme & {
+            fill: $text-dracula;
+        }
+    
+        body.giganoir-theme & {
+            fill: $text-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li:nth-child(3).not-actif > span {
+        /* transition-duration: 0.5s; */
+        /* transition-property: transform; */
+    }    
+
+    .list-mobile-article-choose > li:nth-child(3).not-actif > svg path:not(:first-child) {
+        fill: $bold-biafine;
+
+        body.biafine-theme & {
+            fill: $bold-biafine;
+        }
+    
+        body.dracula-theme & {
+            fill: $bold-dracula;
+        }
+    
+        body.giganoir-theme & {
+            fill: $bold-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li:nth-child(3).actif > svg path {
+        fill: $text-biafine;
+
+        body.biafine-theme & {
+            fill: $text-biafine;
+        }
+    
+        body.dracula-theme & {
+            fill: $text-dracula;
+        }
+    
+        body.giganoir-theme & {
+            fill: $text-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li:nth-child(3).actif > svg path:first-child {
+        stroke: $text-biafine;
+
+        body.biafine-theme & {
+            stroke: $text-biafine;
+        }
+    
+        body.dracula-theme & {
+            stroke: $text-dracula;
+        }
+    
+        body.giganoir-theme & {
+            stroke: $text-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li:nth-child(3).not-actif > svg path:first-child {
+        stroke: $bold-biafine;
+
+        body.biafine-theme & {
+            stroke: $bold-biafine;
+        }
+    
+        body.dracula-theme & {
+            stroke: $bold-dracula;
+        }
+    
+        body.giganoir-theme & {
+            stroke: $bold-bat;
+        }
+    }
+
+    .list-mobile-article-choose > li:nth-child(3).actif > span {
+        /* transition-duration: 0.5s; */
+        /* transition-property: transform; */
+    }
+
+    .list-content {
+        /* display: inherit; */
+        /* height: calc(100vh - 80px - 10px); */
+    }    
+
+    .list-brief, .list-continu {
+    }
+
+    #list-brief > div,
+    #list-hearts > div {
+    }
+
+    .list-brief-actif, .list-continu-actif, .list-hearts-actif {
+    }
+
+    .page-nav-article {
+    }
+
+    .contenu-continu > div {
+    }
+
+    .container-date-header {
+    }
+
+    #list-continu {
+    }
+
+    #list-brief {
+    }
+
+    #list-brief > div {
+
+        body.biafine-theme & {
+        }
+    
+        body.dracula-theme & {
+        }
+    
+        body.giganoir-theme & {
+        }
+    }
+
+    #list-brief > div > div:first-child > div:first-child {
+    }
+
+    #list-brief > div:first-child > div:last-child {
+    }
+
+    #list-continu {
+    }
+
+    .block-article h2 {
+    }
+
+    .block-article .article-text-comment .time-post,
+    #list-continu .block-article .article-text-comment .time-post,
+    #list-brief .block-brief .article-text-comment .time-post {
+    }
+
+    #list-continu .block-article .article-text-comment > span:last-child span,
+    #list-brief .block-brief .article-text-comment > span:last-child span,
+    #list-hearts .block-brief .article-text-comment > span:last-child span,
+    .block-article .article-text-comment > span:last-child span {
+        color: $bold-biafine;
+
+        body.biafine-theme & {
+            color: $bold-biafine;
+        }
+
+        body.dracula-theme & {
+            color: $bold-dracula;
+        }
+
+        body.giganoir-theme & {
+            color: $bold-bat;
+        }
+    }
+
+    .block-article .article-text-comment,
+    #list-hearts .article-text-comment {
+    }
+
+    .block-article > div .categories-button {
+    }    
+
+    .block-article > div:nth-child(2) {
+    }
+
+    .block-article > .thumbnail {
+    }
+
+
+    .block-article > .thumbnail img {
+    }
+
+    .not-img {
+    }
+    
+    .text-article-description {
+    }
+
+    .contenu-continu {
+    }    
+
+    .block-article {
+        // padding: 10px 15px;
+    }
+
+    .block-article .author {
+    }
+
+    .block-article > div:nth-child(2) {
+    }
+
+    .block-article h2 > a,
+    .block-article h2 > a:hover {
+    }
+
+    .block-article h3 {
+    }
+
+    .home .categories-button {
+    }
+
+    .home .categories-button .categories-puce {
+    }
+
+    .block-article > .thumbnail svg {
+    }
+
+    .container-date-header > span.today {
+    }
+}
+
+@media (max-width: 1000px) {
+    #home-articles {
+    }
+}

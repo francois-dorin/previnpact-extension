@@ -2,7 +2,19 @@
     scroll-margin: 150px;
 }
 
+body.biafine-theme .single-comment.selected,
 .single-comment.selected {
     background-color: lightsalmon;
 }
+
+body.giganoir-theme .single-comment.selected {
+    background-color: #282A35;
+}
+
+body.dracula-theme .single-comment.selected {
+    background-color: #3B4252;
+}
+
+
+
 

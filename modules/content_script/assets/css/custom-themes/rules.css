@@ -1,0 +1,13 @@
+
+body.biafine-theme.previnpact-theme,
+body.dracula-theme.previnpact-theme,
+body.giganoir-theme.previnpact-theme,
+body.home.biafine-theme.previnpact-theme,
+body.home.dracula-theme.previnpact-theme,
+body.home.giganoir-theme.previnpact-theme,
+body.briefs-template-default.giganoir-theme.previnpact-theme,
+body.briefs-template-default.biafine-theme.previnpact-theme,
+body.briefs-template-default.dracula-theme.previnpact-theme {
+    background: var(--primary-background-color);
+}
+

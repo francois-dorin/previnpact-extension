@@ -1,0 +1,37 @@
+// style.scss
+@import '_partials/_variables.scss';
+
+.separator-point {
+    background: $bold-biafine;
+
+    body.biafine-theme & {
+        background: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $bold-bat;
+    }
+}
+
+body {
+    background: $header-biafine;
+
+    &.biafine-theme {
+        background: $header-biafine;
+    }
+
+    &.dracula-theme {
+        background: $background-sommaire-dracula;
+    }
+
+    &.giganoir-theme {
+        background: $background-sommaire-bat;
+    }
+}
+
+.blocked-body-header {
+}

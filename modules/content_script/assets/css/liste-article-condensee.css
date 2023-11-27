@@ -4,9 +4,15 @@ body.liste-article-condensee .block-article > .thumbnail {
     height: 120px;
 }
 
+body.liste-article-condensee .block-article .thumbnail ~ div {
+    width: 100%;
+}
+
 body.liste-article-condensee .block-article > div:last-child{
     display: grid;
     grid-template: "a b" minmax(20px, auto) "c c " auto "d d" auto;
+    grid-template-rows: min-content auto auto;
+    grid-template-columns: 1fr 1fr;
 }
 
 body.liste-article-condensee .block-article > div:last-child main {
@@ -27,4 +33,5 @@ body.liste-article-condensee .block-article > div:last-child div.article-text-co
 
 body.liste-article-condensee .block-article .author {
     padding-top: 4px;
+    margin-bottom: 0;
 }

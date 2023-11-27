@@ -1,0 +1,533 @@
+@import '_partials/_variables.scss';
+
+#comments {
+}
+
+#comments > div {
+}
+
+.textera-open {
+    background: $white-biafine;
+    body.biafine-theme & {
+        background: $white-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $white-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $white-bat;
+    }
+}
+
+#comment-editor-wrapper {
+    background: $white-biafine;
+    body.biafine-theme & {
+        background: $white-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $white-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $white-bat;
+    }
+}
+
+.comments-header > h2 {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.comments-header > h2 svg path {
+    stroke: $text-biafine;
+    body.biafine-theme & {
+        stroke: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        stroke: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        stroke: $text-bat;
+    }
+}
+
+.comments-header > h2 > span {
+}
+
+#comment-editor-wrapper img {
+}
+
+#comment-editor-wrapper .username {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.comment-header {
+}
+
+.comment-header > img {
+}
+
+.editor-wrapper textarea {
+}
+
+.editor-wrapper .comment-buttons {
+}
+
+.editor-wrapper .comment-buttons button:first-child {
+}
+
+.cancel-button {
+}
+
+.send-button {
+}
+
+.droit .send-button{
+}
+
+.logical .send-button{
+}
+
+.security .send-button{
+}
+
+.social .send-button{
+}
+
+.web .send-button{
+}
+
+.numerique .send-button{
+}
+
+.economie .send-button{
+}
+
+.hardware .send-button{
+}
+
+.ia .send-button{
+}
+
+.web .send-button{
+}
+
+.space .send-button{
+}
+
+.flock .send-button{
+}
+
+.next .send-button{
+}
+
+.textera-open > span {
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.comments-list > div {
+
+    background: $background-biafine;
+    body.biafine-theme & {
+        background: $background-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $background-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $background-bat;
+    }
+}
+
+.comments-list .single-comment {
+}
+
+.comment-expend {
+}
+
+.comment-expend img {
+}
+
+.comment-main .comment-info-pseudo {
+}
+
+.comment-main .comment-info-pseudo > div:first-child {
+}
+
+.comment-main .comment-info-pseudo .pseudo-comment {
+
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.comment-main {
+}
+
+.comment-main .comment-info-pseudo .author-tag {
+}
+
+.comment-main .comment-info-pseudo .editor {
+}
+
+.comment-main .comment-info-pseudo .subscriber {
+}
+
+.comment-main .ago {
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.comment-main .ago .new-comment {
+}
+
+.comment-main .comment-content {
+}
+
+.comment-main .comment-content blockquote {
+
+    background: $citation-biafine;
+    body.biafine-theme & {
+        background: $citation-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $citation-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $citation-bat;
+    }
+}
+
+/* 939393 */
+
+.comment-main .comment-content blockquote p {
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+/* .comment-main .comment-content blockquote:has(> :nth-child(1):last-child) {
+    display: none;
+} */
+
+.comment-main .comment-content blockquote.single-child-parent {
+}
+
+.comment-main .comment-content blockquote p strong {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.subcomments-container .single-comment {
+}
+
+.comments-list .subcomment-n .subcomments-container {
+}
+
+.comments-list > div > .subcomment-n {
+}
+
+.button-reply-and-edit {
+}
+
+.button-reply-and-edit .reply,
+.button-reply-and-edit .edit {
+}
+
+.button-reply-and-edit .edit {
+}
+
+.button-reply-and-edit .reply svg,
+.button-reply-and-edit .edit svg {
+    stroke: $bold-biafine;
+    body.biafine-theme & {
+        stroke: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        stroke: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        stroke: $bold-bat;
+    }
+}
+
+.button-reply-and-edit .reply svg path,
+.button-reply-and-edit .edit svg path {
+    stroke: $bold-biafine;
+    body.biafine-theme & {
+        stroke: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        stroke: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        stroke: $bold-bat;
+    }
+}
+
+.button-reply-and-edit .reply .reply-button,
+.button-reply-and-edit .edit .edit-button {
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.vertical-separator {
+
+    border: solid 5.5px $background-biafine;
+    background: $text-biafine;
+    body.biafine-theme & {
+        border: solid 5.5px $background-biafine;
+        background: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        border: solid 5.5px $background-dracula;
+        background: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        border: solid 5.5px $background-bat;
+        background: $text-bat;
+    }
+}
+
+.vertical-separator-minus svg {
+    background: $background-biafine;
+    body.biafine-theme & {
+        background: $background-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $background-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $background-bat;
+    }
+}
+
+.vertical-separator-plus svg {
+    background: $background-biafine;
+    body.biafine-theme & {
+        background: $background-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $background-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $background-bat;
+    }
+}
+
+.nothing-ever-to-hide {
+}
+
+.reply-comment-user {
+
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.comment-text-content {
+
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.comment-text-content img:not(.emoji-comment) {
+}
+
+.enter-other-comment {
+}
+
+.update-time {
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.tick-comment {
+}
+
+.quote-container {
+    background: $citation-biafine;
+    body.biafine-theme & {
+        background: $citation-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $citation-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $citation-bat;
+    }
+}
+
+.quote-container .reply-comment-content {
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.quote-commente {
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+@media (max-width: 1200px) {
+    #comments {
+    }
+
+    #comments > div {
+    }
+}
+
+@media (max-width: 1000px) {
+    #comments > div {
+    }
+
+    .comments-list > div {
+    }
+}

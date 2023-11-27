@@ -1,4 +1,3 @@
-const darkModeCheckBox = document.querySelector('input[name="dark-mode"]') as HTMLInputElement;
 const policeSansSerifCheckBox = document.querySelector('input[name="police-sans-serif"]') as HTMLInputElement;
 const texteJustifieCheckBox = document.querySelector('input[name="texte-justifie"]') as HTMLInputElement;
 const avecCesureCheckBox = document.querySelector('input[name="avec-cesure"]') as HTMLInputElement;
@@ -8,10 +7,11 @@ const agoraCondenseCheckBox = document.querySelector('input[name="agora-condense
 const listeArticleCondenseeCheckBox = document.querySelector('input[name="liste-article-condensee"]') as HTMLInputElement;
 const navigationCommentairesCheckBox = document.querySelector('input[name="navigation-commentaires"]') as HTMLInputElement;
 const agoraReplieCheckBox = document.querySelector('input[name="agora-replie"]') as HTMLInputElement;
+const themeCheckBox = document.querySelector('input[name="theme"]') as HTMLInputElement;
 
-const setDarkMode = () => {
-    const value = darkModeCheckBox.checked;
-    extensionRuntime.setSettings({ darkMode: value });
+const setTheme = () => {
+    const value = themeCheckBox.checked;
+    extensionRuntime.setSettings({ theme: value });
 }
 
 const setPoliceSansSerif = () => {
@@ -60,7 +60,7 @@ const setAgoraReplie = () => {
     extensionRuntime.setSettings({agoraReplie: value});
 }
 
-darkModeCheckBox.addEventListener('change', setDarkMode);
+themeCheckBox.addEventListener('change', setTheme);
 policeSansSerifCheckBox.addEventListener('change', setPoliceSansSerif);
 texteJustifieCheckBox.addEventListener('change',setTexteJustifie);
 avecCesureCheckBox.addEventListener('change', setAvecCesure);
@@ -73,11 +73,11 @@ agoraReplieCheckBox.addEventListener('change', setAgoraReplie);
 
 const restoreOptions = () => {
     extensionRuntime.getAllSettings().then((values) => {
-        if (values.darkMode === undefined) {
-            darkModeCheckBox.checked = true;
-            setDarkMode();
+        if (values.theme === undefined) {
+            themeCheckBox.checked = false;
+            setTheme();
         } else {
-            darkModeCheckBox.checked = values.darkMode;
+            themeCheckBox.checked = values.theme;
         }
 
         if (values.policeSansSerif === undefined) {

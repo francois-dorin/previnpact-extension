@@ -1,0 +1,115 @@
+@import '_partials/_variables.scss';
+
+.page-template-categoryPage #aside {
+}
+
+.page-template-categoryPage #moreInfo {
+}
+
+#category-article-image {
+}
+
+#list-continu-category {
+}
+
+.category-page-image {
+}
+#category-page-image-droit {
+}
+
+#category-page-image-economie {
+}
+
+#category-page-image-flock {
+}
+
+#category-page-image-hardware {
+}
+
+#category-page-image-ialgo {
+}
+
+#category-page-image-internet {
+}
+
+#category-page-image-logiciel{
+}
+
+#category-page-image-next {
+}
+
+#category-page-image-rs {
+}
+#category-page-image-sciencesss {
+}
+
+#category-page-image-securite {
+}
+
+#category-page-image-socnum {
+}
+
+.category-page-title {
+}
+
+.category-page-title>h2 {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+    
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+    
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.category-page-title span {
+}
+
+.category-article-none {
+}
+
+.page-nav-category {
+}
+
+@media (max-width: 1200px) {
+    #list-continu-category {
+    }
+    
+    .page-nav-category {
+    }
+
+    .category-page-image {
+    }
+}
+
+@media (max-width: 1100px) {
+
+    #category-article-image {
+    }
+
+    #list-continu-category {
+    }
+
+    .category-page-title {
+    }
+
+    .page-nav-category {
+    }
+
+    #category-page-article .block-article {
+    }
+
+    #category-article {
+    }
+
+    #list-continu-category .list-content {
+    }
+
+    #category-article {
+    }
+}

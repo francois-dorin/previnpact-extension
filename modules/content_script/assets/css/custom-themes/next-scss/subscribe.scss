@@ -1,0 +1,94 @@
+@import '_partials/_variables.scss';
+
+.page-template-subscribe-page header,
+.page-template-subscribe-page footer {
+}
+
+.page-template-subscribe-page {
+}
+
+body.page-template-subscribe-page.biafine-theme {
+    background: $background-biafine;
+}
+
+body.page-template-subscribe-page.dracula-theme {
+    background: $background-dracula;
+}
+
+body.page-template-subscribe-page.giganoir-theme {
+    background: $background-bat;
+}
+
+body.page-template-subscribe-page.biafine-theme .header-sub svg path {
+    fill: $text-biafine;
+}
+
+body.dracula-theme.page-template-subscribe-page .header-sub svg path {
+    fill: $text-dracula;
+}
+
+body.giganoir-theme.page-template-subscribe-page .header-sub svg path {
+    fill: $text-bat;
+}
+
+.page-template-subscribe-page h1 {
+}
+
+body.biafine-theme.page-template-subscribe-page h1 {
+    color: $text-biafine;
+}
+
+body.dracula-theme.page-template-subscribe-page h1 {
+    color: $text-dracula;
+}
+
+body.giganoir-theme.page-template-subscribe-page h1 {
+    color: $text-bat;
+}
+
+
+.page-template-subscribe-page a {
+}
+
+body.biafine-theme.page-template-subscribe-page a {
+    color: $text-biafine;
+    border: 0.5px solid $text-biafine;
+}
+
+body.dracula-theme.page-template-subscribe-page a {
+    color: $text-dracula;
+    border: 0.5px solid $text-dracula;
+}
+
+body.giganoir-theme.page-template-subscribe-page a {
+    color: $text-bat;
+    border: 0.5px solid $text-bat;
+}
+
+.page-template-subscribe-page .header-sub {
+}
+
+.page-template-subscribe-page .container-form-payement {
+}
+
+.page-template-subscribe-page .kr-embedded {
+}
+
+.page-template-subscribe-page .kr-embedded .kr-payment-button {
+}
+
+.page-template-subscribe-page .kr-embedded .kr-icon-wrapper svg {
+}
+
+.page-template-subscribe-page .kr-embedded .kr-payment-button span,
+.page-template-subscribe-page .kr-smart-form .kr-payment-button span {
+}
+
+.page-template-subscribe-page .kr-embedded .kr-field-element {
+}
+
+.page-template-subscribe-page .kr-embedded .kr-form-error {
+}
+
+.page-template-subscribe-page .kr-embedded .kr-form-error span {
+}

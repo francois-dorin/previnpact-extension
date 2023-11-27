@@ -1,0 +1,359 @@
+@import '_partials/_variables.scss';
+
+footer {
+    background: $background-agora-biafine;
+
+    body.biafine-theme & {
+        background: $background-agora-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $background-agora-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $background-agora-bat;
+    }
+}
+
+.main-footer {
+}
+
+.main-footer>div:first-child>svg {
+}
+
+.main-footer>div:first-child>svg path {
+    fill: $text-biafine;
+    body.biafine-theme & {
+        fill: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        fill: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        fill: $text-bat;
+    }
+}
+
+.footer-title {
+    color:  $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#footer-categories {
+}
+
+.button-footer,
+.button-footer-github,
+.button-footer-discord {
+}
+
+.footer-categories-space {
+}
+
+#footer-categories>.footer-categories-security:hover {
+}
+
+#footer-categories>.footer-categories-numerique:hover {
+}
+
+#footer-categories>.footer-categories-droit:hover {
+}
+
+#footer-categories>.footer-categories-economie:hover {
+}
+
+#footer-categories>.footer-categories-hardware:hover {
+}
+
+#footer-categories>.footer-categories-social:hover {
+}
+
+#footer-categories>.footer-categories-ia:hover {
+}
+
+#footer-categories>.footer-categories-web:hover {
+}
+
+#footer-categories>.footer-categories-logical:hover {
+}
+
+#footer-categories>.footer-categories-space:hover {
+}
+
+#footer-categories>.footer-categories-flock:hover {
+}
+
+#footer-categories>.footer-categories-next:hover {
+}
+
+.follow-us {
+}
+
+#follow-us>div:first-child {
+}
+
+.footer-social-network {
+}
+
+.footer-contact-forum {
+}
+
+.button-footer {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        background: $category-tag-biafine;
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $category-tag-dracula;
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $category-tag-bat;
+        color: $text-bat;
+    }
+}
+
+#contact-button,
+#forum-button {
+}
+
+#contact-button:hover,
+#forum-button:hover,
+.footer-button-moderation-rule:hover,
+.footer-button-deontology:hover {
+}
+
+.footer-button-X:hover {
+}
+
+.footer-button-X svg {
+}
+
+.footer-button-X svg path {
+    fill: $text-biafine;
+    body.biafine-theme & {
+        fill: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        fill: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        fill: $text-bat;
+    }
+}
+
+.footer-button-facebook {
+}
+
+.footer-button-facebook:hover {
+}
+
+.footer-button-facebook>svg {
+}
+
+.footer-button-facebook svg path {
+    fill: $text-biafine;
+    body.biafine-theme & {
+        fill: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        fill: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        fill: $text-bat;
+    }
+}
+
+.footer-button-linkedin {
+}
+
+.footer-button-linkedin:hover {
+}
+
+.footer-button-rss {
+}
+
+.footer-button-rss>svg {
+}
+
+.footer-button-rss:hover {
+}
+
+#button-footer-github {
+}
+
+#button-footer-github>svg {
+}
+
+#button-footer-discord {
+}
+
+#button-footer-discord>svg {
+}
+
+.footer-moderation {
+}
+
+#contact-button:hover,
+#forum-button:hover,
+.footer-button-moderation-rule:hover,
+.footer-button-deontology:hover {
+}
+
+.footer-button-moderation-rule {
+}
+
+#footer-moji-who-are-we {
+}
+
+#footer-logo-moji {
+}
+
+#footer-logo-moji svg path {
+    fill: $text-biafine;
+    body.biafine-theme & {
+        fill: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        fill: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        fill: $text-bat;
+    }
+}
+
+.footer-moji-message {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.footer-moji-message-visible {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.footer-moji-mini {
+}
+
+.footer-moji-message-toggle {
+}
+
+.footer-moji-message-toggle>.see-less {
+}
+
+.footer-see-more-less {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.footer-moji-message-toggle svg path {
+    stroke: $text-biafine;
+    &:first-child {
+        fill: $text-biafine;
+    }
+
+    body.biafine-theme & {
+        stroke: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        stroke: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        stroke: $text-bat;
+    }
+
+    body.biafine-theme &:first-child {
+        fill: $text-biafine;
+    }
+
+    body.dracula-theme &:first-child {
+        fill: $text-dracula;
+    }
+
+    body.giganoir-theme &:first-child {
+        fill: $text-bat;
+    }
+}
+
+#bottom-footer {
+}
+
+.bottom-footer-text,
+.bottom-footer-text>a {
+    
+}
+
+.bottom-footer-text>a {
+}
+
+@media (max-width: 1200px) {
+    #bottom-footer {
+    }
+
+    .main-footer {
+    }
+}
+
+@media (max-width: 1100px) {
+    footer {
+    }
+}

@@ -1,0 +1,152 @@
+@import '_partials/_variables.scss';
+
+#info-profile {
+}
+
+#data-user, #rss-user {
+}
+
+#rss-user {
+}
+
+#data-user {
+}
+
+#rss-user {
+}
+
+#data-user > div,
+#rss-user > div {
+}
+
+#data-user > div:first-child {
+}
+
+#data-user > div:last-child,
+#rss-user > div:last-child {
+}
+
+#data-user #data-text-user-info,
+#rss-user > div {
+}
+
+#data-user #data-text-user-info > div,
+#rss-user > div > div {
+}
+
+#rss-user .rss_url {
+}
+
+#rss-user .rss_url > div {
+}
+
+#profile #info-profile #data-inscrit svg {
+}
+
+#profile .delete-avatar {
+}
+
+.transform-input-file {
+}
+
+.transform-input-file label,
+#button_upload {
+
+    color: $text-biafine;
+    background: $category-tag-biafine;
+    body.biafine-theme & {
+        background: $category-tag-biafine;
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $category-tag-dracula;
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $category-tag-bat;
+        color: $text-dracula;
+    }
+}
+
+.transform-input-file:hover label,
+#button_upload:hover {
+}
+
+#file_container {
+}
+
+.transform-input-file label,
+#profile #rss-user button,
+#profile #data-user button {
+}
+
+#profile .group-button-avatar {
+}
+
+#profile #info-profile #data-inscrit p {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#profile #info-profile #data-user #data-text-user-info p:first-child,
+#profile #data-user-avatar > div:last-child p,
+#rss-user p:first-child {
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#profile #info-profile #data-user #data-text-user-info p:last-child,
+#rss-user p:last-child {
+}
+
+/* CSS AVATAR */
+
+#profile #data-user-avatar > div:first-child {
+}
+
+#profile #data-user-avatar > div:first-child img {
+}
+
+#profile #data-user-avatar > div:last-child {
+}
+
+#profile #data-user-avatar > div:last-child p:last-child {
+}
+
+@media(max-width: 900px) {
+
+    #profile .info-profile-actif {
+    }
+
+    #data-user {
+    }
+    
+    #rss-user {
+    }    
+
+    #data-user,
+    #rss-user {
+    }
+}

@@ -1,0 +1,510 @@
+@import '_partials/_variables.scss';
+
+#background-brief-article {
+    background: $background-biafine;
+    body.biafine-theme & {
+        background: $background-biafine;
+    }
+    
+    body.dracula-theme & {
+        background: $background-dracula;
+    }
+    
+    body.giganoir-theme & {
+        background: $background-bat;
+    }
+    // background: #FBFCFF;
+}
+
+#brief-article {
+}
+
+#brief-article > div:first-child {
+}
+
+#brief-article .brief-article-partage {
+}
+
+#brief-article .brief-article-label p {
+}
+
+#brief-article .brief-article-label.droit p {
+}
+
+#brief-article .brief-article-label.logical p {
+}
+
+#brief-article .brief-article-label.security p {
+}
+
+#brief-article .brief-article-label.social p {
+}
+
+#brief-article .brief-article-label.web p {
+}
+
+#brief-article .brief-article-label.numerique p {
+}
+
+#brief-article .brief-article-label.economie p {
+}
+
+#brief-article .brief-article-label.hardware p {
+}
+
+#brief-article .brief-article-label.ia p {
+}
+
+#brief-article .brief-article-label.web p {
+}
+
+#brief-article .brief-article-label.space p {
+}
+
+#brief-article .brief-article-label.flock p {
+}
+
+#brief-article .brief-article-content.droit h2:before,
+#brief-article .brief-article-content.droit h3:before,
+#brief-article .brief-article-content.droit h4:before,
+#brief-article .brief-article-content.droit h5:before,
+#brief-article .brief-article-content.droit h6:before {
+}
+
+#brief-article .brief-article-content.logical h2:before,
+#brief-article .brief-article-content.logical h3:before,
+#brief-article .brief-article-content.logical h4:before,
+#brief-article .brief-article-content.logical h5:before,
+#brief-article .brief-article-content.logical h6:before {
+}
+
+#brief-article .brief-article-content.security h2:before,
+#brief-article .brief-article-content.security h3:before,
+#brief-article .brief-article-content.security h4:before,
+#brief-article .brief-article-content.security h5:before,
+#brief-article .brief-article-content.security h6:before {
+}
+
+#brief-article .brief-article-content.social h2:before,
+#brief-article .brief-article-content.social h3:before,
+#brief-article .brief-article-content.social h4:before,
+#brief-article .brief-article-content.social h5:before,
+#brief-article .brief-article-content.social h6:before {
+}
+
+#brief-article .brief-article-content.web h2:before,
+#brief-article .brief-article-content.web h3:before,
+#brief-article .brief-article-content.web h4:before,
+#brief-article .brief-article-content.web h5:before,
+#brief-article .brief-article-content.web h6:before {
+}
+
+#brief-article .brief-article-content.numerique h2:before,
+#brief-article .brief-article-content.numerique h3:before,
+#brief-article .brief-article-content.numerique h4:before,
+#brief-article .brief-article-content.numerique h5:before,
+#brief-article .brief-article-content.numerique h6:before {
+}
+
+#brief-article .brief-article-content.economie h2:before,
+#brief-article .brief-article-content.economie h3:before,
+#brief-article .brief-article-content.economie h4:before,
+#brief-article .brief-article-content.economie h5:before,
+#brief-article .brief-article-content.economie h6:before {
+}
+
+#brief-article .brief-article-content.hardware h2:before,
+#brief-article .brief-article-content.hardware h3:before,
+#brief-article .brief-article-content.hardware h4:before,
+#brief-article .brief-article-content.hardware h5:before,
+#brief-article .brief-article-content.hardware h6:before {
+}
+
+#brief-article .brief-article-content.ia h2:before,
+#brief-article .brief-article-content.ia h3:before,
+#brief-article .brief-article-content.ia h4:before,
+#brief-article .brief-article-content.ia h5:before,
+#brief-article .brief-article-content.ia h6:before {
+}
+
+#brief-article .brief-article-content.web h2:before,
+#brief-article .brief-article-content.web h3:before,
+#brief-article .brief-article-content.web h4:before,
+#brief-article .brief-article-content.web h5:before,
+#brief-article .brief-article-content.web h6:before {
+}
+
+#brief-article .brief-article-content.space h2:before,
+#brief-article .brief-article-content.space h3:before,
+#brief-article .brief-article-content.space h4:before,
+#brief-article .brief-article-content.space h5:before,
+#brief-article .brief-article-content.space h6:before {
+}
+
+#brief-article .brief-article-content.flock h2:before,
+#brief-article .brief-article-content.flock h3:before,
+#brief-article .brief-article-content.flock h4:before,
+#brief-article .brief-article-content.flock h5:before,
+#brief-article .brief-article-content.flock h6:before {
+}
+
+#brief-article .brief-article-content.next h2:before,
+#brief-article .brief-article-content.next h3:before,
+#brief-article .brief-article-content.next h4:before,
+#brief-article .brief-article-content.next h5:before,
+#brief-article .brief-article-content.next h6:before {
+}
+
+#brief-article .brief-article-content.droit h2,
+#brief-article .brief-article-content.droit h3,
+#brief-article .brief-article-content.droit h4,
+#brief-article .brief-article-content.droit h5,
+#brief-article .brief-article-content.droit h6,
+#brief-article .brief-article-content.logical h2,
+#brief-article .brief-article-content.logical h3,
+#brief-article .brief-article-content.logical h4,
+#brief-article .brief-article-content.logical h5,
+#brief-article .brief-article-content.logical h6,
+#brief-article .brief-article-content.security h1,
+#brief-article .brief-article-content.security h2,
+#brief-article .brief-article-content.security h3,
+#brief-article .brief-article-content.security h4,
+#brief-article .brief-article-content.security h5,
+#brief-article .brief-article-content.security h6,
+#brief-article .brief-article-content.social h1,
+#brief-article .brief-article-content.social h2,
+#brief-article .brief-article-content.social h3,
+#brief-article .brief-article-content.social h4,
+#brief-article .brief-article-content.social h5,
+#brief-article .brief-article-content.social h6,
+#brief-article .brief-article-content.web h1,
+#brief-article .brief-article-content.web h2,
+#brief-article .brief-article-content.web h3,
+#brief-article .brief-article-content.web h4,
+#brief-article .brief-article-content.web h5,
+#brief-article .brief-article-content.web h6,
+#brief-article .brief-article-content.web h1,
+#brief-article .brief-article-content.numerique h2,
+#brief-article .brief-article-content.numerique h3,
+#brief-article .brief-article-content.numerique h4,
+#brief-article .brief-article-content.numerique h5,
+#brief-article .brief-article-content.numerique h6,
+#brief-article .brief-article-content.economie h2,
+#brief-article .brief-article-content.economie h3,
+#brief-article .brief-article-content.economie h4,
+#brief-article .brief-article-content.economie h5,
+#brief-article .brief-article-content.economie h6,
+#brief-article .brief-article-content.hardware h2,
+#brief-article .brief-article-content.hardware h3,
+#brief-article .brief-article-content.hardware h4,
+#brief-article .brief-article-content.hardware h5,
+#brief-article .brief-article-content.hardware h6,
+#brief-article .brief-article-content.ia h2,
+#brief-article .brief-article-content.ia h3,
+#brief-article .brief-article-content.ia h4,
+#brief-article .brief-article-content.ia h5,
+#brief-article .brief-article-content.ia h6,
+#brief-article .brief-article-content.web h2,
+#brief-article .brief-article-content.web h3,
+#brief-article .brief-article-content.web h4,
+#brief-article .brief-article-content.web h5,
+#brief-article .brief-article-content.web h6, 
+#brief-article .brief-article-content.space h2,
+#brief-article .brief-article-content.space h3,
+#brief-article .brief-article-content.space h4,
+#brief-article .brief-article-content.space h5,
+#brief-article .brief-article-content.space h6,
+#brief-article .brief-article-content.flock h2,
+#brief-article .brief-article-content.flock h3,
+#brief-article .brief-article-content.flock h4,
+#brief-article .brief-article-content.flock h5,
+#brief-article .brief-article-content.flock h6,
+#brief-article .brief-article-content.next h2,
+#brief-article .brief-article-content.next h3,
+#brief-article .brief-article-content.next h4,
+#brief-article .brief-article-content.next h5,
+#brief-article .brief-article-content.next h6 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article .brief-article-label.next p {
+}
+
+#brief-article .brief-article-partage > div p:first-child {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article .brief-article-partage > div:first-child {
+}
+
+#brief-article .brief-article-partage > div:first-child {
+}
+
+#brief-article .brief-article-partage > div:first-child .categories-button {
+}
+
+#brief-article .brief-article-partage > div .tick,
+#brief-article .brief-article-partage-bottom > div .tick {
+    background: $text-biafine;
+
+    body.biafine-theme & {
+        background: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $text-bat;
+    }
+}
+
+#brief-article .brief-article-partage svg {
+}
+
+#brief-article .brief-article-partage svg:last-child {
+}
+
+#brief-article #brief-article-title h1 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article #brief-article-title .thumbnail {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#brief-article #brief-article-title .thumbnail img {
+}
+
+#brief-article .brief-article-content p {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article .brief-article-content p strong {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article .brief-article-content p em {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article .brief-article-content p em > strong,
+#brief-article .brief-article-content p strong > em {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article .brief-article-content ul {
+}
+
+#brief-article .brief-article-content ol {
+}
+
+#brief-article .brief-article-content .slideshow-container {
+}
+
+#brief-article .brief-article-content ul li a,
+#brief-article .brief-article-content ul li {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article .brief-article-content a {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article .brief-article-content ul {
+}
+
+#brief-article .brief-article-tags {
+}
+
+#brief-article .brief-article-content .brief-article-tags li {
+}
+
+#brief-article .brief-article-tags li:last-child {
+}
+
+#brief-article .brief-article-partage-bottom {
+}
+
+#brief-article .brief-article-partage-bottom div:first-child svg {
+}
+
+#brief-article .brief-article-partage-bottom svg {
+}
+
+#brief-article .brief-article-partage-bottom div:first-child svg:last-child {
+}
+
+#brief-article .other-article > div {
+}
+
+#brief-article .other-article h2 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#brief-article #moreInfo {
+}
+
+@media (max-width: 1200px) {
+    #brief-article {
+    }
+
+    #brief-article > div:first-child {
+    }
+}
+
+@media (max-width: 1000px) {
+    #brief-article {
+    }
+
+    #brief-article > div:first-child {
+    }
+}
+
+
+@media (max-width: 900px) {
+    #brief-article {
+    }
+
+    #brief-article #brief-article-title .thumbnail {
+    }
+
+    #brief-article #brief-article-title h1 {
+    }
+    
+    #brief-article #brief-article-title > h2 {
+    }
+}

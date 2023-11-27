@@ -1,0 +1,111 @@
+@import '_partials/_variables.scss';
+
+.block-brief {
+}
+
+#test div:nth-last-child(2) > .block-brief,
+#list-continu div div:last-child > .block-brief {
+}
+
+#list-brief > div div > form select {
+    color: $text-biafine;
+    background: $category-tag-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+        background: $category-tag-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+        background: $category-tag-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+        background: $category-tag-bat;
+    }
+}
+
+#list-brief > div div > form select option {
+}
+
+.block-brief > div:last-child {
+}
+
+.block-brief > .thumbnail {
+}
+
+.block-brief .not-img {
+}
+
+.block-brief h2 {
+}
+
+.week_brief {
+}
+
+#test {
+}
+
+.week_brief {
+}
+
+.week_brief > div {
+}
+
+.week_brief > div img {
+}
+
+.week_brief > p {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+.block-brief,
+.block-brief h2 a {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+@media (max-width: 1100px) {
+    .block-brief {
+    }
+
+    .block-brief > .thumbnail {
+    }
+
+    .block-brief > .thumbnail img {
+    }
+
+    .block-brief .not-img {
+    }
+
+    .block-brief > div:nth-child(2) {
+    }
+
+    .block-brief h2 {
+    }
+}

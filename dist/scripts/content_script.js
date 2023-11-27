@@ -224,11 +224,12 @@ const commentairesPrev = () => {
 };
 const menuTalk = () => {
     const litsheart = document.getElementById('list-heart');
-    litsheart.classList.toggle("close-talk");
     const talk = document.getElementById('talk');
-    talk.classList.toggle('close-heart-talk');
+    litsheart?.classList.toggle("close-talk");
+    talk?.classList.toggle('close-heart-talk');
 };
 const body = document.querySelector('body');
+body.id = 'previnpact-extension';
 const setClass = (className, condition) => {
     if (condition) {
         body.classList.add(className);
@@ -239,8 +240,9 @@ const setClass = (className, condition) => {
 };
 extensionRuntime.onChanged((changes) => {
     for (let [key, { newValue }] of Object.entries(changes)) {
-        if (key == 'darkMode') {
-            setClass('dark-theme', newValue);
+        if (key == 'theme') {
+            setClass('previnpact-theme', newValue);
+            setClass('theme-orange', newValue);
         }
         if (key == 'policeSansSerif') {
             setClass('font-sans-serif', newValue);
@@ -272,7 +274,8 @@ const loadState = () => {
     extensionRuntime
         .getAllSettings()
         .then(settings => {
-        setClass('dark-theme', settings.darkMode);
+        setClass('previnpact-theme', settings.theme);
+        setClass('theme-orange', settings.theme);
         setClass('font-sans-serif', settings.policeSansSerif);
         setClass('texte-justifie', settings.texteJustifie);
         setClass('avec-cesure', settings.avecCesure);

@@ -1,0 +1,905 @@
+@import '_partials/_variables.scss';
+
+#background-article {
+    background-color: $background-biafine;
+
+    body.biafine-theme & {
+        background-color: $background-biafine;
+    }
+
+    body.dracula-theme & {
+        background-color: $background-dracula;
+    }
+
+    body.giganoir-theme & {
+        background-color: $background-bat;
+    }
+}
+
+#article-single {
+}
+
+#article-single .article-header > .thumbnail {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#article-single .thumbnail > img,
+#article-single .thumbnail-mobile > img {
+}
+
+#article-single iframe {
+}
+
+#article-single .test {
+}
+
+#article-single .article-contenu {
+}
+
+#article-single .article-header {
+}
+
+#article-single h1 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-header > h2 {
+
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#article-single .article-header > .author {
+}
+
+#article-single .article-header > .author .time-post {
+
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-header > .author img {
+}
+
+#article-single .article-header > .author > div {
+}
+
+#article-single .article-header > .author .tick, 
+#article-single .article-contenu .author-partage .tick {
+    background: $text-biafine;
+
+    body.biafine-theme & {
+        background: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $text-bat;
+    }
+}
+
+#article-single .article-header > .author > div > div:first-child > p:first-child {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-header > .author > div > div > div {
+}
+
+#article-single .public_categories {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .public_categories > svg {
+}
+
+#article-single .article-header > .author > div > div:first-child div p:last-child {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-header > .author > div .categories-button {
+}
+
+#article-single .article-header > .author svg {
+}
+
+#article-single .article-header > .author svg:last-child {
+}
+
+#article-single .article-content p {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content pre {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content p strong {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content p em {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content p em > strong,
+#article-single .article-content p strong > em {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-contenu ul {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-contenu ol {
+}
+
+#article-single .article-contenu .slideshow-container {
+}
+
+#article-single .article-contenu ul li,
+#article-single .article-contenu ol li {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content figure {
+   /* max-height: 450px; */
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#article-single .article-content figure:not(.content-img) {
+    /* height: 450px; */
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#article-single .article-content figure a {
+}
+
+#article-single .article-content figure figcaption {
+}
+
+#article-single .article-content figure p {
+}
+
+#article-single .article-content img {
+}
+
+#article-single .article-content #paywall {
+}
+
+#article-single .article-content #paywall > h3:before {
+}
+
+#article-single .article-content #paywall h3 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content #paywall p {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content #paywall p > a {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content #paywall > a {
+}
+
+#article-single .article-content .article-tags {
+}
+
+#article-single .article-content .article-tags li {
+}
+
+#article-single .article-content .article-tags li:last-child {
+}
+
+#article-single .article-content h2,
+#article-single .article-content h3,
+#article-single .article-content h4,
+#article-single .article-content h5,
+#article-single .article-content h6 {
+}
+
+#article-single a {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content.droit h2:before,
+#article-single .article-content.droit h3:before,
+#article-single .article-content.droit h4:before,
+#article-single .article-content.droit h5:before,
+#article-single .article-content.droit h6:before {
+}
+
+#article-single .article-content.logical h2:before,
+#article-single .article-content.logical h3:before,
+#article-single .article-content.logical h4:before,
+#article-single .article-content.logical h5:before,
+#article-single .article-content.logical h6:before {
+}
+
+#article-single .article-content.security h2:before,
+#article-single .article-content.security h3:before,
+#article-single .article-content.security h4:before,
+#article-single .article-content.security h5:before,
+#article-single .article-content.security h6:before {
+}
+
+#article-single .article-content.social h2:before,
+#article-single .article-content.social h3:before,
+#article-single .article-content.social h4:before,
+#article-single .article-content.social h5:before,
+#article-single .article-content.social h6:before {
+}
+
+#article-single .article-content.web h2:before,
+#article-single .web h3:before,
+#article-single .article-content.web h4:before,
+#article-single .article-content.web h5:before,
+#article-single .article-content.web h6:before {
+}
+
+#article-single .article-content.numerique h2:before,
+#article-single .article-content.numerique h3:before,
+#article-single .article-content.numerique h4:before,
+#article-single .article-content.numerique h5:before,
+#article-single .article-content.numerique h6:before {
+}
+
+#article-single .article-content.economie h2:before,
+#article-single .article-content.economie h3:before,
+#article-single .article-content.economie h4:before,
+#article-single .article-content.economie h5:before,
+#article-single .article-content.economie h6:before {
+}
+
+#article-single .article-content.hardware h2:before,
+#article-single .article-content.hardware h3::before,
+#article-single .article-content.hardware h4:before,
+#article-single .article-content.hardware h5:before,
+#article-single .article-content.hardware h6:before {
+}
+
+#article-single .article-content.ia h2:before,
+#article-single .article-content.ia h3:before,
+#article-single .article-content.ia h4:before,
+#article-single .article-content.ia h5:before,
+#article-single .article-content.ia h6:before {
+}
+
+#article-single .article-content.space h2:before,
+#article-single .article-content.space h3:before,
+#article-single .article-content.space h4:before,
+#article-single .article-content.space h5:before,
+#article-single .article-content.space h6:before {
+}
+
+#article-single .article-content.flock h2:before,
+#article-single .article-content.flock h3:before,
+#article-single .article-content.flock h4:before,
+#article-single .article-content.flock h5:before,
+#article-single .article-content.flock h6:before {
+}
+
+#article-single .article-content.next h2:before,
+#article-single .article-content.next h3:before,
+#article-single .article-content.next h4:before,
+#article-single .article-content.next h5:before,
+#article-single .article-content.next h6:before {
+}
+
+#article-single .article-content.droit h2,
+#article-single .article-content.droit h3,
+#article-single .article-content.droit h4,
+#article-single .article-content.droit h5,
+#article-single .article-content.droit h6,
+#article-single .article-content.logical h2,
+#article-single .article-content.logical h3,
+#article-single .article-content.logical h4,
+#article-single .article-content.logical h5,
+#article-single .article-content.logical h6,
+#article-single .article-content.security h1,
+#article-single .article-content.security h2,
+#article-single .article-content.security h3,
+#article-single .article-content.security h4,
+#article-single .article-content.security h5,
+#article-single .article-content.security h6,
+#article-single .article-content.social h1,
+#article-single .article-content.social h2,
+#article-single .article-content.social h3,
+#article-single .article-content.social h4,
+#article-single .article-content.social h5,
+#article-single .article-content.social h6,
+#article-single .article-content.numerique h2,
+#article-single .article-content.numerique h3,
+#article-single .article-content.numerique h4,
+#article-single .article-content.numerique h5,
+#article-single .article-content.numerique h6,
+#article-single .article-content.economie h2,
+#article-single .article-content.economie h3,
+#article-single .article-content.economie h4,
+#article-single .article-content.economie h5,
+#article-single .article-content.economie h6,
+#article-single .article-content.hardware h2,
+#article-single .article-content.hardware h3,
+#article-single .article-content.hardware h4,
+#article-single .article-content.hardware h5,
+#article-single .article-content.hardware h6,
+#article-single .article-content.ia h2,
+#article-single .article-content.ia h3,
+#article-single .article-content.ia h4,
+#article-single .article-content.ia h5,
+#article-single .article-content.ia h6,
+#article-single .article-content.web h2,
+#article-single .article-content.web h3,
+#article-single .article-content.web h4,
+#article-single .article-content.web h5,
+#article-single .article-content.web h6, 
+#article-single .article-content.space h2,
+#article-single .article-content.space h3,
+#article-single .article-content.space h4,
+#article-single .article-content.space h5,
+#article-single .article-content.space h6,
+#article-single .article-content.flock h2,
+#article-single .article-content.flock h3,
+#article-single .article-content.flock h4,
+#article-single .article-content.flock h5,
+#article-single .article-content.flock h6,
+#article-single .article-content.next h2,
+#article-single .article-content.next h3,
+#article-single .article-content.next h4,
+#article-single .article-content.next h5,
+#article-single .article-content.next h6 {
+}
+
+#article-single .article-content.article-content h2,
+#article-single .article-content.article-content h3,
+#article-single .article-content.article-content h4,
+#article-single .article-content.article-content h5,
+#article-single .article-content.article-content h6 {
+
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .article-content .modal-content  h2#error-notify-title:before {
+}
+
+#article-single .article-content .modal-content h2#error-notify-title {
+}
+
+
+#article-single .article-contenu .author-partage {
+}
+
+#article-single .article-contenu .author-partage div:first-child svg {
+}
+
+#article-single .article-contenu .author-partage svg {
+}
+
+#article-single .article-contenu .author-partage div:first-child svg:last-child {
+}
+
+#article-single .author-info {
+}
+
+#article-single .author-info .photo-author {
+}
+
+#article-single .author-info > div:first-child div img {
+}
+
+#article-single .author-info > div:first-child {
+}
+
+#article-single .author-info > div:first-child > div:last-child {
+}
+
+#article-single .author-info > div:first-child > div:last-child > div:first-child p:first-child {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#article-single .author-info > div:first-child > div:last-child > div:first-child p:last-child {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#article-single .author-info a:first-child {
+}
+
+#article-single .author-info .button-linkedIn {
+}
+
+#article-single .author-info .button-x {
+}
+
+#article-single .author-info .button-instagram {
+}
+
+#article-single .author-info .button-mastodon {
+}
+
+#article-single .author-info > div:last-child p {
+    color: $bold-biafine;
+
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+#article-single .other-article > div {
+}
+
+.thumbnail-mobile {
+}
+
+@media (max-width: 1200px) {
+    #article-single {
+    }
+
+    #article-single .article-contenu {
+    }
+}
+
+@media (max-width: 1000px) {
+    #article-single .article-contenu {
+    }
+
+    #article-single .article-header {
+    }
+}
+
+@media (max-width: 900px) {
+    #article-single {
+    }
+
+    #article-single .article-contenu {
+    }
+
+    #article-single .article-header,
+    #article-single #Introduction,
+    #article-single #share-bottom,
+    #article-single .author-info,
+    #article-single .other-article > h2 {
+    }
+
+    #article-single .other-article a:first-child {
+    }
+
+    #article-single .other-article a:last-child {
+    }
+
+    #article-single .thumbnail-mobile {
+        color: $bold-biafine;
+
+        body.biafine-theme & {
+            color: $bold-biafine;
+        }
+
+        body.dracula-theme & {
+            color: $bold-dracula;
+        }
+
+        body.giganoir-theme & {
+            color: $bold-bat;
+        }
+    }
+
+    #article-single .article-header .thumbnail {
+    }
+
+    #article-single iframe {
+    }    
+
+    #article-single h1 {
+    }
+    
+    #article-single .article-header > h2 {
+    }
+
+    #article-single .article-header > .author {
+    }
+
+    #article-single .article-header > .author > div > div:last-child {
+    }
+
+    #article-single h2,
+    #article-single h3,
+    #article-single h4,
+    #article-single h5,
+    #article-single h6 {
+    }
+
+    /* #article-single .article-contenu ul li {
+        font: normal normal normal 20px/32px SourceSerifProRegular;
+        text-align: justify;
+        margin-bottom: 25px;
+    }
+
+    #article-single .article-content p {
+        font: normal normal normal 15px/22px SourceSerifProRegular;
+        margin-bottom: 25px;
+    }
+    
+    #article-single .article-content p strong {
+        font: normal normal normal 15px/22px SourceSerifProSemiBold;
+    }
+    
+    #article-single .article-content p em {
+        font: normal normal normal 15px/22px SourceSerifProIt;
+    }
+    
+    #article-single .article-content p em > strong,
+    #article-single .article-content p strong > em {
+        font: normal normal normal 15px/22px SourceSerifProSemiBoldIt;
+    } */
+
+    #article-single .article-content figure {
+        /* height: 220px; */
+    }
+
+    #article-single .article-content h2,
+    #article-single .article-content h3,
+    #article-single .article-content h4,
+    #article-single .article-content h5,
+    #article-single .article-content h6 {
+    }
+
+    #article-single .author-info {
+    }
+
+    #article-single .author-info > div:first-child {
+    }
+
+    #article-single .author-info > div:first-child > div:last-child {
+    }
+
+    #article-single .author-info > div:first-child > div:last-child > div:first-child {
+    }
+
+    #article-single .author-info > div:first-child > div:last-child > div:first-child p:first-child {
+        color: $text-biafine;
+
+        body.biafine-theme & {
+            color: $text-biafine;
+        }
+
+        body.dracula-theme & {
+            color: $text-dracula;
+        }
+
+        body.giganoir-theme & {
+            color: $text-bat;
+        }
+    }
+    
+    #article-single .author-info > div:first-child > div:last-child > div:first-child p:last-child {
+        color: $text-biafine;
+
+        body.biafine-theme & {
+            color: $text-biafine;
+        }
+
+        body.dracula-theme & {
+            color: $text-dracula;
+        }
+
+        body.giganoir-theme & {
+            color: $text-bat;
+        }
+    }
+
+    #article-single .author-info .button-linkedIn {
+    }
+
+    #article-single .author-info .button-x {
+    }
+
+    #article-single .author-info > div:last-child p {
+        color: $bold-biafine;
+
+        body.biafine-theme & {
+            color: $bold-biafine;
+        }
+
+        body.dracula-theme & {
+            color: $bold-dracula;
+        }
+
+        body.giganoir-theme & {
+            color: $bold-bat;
+        }
+    }
+
+    #article-single .author-info a:first-child {
+    }    
+}
+
+@media(max-width: 400px) {
+    #article-single .article-header > .author > div > div > div {
+    }
+}

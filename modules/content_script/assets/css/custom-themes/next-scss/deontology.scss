@@ -1,0 +1,160 @@
+@import '_partials/_variables.scss';
+
+body.page-template-deontology.biafine-theme{
+}
+
+body.page-template-deontology.dracula-theme {
+    background: $background-dracula;
+}
+
+body.page-template-deontology.giganoir-theme {
+    background: $background-bat;
+}
+
+#deontology-main {
+}
+
+#deontology-title {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#deontology-container {
+}
+
+.deontology-text {
+}
+
+#deontology-text h2 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#deontology-text h2:before {
+}
+
+#deontology-text h3 {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#deontology-text h3:before {
+
+    background-color: $text-biafine;
+
+    body.biafine-theme & {
+        background-color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background-color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background-color: $text-bat;
+    }
+}
+
+#deontology-text p,
+#deontology-text li {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#deontology-text p {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#deontology-text p a {
+    color: $text-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#deontology-text h2+p {
+}
+
+#deontology-text a {
+}
+
+#deontology-text h2 {
+}
+
+#deontology-text h2:before {
+}
+
+
+@media (max-width: 1100px) {
+
+    #deontology-text p,
+    #deontology-text li,
+    #deontology-text h2,
+    #deontology-title {
+    }
+}

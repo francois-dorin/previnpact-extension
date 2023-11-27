@@ -1,0 +1,138 @@
+@import '_partials/_variables.scss';
+
+.modal {
+}
+
+.modal-content {
+
+    background: $white-biafine;
+    body.biafine-theme & {
+        background: $white-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $white-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $white-bat;
+    }
+}
+
+#myModal .modal-content > .error-title-container:before {
+}
+
+#myModal .modal-content > #error-notify-title {
+
+    color: $text-biafine;
+    body.biafine-theme & {
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+    }
+}
+
+#myModal .modal-content > #error-notify-title svg {
+}
+
+.message-modal-content {
+}
+
+#myModal .message-modal-content p {
+
+    color: $bold-biafine;
+    body.biafine-theme & {
+        color: $bold-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $bold-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $bold-bat;
+    }
+}
+
+.input-container {
+}
+
+#selectedText {
+    color: $text-biafine;
+    // background: $background-biafine;
+
+    body.biafine-theme & {
+        color: $text-biafine;
+        // background: $background-biafine;
+    }
+
+    body.dracula-theme & {
+        color: $text-dracula;
+        background: $citation-dracula;
+    }
+
+    body.giganoir-theme & {
+        color: $text-bat;
+        background: $citation-bat;
+    }
+}
+
+.modal-buttons {
+}
+
+.modal-buttons .cancel-button {
+}
+
+#correction-button {
+    // background-color: white;
+    color: $text-biafine;
+    background: $white-biafine;
+    body.biafine-theme & {
+        background: $white-biafine;
+        color: $text-biafine;
+    }
+
+    body.dracula-theme & {
+        background: $white-dracula;
+        color: $text-dracula;
+    }
+
+    body.giganoir-theme & {
+        background: $white-bat;
+        color: $text-bat;
+    }
+}
+
+body.no-scroll {
+}
+
+.error-button-send {
+}
+
+.container-input input,
+.container-input textarea {
+}
+
+@media (max-width: 900px) {
+    .modal {
+    }
+
+    .modal-content {
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+    }
+}

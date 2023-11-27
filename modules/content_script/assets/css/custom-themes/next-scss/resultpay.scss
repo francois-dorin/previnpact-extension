@@ -1,0 +1,82 @@
+@import '_partials/_variables.scss';
+
+.page-template-result-pay header,
+.page-template-result-pay footer {
+}
+
+body.page-template-result-pay.biafine-theme {
+    background: $background-biafine;
+}
+
+body.dracula-theme.page-template-result-pay {
+    background: $background-dracula;
+}
+
+body.giganoir-theme.page-template-result-pay {
+    background: $background-bat;
+}
+
+body.page-template-result-pay.biafine-theme svg path {
+    fill: $text-biafine;
+}
+
+body.dracula-theme.page-template-result-pay svg path {
+    fill: $text-dracula;
+}
+
+body.giganoir-theme.page-template-result-pay svg path {
+    fill: $text-bat;
+}
+
+.page-template-result-pay > div {
+}
+
+.page-template-result-pay > div > div:first-child {
+}
+
+.page-template-result-pay > div > div:first-child > div {
+}
+
+.page-template-result-pay > div p {
+}
+
+body.page-template-result-pay.biafine-theme > div p {
+    color: $text-biafine;
+}
+
+body.dracula-theme.page-template-result-pay > div p {
+    color: $text-dracula;
+}
+
+body.giganoir-theme.page-template-result-pay > div p {
+    color: $text-bat;
+}
+
+.page-template-result-pay > div a {
+}
+
+body.page-template-result-pay.biafine-theme > div a {
+    color: $text-biafine;
+    border: 0.5px solid $text-biafine;
+}
+
+body.dracula-theme.page-template-result-pay > div a {
+    color: $text-dracula;
+    border: 0.5px solid $text-dracula;
+}
+
+body.giganoir-theme.page-template-result-pay > div a {
+    color: $text-bat;
+    border: 0.5px solid $text-bat;
+}
+
+.img-container {
+}
+
+.img-container > img {
+}
+
+@media (max-width: 900px) {
+    .img-container {
+    }
+}
