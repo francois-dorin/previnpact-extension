@@ -1,5 +1,10 @@
+:root {
+    --background-default: #bec1c6;
+    --background-active: #9ab9ef;
+}
+
 body {
-    width: 250px;
+    width: 350px;
     font-family: 'Arial';
     color: #606368;
 }
@@ -32,11 +37,16 @@ li.option {
     padding: 5px;
 }
 
-.checkbox.input {
+li.option > span {
+    width: 250px;
+    display: inline-block;
+}
+
+.checkbox.input,
+.select.input {
     float: right;
     display: block;
-    width: 50px;
-
+    width: 100px;
 }
 
 .checkbox.input input {
@@ -90,4 +100,19 @@ li.option {
 .checkbox.input input:checked ~ .toggle span {
     background-color: #3674e0;
     transform: translate(20px);
+}
+
+select {        
+    border: 1px solid #ccc;
+    border-radius: 8px;    
+    color: white;
+    padding: 2px;
+}
+
+select:has(option[value="default"]:checked) {
+    background-color: var(--background-default);
+}
+
+select:not(:has(option[value="default"]:checked)) {
+    background-color: var(--background-active);
 }

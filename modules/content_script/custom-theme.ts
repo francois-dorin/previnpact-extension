@@ -14,6 +14,13 @@ const setClass = (className: string, condition: boolean): void => {
     body.classList.remove(className);
   }
 }
+const setData = (dataName: string, value: string): void => {
+  if (value && value != "default") {    
+    body.setAttribute(`data-${dataName}`, value);
+  } else {
+    body.removeAttribute(`data-${dataName}`);
+  }
+}
 
 extensionRuntime.onChanged((changes) => {  
   for (let [key, { newValue }] of Object.entries(changes)) {
@@ -35,7 +42,8 @@ extensionRuntime.onChanged((changes) => {
     }
 
     if (key == 'ecranLarge') {
-      //setClass('ecran-large', newValue);  
+      setClass('ecran-large', newValue && newValue != "default");  
+      setData('ecran-large', newValue);
     }
 
     if (key == 'taillePolice') {
@@ -65,7 +73,8 @@ const loadState = () => {
       setClass('font-sans-serif', settings.policeSansSerif);      
       setClass('texte-justifie', settings.texteJustifie);      
       setClass('avec-cesure', settings.avecCesure);
-      //setClass('ecran-large', settings.ecranLarge);
+      setClass('ecran-large', settings.ecranLarge && settings.ecranLarge != "default");
+      setData('ecran-large', settings.ecranLarge);
       setClass('taille-police', settings.taillePolice);
       setClass('agora-condense', settings.agoraCondense);
       setClass('liste-article-condensee', settings.listeArticleCondensee);

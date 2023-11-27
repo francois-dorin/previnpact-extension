@@ -1,20 +1,55 @@
-body.ecran-large #article-single {
-    max-width: none;
-    width: 80%;
+:root {
+    --max-width: unset;
 }
 
-body.ecran-large #article-single .article-contenu {
-    max-width: none;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 100%;
+:root body.ecran-large[data-ecran-large="xl"] {
+    --max-width: 1400px;
 }
 
-body.ecran-large #article-single main {
-    min-width: 294px;
+:root body.ecran-large[data-ecran-large="xxl"] {
+    --max-width: 1600px;
 }
 
-body.ecran-large #article-single main div#aside {
-    right: inherit !important;
-}
+@media (min-width: 1200px) {
+    
+    body.ecran-large #list-content,
+    body.ecran-large #article-single,
+    body.ecran-large #comments,
+    body.ecran-large #brief-article,
+    body.ecran-large #briefs {
+        max-width: var(--max-width);
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 
+
+    body.ecran-large #list-continu,
+    body.ecran-large #article-single .article-contenu,
+    body.ecran-large #briefs #max-right {
+        max-width: unset;
+        width: calc(100% - 300px);
+        float: left;
+    }
+
+    body.ecran-large #list-brief.list-brief {
+        float: left;
+        clear: right;
+    }
+
+    body.ecran-large #list-brief.fixed-brief {
+        right: 25px !important;
+    }
+
+    body.ecran-large #comments #comment-page {
+        max-width: unset;
+        width: calc(100% - 300px);
+    }
+
+    body.ecran-large #other-article {
+        justify-content: space-around;
+    }
+
+    body.ecran-large #briefs .briefs-article {
+        max-width: unset;
+    }
+}

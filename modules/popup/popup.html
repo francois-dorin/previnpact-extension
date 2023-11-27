@@ -56,14 +56,7 @@
             <span></span>
           </label>
         </div>     
-      </li>
-                
-      <!-- <li>
-        <label>
-          <input type="checkbox" name="ecran-large" disabled>
-          <span title="désactivé temporairement le temps de réparer la mise en page">Ecran large</span>
-        </label>
-      </li>     -->
+      </li>                       
     </ul>
     <h1>Agora</h1>
     <ul>
@@ -96,12 +89,24 @@
             <span></span>
           </label>
         </div>    
-      </li>   
-    </ul>
-    <ul>
-      <h1>Fonctionnalités supplémentaires</h1>
+      </li>  
       <li class="option">
-        Navigation dans les nouveaux commentaires via les flèches          
+        Ecran large 
+
+        <div class="select input">
+          <select name="ecran-large" id="option-ecran-large">
+            <option value="default">Normal</option>
+            <option value="xl">XL</option> 
+            <option value="xxl">XXL</option> 
+            <option value="fluid">Fluide</option> 
+          </select>         
+        </div>                       
+      </li>  
+    </ul>
+    <h1>Fonctionnalités supplémentaires</h1>
+    <ul>
+      <li class="option">
+        Navigation commentaires
         <div class="checkbox input">
           <input type="checkbox" name="navigation-commentaires" id="option-navigation-commentaires">
           <label for="option-navigation-commentaires" class="toggle">

@@ -1,7 +1,7 @@
 const policeSansSerifCheckBox = document.querySelector('input[name="police-sans-serif"]') as HTMLInputElement;
 const texteJustifieCheckBox = document.querySelector('input[name="texte-justifie"]') as HTMLInputElement;
 const avecCesureCheckBox = document.querySelector('input[name="avec-cesure"]') as HTMLInputElement;
-//const ecranLargeCheckBox = document.querySelector('input[name="ecran-large"]') as HTMLInputElement;
+const ecranLargeSelect = document.querySelector('select[name="ecran-large"]') as HTMLSelectElement;
 const taillePoliceCheckBox = document.querySelector('input[name="taille-police"]') as HTMLInputElement;
 const agoraCondenseCheckBox = document.querySelector('input[name="agora-condense"]') as HTMLInputElement;
 const listeArticleCondenseeCheckBox = document.querySelector('input[name="liste-article-condensee"]') as HTMLInputElement;
@@ -30,10 +30,15 @@ const setAvecCesure = () => {
     extensionRuntime.setSettings({avecCesure: value});
 }
 
-// const setEcranLarge = () => {
-//     const value = ecranLargeCheckBox.checked;
-//     extensionRuntime.setSettings({ecranLarge: value});
-// }
+const setEcranLarge = () => {
+    const value = ecranLargeSelect.value;
+    
+    if (value) {
+        extensionRuntime.setSettings({ecranLarge: value});
+    } else {
+        extensionRuntime.setSettings({ecranLarge: false});
+    }
+}
 
 const setTaillePolice = () => {
     const value = taillePoliceCheckBox.checked;
@@ -64,7 +69,7 @@ themeCheckBox.addEventListener('change', setTheme);
 policeSansSerifCheckBox.addEventListener('change', setPoliceSansSerif);
 texteJustifieCheckBox.addEventListener('change',setTexteJustifie);
 avecCesureCheckBox.addEventListener('change', setAvecCesure);
-//ecranLargeCheckBox.addEventListener('change', setEcranLarge);
+ecranLargeSelect.addEventListener('change', setEcranLarge);
 taillePoliceCheckBox.addEventListener('change', setTaillePolice);
 agoraCondenseCheckBox.addEventListener('change', setAgoraCondense);
 listeArticleCondenseeCheckBox.addEventListener('change', setListeArticleCondensee);
@@ -102,12 +107,12 @@ const restoreOptions = () => {
             avecCesureCheckBox.checked = values.avecCesure;
         }
 
-        // if (values.ecranLarge === undefined) {
-        //     ecranLargeCheckBox.checked = true;
-        //     setEcranLarge();
-        // } else {
-        //     ecranLargeCheckBox.checked = values.ecranLarge;
-        // }
+        if (values.ecranLarge === undefined) {
+            ecranLargeSelect.value = "";
+            setEcranLarge();
+        } else {
+            ecranLargeSelect.value = values.ecranLarge ?? "default";
+        }
 
         if (values.taillePolice === undefined) {
             taillePoliceCheckBox.checked = false;
