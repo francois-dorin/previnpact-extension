@@ -186,14 +186,16 @@ const defaultOrder = () => {
 }
 
 const setOrdreCommentaires = (ordre: string) => {
-    switch(ordre) {
-        case 'chronologique':
-            ordreChronologique();
-            break;
-        case 'antechronologique':
-            ordreAnteChronologique();
-            break;
-        default:
-            defaultOrder();
+    if (ordreCommentairesState.container) {
+        switch(ordre) {
+            case 'chronologique':
+                ordreChronologique();
+                break;
+            case 'antechronologique':
+                ordreAnteChronologique();
+                break;
+            default:
+                defaultOrder();
+        }
     }
 }
