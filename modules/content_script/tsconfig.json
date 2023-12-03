@@ -2,6 +2,7 @@
   "files": [
     "../shared/ExtensionRuntime.ts",
     "navigation-commentaires.ts",
+    "ordre-commentaires.ts",
     "custom-theme.ts"
   ],
   "compilerOptions": {

@@ -61,6 +61,10 @@ extensionRuntime.onChanged((changes) => {
     if (key == 'navigationCommentaires') {
       commentairesState.enabled = newValue;
     }
+
+    if (key == 'ordreCommentaires') {
+      setOrdreCommentaires(newValue);
+    }
   }
 }); 
 
@@ -77,8 +81,9 @@ const loadState = () => {
       setData('ecran-large', settings.ecranLarge);
       setClass('taille-police', settings.taillePolice);
       setClass('agora-condense', settings.agoraCondense);
-      setClass('liste-article-condensee', settings.listeArticleCondensee);
+      setClass('liste-article-condensee', settings.listeArticleCondensee);      
       commentairesState.enabled = settings.navigationCommentaires;
+      setOrdreCommentaires(settings.ordreCommentaires);
 
       if (settings.agoraReplie) {
         menuTalk();

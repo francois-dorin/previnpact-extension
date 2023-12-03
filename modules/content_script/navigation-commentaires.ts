@@ -75,7 +75,6 @@ const getCommentaires = () => {
   const coms = document.getElementsByClassName('single-comment');
   const commentaires = [...coms];
   sortCommentaires(commentaires);
-  console.log('commentaires', commentaires, commentairesState);
   return commentaires;
 }
 

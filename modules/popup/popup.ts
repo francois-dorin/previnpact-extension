@@ -8,6 +8,7 @@ const listeArticleCondenseeCheckBox = document.querySelector('input[name="liste-
 const navigationCommentairesCheckBox = document.querySelector('input[name="navigation-commentaires"]') as HTMLInputElement;
 const agoraReplieCheckBox = document.querySelector('input[name="agora-replie"]') as HTMLInputElement;
 const themeCheckBox = document.querySelector('input[name="theme"]') as HTMLInputElement;
+const ordreCommentairesSelect = document.querySelector('select[name="ordre-commentaires"]') as HTMLSelectElement;
 
 const setTheme = () => {
     const value = themeCheckBox.checked;
@@ -65,6 +66,11 @@ const setAgoraReplie = () => {
     extensionRuntime.setSettings({agoraReplie: value});
 }
 
+const setOrdreCommentaires = () => {
+    const value = ordreCommentairesSelect.value;
+    extensionRuntime.setSettings({ordreCommentaires: value});
+}
+
 themeCheckBox.addEventListener('change', setTheme);
 policeSansSerifCheckBox.addEventListener('change', setPoliceSansSerif);
 texteJustifieCheckBox.addEventListener('change',setTexteJustifie);
@@ -75,6 +81,7 @@ agoraCondenseCheckBox.addEventListener('change', setAgoraCondense);
 listeArticleCondenseeCheckBox.addEventListener('change', setListeArticleCondensee);
 navigationCommentairesCheckBox.addEventListener('change', setNavigationCommentaires);
 agoraReplieCheckBox.addEventListener('change', setAgoraReplie);
+ordreCommentairesSelect.addEventListener('change', setOrdreCommentaires);
 
 const restoreOptions = () => {
     extensionRuntime.getAllSettings().then((values) => {
@@ -147,6 +154,13 @@ const restoreOptions = () => {
             setAgoraReplie();
         } else {
             agoraReplieCheckBox.checked = values.agoraReplie;
+        }
+
+        if (values.ordreCommentaires === undefined) {
+            ordreCommentairesSelect.value = "";
+            setOrdreCommentaires();
+        } else {
+            ordreCommentairesSelect.value = values.ordreCommentaires ?? "default";
         }
     });
 }
