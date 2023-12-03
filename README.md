@@ -7,7 +7,7 @@ Les personnalisations possibles sont cochées, les autres sont prévues dans les
 - [x] l'activation / désactivation de la justification
 - [x] l'activation / désactivation de la gestion de la césure lors la justification est activée
 - [x] changement de police (mode avec / sans Sérif)
-- [ ] gestion des écrans larges
+- [x] gestion des écrans larges
 - [x] changement de la taille de la police (15px comme sur l'ancien site)
 - [x] le retour de Travolta
 - [x] condensation de l'Agora
@@ -17,9 +17,16 @@ Les personnalisations possibles sont cochées, les autres sont prévues dans les
 
 Il pourrait y en avoir d'autres. Mais pour l'instant, c'est la feuille de route.
 
-# Note sur la version v1.0.8 et supérieure
+# Note sur la version v1.0.12 et supérieure
 
-J'ai désactivé la gestion des écrans larges, car la mise en page était cassée suite aux dernières mises à jour du site. Il faut donc que je prenne un peu de temps pour regarder cela de plus près et faire les adaptations nécessaires.
+La gestion des écrans larges est de retour avec la version 1.0.12 ! Elle avait été désactivé avec la version 1.0.8 faute de compatiblité suite à la mise à jour du site.
+
+Il est maintenant possible de choisir entre :
+- normal : 1210px de large (la dimension de base proposée par Next)
+- XL : 1400px de large
+- XXL : 1600px de large
+- Fluid (= toute la largeur)
+
 
 # Screenshots
 
