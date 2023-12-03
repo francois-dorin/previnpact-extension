@@ -37,10 +37,6 @@ li.option {
     padding: 5px;
 }
 
-li.option > span {
-    width: 250px;
-    display: inline-block;
-}
 
 .checkbox.input,
 .select.input {
@@ -115,4 +111,11 @@ select:has(option[value="default"]:checked) {
 
 select:not(:has(option[value="default"]:checked)) {
     background-color: var(--background-active);
+}
+
+li.option > span.experimental {
+    display: inline;
+    color: darkorange;
+    font-size: 0.8rem;
+    font-style: italic;
 }
