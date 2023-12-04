@@ -2,8 +2,14 @@ name: Release
 
 on:
   workflow_dispatch:
-  push:
-    branches: [master]
+    inputs:
+      release-name:
+        type: string
+        description: Release name
+        required: true
+
+permissions:
+  contents: write
 
 jobs:
   release:
@@ -11,3 +17,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Create a Release
+        uses: elgohr/Github-Release-Action@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_NAME: ${{ inputs.release-name }}
+        with:
+          title: ${{ env.RELEASE_NAME }}
