@@ -35,6 +35,144 @@ class ExtensionRuntime {
     }
 }
 const extensionRuntime = new ExtensionRuntime();
+// function loadAjax() {
+//     $("#comment-page").on("click", "#toggle-editor-button", function() {
+//         $("#editor-wrap-0").empty();
+//     });
+//     function replyOrEdit(element: any, edit: boolean) {
+//         var cid = element.attr("cid");
+//         var prevcid = $("#comment-editor-wrapper").attr("cid");
+//         $("#editor-wrap-" + prevcid).hide();
+//         $("#reply-and-edit-" + prevcid).show();
+//         $("#editor-wrap-" + cid).show();
+//         $("#reply-editor").val("");
+//         $("#comment-editor-wrapper").prependTo($("#editor-wrap-" + cid));
+//         $("#comment-editor-wrapper").attr("cid", cid);
+//         $("#comment-send-butt").attr("cid", cid);
+//         $("#reply-and-edit-" + cid).hide();
+//         if (edit) {
+//             $("#comment-send-butt").attr("editid", cid);
+//             var content = $('#comment-content-' + cid + " .comment-text-content").text();
+//             $("#reply-editor").val(content);
+//         } else {
+//             $("#comment-send-butt").attr("editid", 0);
+//         }
+//         $("#reply-editor").focus();
+//         $("#reply-editor")[0].setSelectionRange($("#reply-editor").val().length, $("#reply-editor").val().length);
+//     }
+//     $("#comment-page").on("click", ".edit", function() {
+//         var elem = $(this);
+//         replyOrEdit(elem, true);
+//     })
+//     $("#comment-page").on("click", ".reply", function() {
+//         var elem = $(this);
+//         replyOrEdit(elem, false);
+//     });
+//     $("#comment-page").on('click', ".cancel-button", function() {
+//         var cid = $(this).attr("cid");
+//         var prevcid = $("#comment-editor-wrapper").attr("cid");
+//         $("#editor-wrap-" + prevcid).hide();
+//         $("#reply-and-edit-" + prevcid).show();
+//         $("#reply-editor").val("");
+//         $("#comment-editor-wrapper").prependTo($("#editor-wrap-" + cid));
+//     });
+//     $("#comment-page").on("click", ".vertical-separator", function() {
+//         var cid = $(this).attr("cid");
+//         var containerIdToFind = "#subcomments-container-" + cid;
+//         var container = $("#subcomments-container-" + cid);
+//         if (container.is(":hidden")) {
+//             container.show();
+//             $(this).removeClass("something-to-hide");
+//             $("#vertical-separator-plus-" + cid).hide();
+//             $("#vertical-separator-minus-" + cid).show();
+//         } else {
+//             container.hide();
+//             $(this).addClass("something-to-hide");
+//             $("#vertical-separator-plus-" + cid).show();
+//             $("#vertical-separator-minus-" + cid).hide();
+//         }
+//     })
+//     $("#comment-page").on("click", ".send-button", function(event: any) {
+//         var cid = $(this).attr("cid");
+//         var editid = $(this).attr("editid");
+//         if (editid > 0) {
+//             try {
+//                 let request =
+//                     $.ajax({
+//                         type: "POST",
+//                         url: this.getAttribute("url"),
+//                         data: {
+//                             action: "edit_ajax_comment",
+//                             comment_post_ID: $('#comment-page').attr("postId"),
+//                             comment_ID: cid,
+//                             content: $("#reply-editor").val(),
+//                         },
+//                         action: "edit_ajax_comment",
+//                         dataType: 'json',
+//                     });
+//                 request.done(function(output: any) {
+//                     //Code à jouer en cas d'éxécution sans erreur du script du PHP
+//                     if (output.success) {
+//                         //location.reload();const 
+//                         // element = document.getElementById("loading-post");
+//                         // element.removeChild();
+//                         $("#comment-page").load(location.href + " #comment-page > *", reloadCommentaires);
+//                     }
+//                 });
+//                 request.fail(function(error: any) {
+//                     //Code à jouer en cas d'éxécution en erreur du script du PHP ou de ressource introuvable
+//                 });
+//                 request.always(function() {
+//                     //Code à jouer après done OU fail quoi qu'il arrive
+//                 });
+//             } catch (e) {
+//                 //alert(e, "edit");
+//             }
+//         } else {
+//             try {
+//                 let request = $.ajax({
+//                     type: "POST",
+//                     url: this.getAttribute("url"),
+//                     data: {
+//                         action: "post_ajax_comment",
+//                         comment_post_ID: $('#comment-page').attr("postId"),
+//                         comment_ID: cid,
+//                         content: $("#reply-editor").val(),
+//                     },
+//                     action: "post_ajax_comment",
+//                     dataType: 'json',
+//                 });
+//                 request.done(function(output: any) {
+//                     // console.log(output);
+//                     //Code à jouer en cas d'éxécution sans erreur du script du PHP
+//                     if (output.success) {
+//                         $("#comment-page").load(location.href + " #comment-page > *", reloadCommentaires);
+//                         const url = "https://next.ink/wp-admin/admin-ajax.php";
+//                         const data = {
+//                             action: 'insert_or_update_count_diff',
+//                             post_id: $('#comment-page').attr("postId"),
+//                             last_comment_id: output.data.id,
+//                         }
+//                         $.ajax({
+//                             url: url,
+//                             type: 'POST',
+//                             data: data,
+//                             success: function(_data: any) {},
+//                             error: function(_error: any) {}
+//                         })
+//                     }
+//                 });
+//                 request.fail(function(_error: any) {
+//                 });
+//                 request.always(function() {
+//                 });
+//             } catch (e) {
+//                 //alert(e, 'addd');
+//             }
+//         }
+//     });
+//     $('.send-button').off('click');
+// }
 const commentairesState = {
     enabled: true,
     commentairesNonLus: null,
@@ -231,15 +369,19 @@ const getImageURL = (hCommentaire) => {
         // Commentaire de niveau 1
         hIcon = hCommentaire.parentNode.parentNode.querySelector('.comment-expend > img.avatar');
     }
-    return hIcon?.getAttribute('src');
+    return hIcon?.getAttribute('src') ?? hIcon?.getAttribute('data-src');
 };
 const getAuthorType = (hCommentaire) => {
     const hAuthorType = hCommentaire.querySelector('.author-tag');
-    return hAuthorType.textContent;
+    return hAuthorType?.textContent;
 };
 const getContent = (hCommentaire) => {
-    const hcontent = hCommentaire.querySelector('.comment-content');
+    const hcontent = hCommentaire.querySelector('.comment-text-content');
     return hcontent.innerHTML;
+};
+const getQuoteContent = (hCommentaire) => {
+    const hcontent = hCommentaire.querySelector('.quote-container');
+    return hcontent?.innerHTML;
 };
 const getDate = (hCommentaire) => {
     const hDate = hCommentaire.querySelector('.ago');
@@ -251,7 +393,11 @@ const getAuthor = (hCommentaire) => {
 };
 const getAuthorClass = (hCommentaire) => {
     const hAuthor = hCommentaire.querySelector('.author-tag');
-    return hAuthor.classList.item(1);
+    return hAuthor?.classList?.item(1);
+};
+const getIsEditable = (hCommentaire) => {
+    const hEdit = hCommentaire.querySelector('.edit');
+    return hEdit !== null;
 };
 const getCommentairesFromDOM = () => {
     const hCommentaires = document.querySelectorAll('.comment');
@@ -263,21 +409,26 @@ const getCommentairesFromDOM = () => {
             iconUrl: getImageURL(hCommentaire),
             authorType: getAuthorType(hCommentaire),
             content: getContent(hCommentaire),
+            quoteContent: getQuoteContent(hCommentaire),
             date: getDate(hCommentaire),
             author: getAuthor(hCommentaire),
-            authorClass: getAuthorClass(hCommentaire)
+            authorClass: getAuthorClass(hCommentaire),
+            isEditable: getIsEditable(hCommentaire)
         };
         list.push(commentaire);
     }
     return list;
 };
-const ordreCommentairesState = {
-    ordre: 'default',
-    initialDOM: document.querySelector('#comment-page > .comments-list'),
-    currentDOM: document.querySelector('#comment-page > .comments-list'),
-    container: document.querySelector('#comment-page'),
-    commentaires: getCommentairesFromDOM()
+const getInitialState = () => {
+    return {
+        ordre: 'default',
+        initialDOM: document.querySelector('#comment-page > .comments-list'),
+        currentDOM: document.querySelector('#comment-page > .comments-list'),
+        container: document.querySelector('#comment-page'),
+        commentaires: getCommentairesFromDOM()
+    };
 };
+let ordreCommentairesState = getInitialState();
 const sortCommentairesOrdreChronologique = (commentaires) => {
     return commentaires.sort((a, b) => {
         if (a.id > b.id)
@@ -298,6 +449,15 @@ const sortCommentairesOrdreAnteChronologique = (commentaires) => {
 };
 const createDOMForCommentaire = (commentaire) => {
     const div = document.createElement('div');
+    const editDiv = `
+<div class="edit" id="edit-${commentaire.id}" cid="${commentaire.id}">
+    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.42188 15.5771H14.0006" stroke="#6B6B6B" style="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M6.48393 12.1099L2.59473 13.2235L3.70834 9.33428L11.2168 1.82585C11.7567 1.28592 12.6257 1.28592 13.1656 1.82585L14.0008 2.66106C14.5407 3.20099 14.5407 4.06994 14.0008 4.60987L6.48393 12.1099Z" stroke="#6B6B6B" style="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M12.8786 5.71504L10.103 2.93945" stroke="#6B6B6B" style="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span class="edit-button">Éditer</span>
+</div>`;
     div.innerHTML = `
 <div class="comment byuser depth-1 single-comment" id="comment-${commentaire.id}">
     <div class="comment-expend">
@@ -309,7 +469,7 @@ const createDOMForCommentaire = (commentaire) => {
     <div class="comment-info-pseudo">
         <div>
             <span class="pseudo-comment">${commentaire.author}</span>
-            <span class="author-tag ${commentaire.authorClass}">${commentaire.authorType}</span>                    
+            <span class="author-tag ${commentaire.authorClass}">${commentaire.authorType ?? ''}</span>                    
         </div>
 
     <div class="ago ago-${commentaire.id}">${commentaire.date}</div>
@@ -317,6 +477,7 @@ const createDOMForCommentaire = (commentaire) => {
 
 <div>
     <div class="comment-content" id="comment-content-${commentaire.id}">
+        ${commentaire.quoteContent ? `<div class="quote-container">${commentaire.quoteContent}</div>` : ''}
         <div class="comment-text-content">${commentaire.content}</div>
         <div style="display:none;" class="add-comment" id="editor-wrap-${commentaire.id}">
     </div>
@@ -333,9 +494,24 @@ const createDOMForCommentaire = (commentaire) => {
             <span class="reply-button">Répondre</span>
         </div>        
     </div>
+    ${commentaire.isEditable ? editDiv : ''}
 </div>
 `;
     return div;
+};
+const clearEvents = () => {
+    // if (jQuery) {
+    //     $("#comment-page").off("click", ".edit");
+    //     $("#comment-page").off("click", ".reply");
+    //     $("#comment-page").off('click', ".cancel-button");
+    //     $("#comment-page").off("click", ".vertical-separator");
+    //     $("#comment-page").off("click", ".send-button");
+    // }
+};
+const addEvents = () => {
+    // if ($) {
+    //     loadAjax();
+    // }
 };
 const createDOM = (commentaires) => {
     const divCommentsList = document.createElement('div');
@@ -347,28 +523,38 @@ const createDOM = (commentaires) => {
     }
     return divCommentsList;
 };
+const setNewDOM = (newDOM) => {
+    clearEvents();
+    $("#comment-editor-wrapper").prependTo($("#editor-wrap-0")); // Pour être sur de conserver l'éditeur si jamais il était ouvert.
+    ordreCommentairesState.container.replaceChild(newDOM, ordreCommentairesState.currentDOM);
+    ordreCommentairesState.currentDOM = newDOM;
+    addEvents();
+};
 const ordreChronologique = () => {
     const commentaires = [...ordreCommentairesState.commentaires];
     let newDOM;
     sortCommentairesOrdreChronologique(commentaires);
     newDOM = createDOM(commentaires);
-    ordreCommentairesState.container.replaceChild(newDOM, ordreCommentairesState.currentDOM);
-    ordreCommentairesState.currentDOM = newDOM;
+    setNewDOM(newDOM);
 };
 const ordreAnteChronologique = () => {
     const commentaires = [...ordreCommentairesState.commentaires];
     let newDOM;
     sortCommentairesOrdreAnteChronologique(commentaires);
     newDOM = createDOM(commentaires);
-    ordreCommentairesState.container.replaceChild(newDOM, ordreCommentairesState.currentDOM);
-    ordreCommentairesState.currentDOM = newDOM;
+    setNewDOM(newDOM);
 };
 const defaultOrder = () => {
-    ordreCommentairesState.container.replaceChild(ordreCommentairesState.initialDOM, ordreCommentairesState.currentDOM);
-    ordreCommentairesState.currentDOM = ordreCommentairesState.initialDOM;
+    setNewDOM(ordreCommentairesState.initialDOM);
+};
+const setHeaderDataReloaded = () => {
+    const commentPage = document.querySelector('#comment-page');
+    const commentHeader = commentPage?.querySelector('.comments-header');
+    commentHeader?.setAttribute('data-reloaded', 'true');
 };
 const setOrdreCommentaires = (ordre) => {
     if (ordreCommentairesState.container) {
+        ordreCommentairesState.ordre = ordre;
         switch (ordre) {
             case 'chronologique':
                 ordreChronologique();
@@ -379,8 +565,47 @@ const setOrdreCommentaires = (ordre) => {
             default:
                 defaultOrder();
         }
+        setHeaderDataReloaded();
     }
 };
+const observeDOM = (function () {
+    const MutationObserver = window.MutationObserver;
+    return function (obj, callback) {
+        if (!obj || obj.nodeType !== Node.ELEMENT_NODE)
+            return;
+        if (MutationObserver) {
+            // define a new observer
+            const mutationObserver = new MutationObserver(callback);
+            // have the observer observe for changes in children
+            mutationObserver.observe(obj, { childList: true, subtree: true });
+            return mutationObserver;
+        }
+    };
+})();
+const reloadCommentaires = () => {
+    const ordre = ordreCommentairesState.ordre;
+    ordreCommentairesState = getInitialState();
+    ordreCommentairesState.ordre = ordre;
+    setOrdreCommentaires(ordreCommentairesState.ordre);
+};
+const commentairesNeedReload = () => {
+    const commentPage = document.querySelector('#comment-page');
+    const commentHeader = commentPage?.querySelector('.comments-header');
+    if (commentHeader && commentHeader.getAttribute('data-reloaded') !== 'true') {
+        setHeaderDataReloaded();
+        reloadCommentaires();
+    }
+};
+const initObserveCommentChange = () => {
+    const commentPage = document.querySelector('#comment-page');
+    observeDOM(commentPage, commentairesNeedReload);
+};
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initObserveCommentChange);
+}
+else {
+    initObserveCommentChange();
+}
 const menuTalk = () => {
     const litsheart = document.getElementById('list-heart');
     const talk = document.getElementById('talk');

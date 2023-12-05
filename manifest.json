@@ -10,7 +10,10 @@
         "128": "assets/icons/nextinpact-128x128.png"
     },
     "content_scripts": [{
-      "js": ["dist/scripts/content_script.js"],
+      "js": [
+        "modules/content_script/assets/js/jquery-3.7.1.js",
+        "dist/scripts/content_script.js"
+      ],
       "css": [
         "modules/content_script/assets/css/extra-themes.css",
         "modules/content_script/assets/css/font-sans-serif.css",

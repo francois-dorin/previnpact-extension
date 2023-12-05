@@ -25,7 +25,8 @@
 
     body.ecran-large #list-continu,
     body.ecran-large #article-single .article-contenu,
-    body.ecran-large #briefs #max-right {
+    body.ecran-large #briefs #max-right,
+    body.ecran-large #brief-article > div:first-child  {
         max-width: unset;
         width: calc(100% - 300px);
         float: left;
