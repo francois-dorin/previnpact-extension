@@ -1,6 +1,3 @@
-declare var $: any;
-declare var jQuery: any;
-
 interface IComment {
     id: number,
     author: string,
@@ -173,22 +170,6 @@ const createDOMForCommentaire = (commentaire: IComment) => {
     return div;
 }
 
-const clearEvents = () => {
-    // if (jQuery) {
-    //     $("#comment-page").off("click", ".edit");
-    //     $("#comment-page").off("click", ".reply");
-    //     $("#comment-page").off('click', ".cancel-button");
-    //     $("#comment-page").off("click", ".vertical-separator");
-    //     $("#comment-page").off("click", ".send-button");
-    // }
-}
-
-const addEvents = () => {
-    // if ($) {
-    //     loadAjax();
-    // }
-}
-
 const createDOM = (commentaires: IComment[]) => {
     const divCommentsList = document.createElement('div');
 
@@ -204,12 +185,12 @@ const createDOM = (commentaires: IComment[]) => {
 }
 
 const setNewDOM = (newDOM: Element) => {
-    clearEvents();
-    $("#comment-editor-wrapper").prependTo($("#editor-wrap-0")); // Pour être sur de conserver l'éditeur si jamais il était ouvert.
+    const editorWrapper = document.getElementById('comment-editor-wrapper');
+    const container = document.getElementById('editor-wrap-0');
+    container.prepend(editorWrapper); // Pour être sur de conserver l'éditeur si jamais il était ouvert.
 
     ordreCommentairesState.container.replaceChild(newDOM, ordreCommentairesState.currentDOM);
-    ordreCommentairesState.currentDOM = newDOM;
-    addEvents();
+    ordreCommentairesState.currentDOM = newDOM;    
 }
 
 const ordreChronologique = () => {

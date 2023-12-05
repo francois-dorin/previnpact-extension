@@ -1,7 +1,6 @@
 {
   "files": [
     "../shared/ExtensionRuntime.ts",
-    "next.ts",
     "navigation-commentaires.ts",
     "ordre-commentaires.ts",
     "custom-theme.ts"
