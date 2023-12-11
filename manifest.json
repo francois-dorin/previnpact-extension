@@ -22,7 +22,8 @@
         "modules/content_script/assets/css/agora.css",
         "modules/content_script/assets/css/liste-article-condensee.css",
         "modules/content_script/assets/css/404.css",
-        "modules/content_script/assets/css/navigation-commentaire.css"
+        "modules/content_script/assets/css/navigation-commentaire.css",
+        "modules/content_script/assets/css/logo-sans-beta.css"
       ],
       "matches": [
         "https://beta.next.ink/*",

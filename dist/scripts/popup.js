@@ -9,6 +9,7 @@ const navigationCommentairesCheckBox = document.querySelector('input[name="navig
 const agoraReplieCheckBox = document.querySelector('input[name="agora-replie"]');
 const themeCheckBox = document.querySelector('input[name="theme"]');
 const ordreCommentairesSelect = document.querySelector('select[name="ordre-commentaires"]');
+const logoSansBetaCheckBox = document.querySelector('input[name="logo-sans-beta"]');
 const setTheme = () => {
     const value = themeCheckBox.checked;
     extensionRuntime.setSettings({ theme: value });
@@ -59,6 +60,10 @@ const setOrdreCommentaires = () => {
     const value = ordreCommentairesSelect.value;
     extensionRuntime.setSettings({ ordreCommentaires: value });
 };
+const setLogoSansBeta = () => {
+    const value = logoSansBetaCheckBox.checked;
+    extensionRuntime.setSettings({ logoSansBeta: value });
+};
 themeCheckBox.addEventListener('change', setTheme);
 policeSansSerifCheckBox.addEventListener('change', setPoliceSansSerif);
 texteJustifieCheckBox.addEventListener('change', setTexteJustifie);
@@ -70,6 +75,7 @@ listeArticleCondenseeCheckBox.addEventListener('change', setListeArticleCondense
 navigationCommentairesCheckBox.addEventListener('change', setNavigationCommentaires);
 agoraReplieCheckBox.addEventListener('change', setAgoraReplie);
 ordreCommentairesSelect.addEventListener('change', setOrdreCommentaires);
+logoSansBetaCheckBox.addEventListener('change', setLogoSansBeta);
 const restoreOptions = () => {
     extensionRuntime.getAllSettings().then((values) => {
         if (values.theme === undefined) {
@@ -149,6 +155,13 @@ const restoreOptions = () => {
         }
         else {
             ordreCommentairesSelect.value = values.ordreCommentaires ?? "default";
+        }
+        if (values.logoSansBeta === undefined) {
+            logoSansBetaCheckBox.checked = false;
+            setLogoSansBeta();
+        }
+        else {
+            logoSansBetaCheckBox.checked = values.logoSansBeta;
         }
     });
 };

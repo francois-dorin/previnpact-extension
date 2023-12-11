@@ -512,6 +512,9 @@ extensionRuntime.onChanged((changes) => {
         if (key == 'ordreCommentaires') {
             setOrdreCommentaires(newValue);
         }
+        if (key == 'logoSansBeta') {
+            setClass('logo-sans-beta', newValue);
+        }
     }
 });
 const loadState = () => {
@@ -528,6 +531,7 @@ const loadState = () => {
         setClass('taille-police', settings.taillePolice);
         setClass('agora-condense', settings.agoraCondense);
         setClass('liste-article-condensee', settings.listeArticleCondensee);
+        setClass('logo-sans-beta', settings.logoSansBeta);
         commentairesState.enabled = settings.navigationCommentaires;
         setOrdreCommentaires(settings.ordreCommentaires);
         if (settings.agoraReplie) {

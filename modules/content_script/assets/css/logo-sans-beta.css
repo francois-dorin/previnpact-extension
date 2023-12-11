@@ -1,0 +1,3 @@
+body.logo-sans-beta .next svg path:nth-last-child(-n+4) {
+    display: none;
+}
