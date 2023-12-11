@@ -39,8 +39,14 @@ const getQuoteContent = (hCommentaire: Element): string => {
 }
 
 const getDate = (hCommentaire: Element): string => {
-    const hDate = hCommentaire.querySelector('.ago');
-    return hDate.textContent;
+    let hDate: Element;
+    if (hCommentaire.closest('.subcomments-container')) {
+        hDate = hCommentaire.querySelector('.ago');
+    } else {
+        hDate = hCommentaire.closest('.parent-comment')?.querySelector('.ago');
+    }
+    
+    return hDate?.textContent;
 }
 
 const getAuthor = (hCommentaire: Element): string => {
