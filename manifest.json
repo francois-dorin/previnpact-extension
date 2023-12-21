@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Prev INpact",
-    "version": "1.0.14",
+    "version": "1.0.16",
     "description": "Next INpact Dark mode pour la beta",
     "icons": {
         "16": "assets/icons/nextinpact-16x16.png",

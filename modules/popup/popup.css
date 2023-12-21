@@ -119,3 +119,19 @@ li.option > span.experimental {
     font-size: 0.8rem;
     font-style: italic;
 }
+
+.contributeur {
+    font-size: 0.7rem;
+    color: #242424;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 15px;  
+    padding: 3px;  
+    background-color: #F2F2F2;
+}
+
+.contributeur a {    
+    text-decoration: none;
+    color: #242424;
+}

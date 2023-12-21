@@ -1,3 +1,9 @@
+interface IReaction {
+    emoji: string,
+    count: number,
+    current_user_emoji: boolean
+}
+
 interface IComment {
     id: number,
     author: string,
@@ -7,25 +13,39 @@ interface IComment {
     iconUrl: string,
     authorType: string,
     authorClass: string,
-    isEditable: boolean
+    isEditable: boolean,
+    archor: string
+    newComment: boolean
 }
 
 const getImageURL = (hCommentaire: Element): string => {
     let hIcon: Element;
     if (hCommentaire.closest('.subcomments-container')) {
         // Sous-commentaire
-        hIcon = hCommentaire.querySelector('.comment-expend > img.avatar');
+        hIcon = hCommentaire.querySelector('.comment-expend > div > img.avatar');
     } else {
         // Commentaire de niveau 1
-        hIcon = hCommentaire.parentNode.parentNode.querySelector('.comment-expend > img.avatar');
+        hIcon = hCommentaire.closest('.parent-comment').querySelector('.comment-expend > div > img.avatar');
     }
     return hIcon?.getAttribute('src') ?? hIcon?.getAttribute('data-src');
 
 }
 
 const getAuthorType = (hCommentaire: Element): string => {
-    const hAuthorType = hCommentaire.querySelector('.author-tag');
+    let hAuthorType: Element;
+
+    if (hCommentaire.closest('.subcomments-container')) {
+        hAuthorType = hCommentaire.querySelector('.author-tag');
+    } else {
+        hAuthorType = hCommentaire.closest('.parent-comment').querySelector('.author-tag');
+    }
+    
     return hAuthorType?.textContent;
+}
+
+const isNewComment = (hCommentaire: Element): boolean => {
+    const hNew = hCommentaire.querySelector('.new-comment');
+    return hNew !== null;
 }
 
 const getContent = (hCommentaire: Element): string => {
@@ -45,23 +65,49 @@ const getDate = (hCommentaire: Element): string => {
     } else {
         hDate = hCommentaire.closest('.parent-comment')?.querySelector('.ago');
     }
-    
+
     return hDate?.textContent;
 }
 
 const getAuthor = (hCommentaire: Element): string => {
-    const hAuthor = hCommentaire.querySelector('.pseudo-comment');
-    return hAuthor.textContent;
+    let hAuthor: Element;
+
+    if (hCommentaire.closest('.subcomments-container')) {
+        hAuthor = hCommentaire.querySelector('.pseudo-comment');
+    } else {
+        hAuthor = hCommentaire.closest('.parent-comment')?.querySelector('.pseudo-comment');
+    }
+
+    return hAuthor?.textContent;
 }
 
 const getAuthorClass = (hCommentaire: Element): string => {
-    const hAuthor = hCommentaire.querySelector('.author-tag');
+    let hAuthor: Element;
+
+    if (hCommentaire.closest('.subcomments-container')) {
+        hAuthor = hCommentaire.querySelector('.author-tag');
+    } else {
+        hAuthor = hCommentaire.closest('.parent-comment')?.querySelector('.author-tag');
+    }
+    
     return hAuthor?.classList?.item(1);
 }
 
 const getIsEditable = (hCommentaire: Element): boolean => {
     const hEdit = hCommentaire.querySelector('.edit');
     return hEdit !== null;
+}
+
+const getArchor = (hCommentaire: Element): string => {
+    let hArchor: Element;
+
+    if (hCommentaire.closest('.subcomments-container')) {
+        hArchor = hCommentaire.querySelector('.archor');
+    } else {
+        hArchor = hCommentaire.closest('.parent-comment')?.querySelector('.archor');
+    }
+
+    return hArchor?.textContent;
 }
 
 const getCommentairesFromDOM: () => IComment[] = () => {
@@ -79,7 +125,9 @@ const getCommentairesFromDOM: () => IComment[] = () => {
             date: getDate(hCommentaire), 
             author: getAuthor(hCommentaire),
             authorClass: getAuthorClass(hCommentaire),
-            isEditable: getIsEditable(hCommentaire)
+            isEditable: getIsEditable(hCommentaire),
+            archor: getArchor(hCommentaire),
+            newComment: isNewComment(hCommentaire)
         }
 
         list.push(commentaire);
@@ -121,6 +169,85 @@ const sortCommentairesOrdreAnteChronologique = (commentaires: IComment[]) => {
     });  
   };
 
+const buttonReagirClick = (event: MouseEvent) => {
+    const commentId = (event.currentTarget as Element).getAttribute('cid'); //event.target .data('cid');
+    const emojiList = document.getElementById('emoji-react-list-' + commentId);
+    
+    if (emojiList.classList.contains('hiding-emojis')) {
+        emojiList.classList.remove('hiding-emojis');
+        emojiList.classList.add('showing-emojis');
+        getEmojiReactions(parseInt(commentId));
+    } else {
+        emojiList.classList.remove('showing-emojis');
+        emojiList.classList.add('hiding-emojis');
+    }
+};
+
+const addEmojiReaction = (commentId: number, emoji: string) => {
+    const formData = new FormData();
+    formData.append('action', 'set_emoji_reaction');
+    formData.append('comment_id', commentId.toString());
+    formData.append('reaction_emoji', emoji);
+
+    fetch('https://next.ink/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: formData
+    }).then(async response => {
+        if (response.ok) {
+            const json = await response.json() as IReaction[];
+            setEmojiReactionsHtml(commentId, json);            
+        } else {
+            throw new Error('Erreur lors de la récupération des réactions emoji');
+        }
+    });           
+}
+
+
+const setEmojiReactionsHtml = (commentId: number, reactions: IReaction[]) => {
+    const reactionList = document.getElementById('emoji-react-list-' + commentId);
+
+    reactionList.innerHTML = '';
+    reactions.forEach((reaction) => {
+        const button = document.createElement('button');
+
+        button.textContent = reaction.emoji + ' ' + (reaction.count > 99 ? '99+' : reaction.count);
+        button.className = reaction.count > 0 ? 'used' : 'unused';
+
+        if (reaction.current_user_emoji) {
+            button.className += ' your-reaction';
+        }
+
+        button.setAttribute('data-emoji', reaction.emoji);
+        button.setAttribute('data-comment-id', commentId.toString());
+
+        button.addEventListener('click', function() {
+            addEmojiReaction(commentId, reaction.emoji);
+        });
+
+        // Ajoutez le bouton à la div 'emoji-reaction-list'
+        reactionList.appendChild(button);
+    });
+}
+
+
+const getEmojiReactions = (commentId:number) => {
+    const formData = new FormData();
+    formData.append('action', 'post_get_comment_reactions');
+    formData.append('comment_id', commentId.toString());
+
+    fetch('https://next.ink/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: formData
+    }).then(async response => {
+        if (response.ok) {
+            const json = await response.json() as IReaction[];
+            setEmojiReactionsHtml(commentId, json);            
+        } else {
+            throw new Error('Erreur lors de la récupération des réactions emoji');
+        }
+    });
+}
+
 const createDOMForCommentaire = (commentaire: IComment) => {
     const div = document.createElement('div');
     const editDiv = `
@@ -135,44 +262,68 @@ const createDOMForCommentaire = (commentaire: IComment) => {
 
 
     div.innerHTML = `
-<div class="comment byuser depth-1 single-comment" id="comment-${commentaire.id}">
+<div class="parent-comment" id="parent-comment-${commentaire.id}">
     <div class="comment-expend">
-        <img alt="" src="${commentaire.iconUrl}" srcset="${commentaire.iconUrl} 2x" class="avatar avatar-30 photo ls-is-cached lazyloaded" height="30" width="30" decoding="async">    <div class="vertical-separator nothing-ever-to-hide" hiding-things="0" cid="${commentaire.id}">
-    </div>
-</div>
-
-<div class="comment-main">
-    <div class="comment-info-pseudo">
         <div>
+            <img alt="" src="${commentaire.iconUrl}" srcset="${commentaire.iconUrl} 2x" class="avatar avatar-50 photo ls-is-cached lazyloaded" height="50" width="50" decoding="async">        <div class="info-comment">
+        <div class="status-compte">
             <span class="pseudo-comment">${commentaire.author}</span>
-            <span class="author-tag ${commentaire.authorClass}">${commentaire.authorType ?? ''}</span>                    
+                                                <span class="separator-point"></span>
+                                <span class="author-tag ${commentaire.authorClass}">
+                                ${commentaire.authorType ?? ''}
+                                </span>
+                                        </div>
+            <span class="separator-point"></span>
+            <div class="ago ago-${commentaire.id}">${commentaire.date}</div>
         </div>
-
-    <div class="ago ago-${commentaire.id}">${commentaire.date}</div>
-</div>
-
-<div>
-    <div class="comment-content" id="comment-content-${commentaire.id}">
-        ${commentaire.quoteContent ? `<div class="quote-container">${commentaire.quoteContent}</div>` : ''}
-        <div class="comment-text-content">${commentaire.content}</div>
-        <div style="display:none;" class="add-comment" id="editor-wrap-${commentaire.id}">
     </div>
-
-    <div class="editor-wrap" id="editor-subwrap-${commentaire.id}"></div>
-</div>
-
-<div class="button-reply-and-edit">
-    <div class="reply-and-edit" id="reply-and-edit-${commentaire.id}">
-        <div class="reply" id="reply-${commentaire.id}" cid="${commentaire.id}">
-            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.9299 13.0035C14.5949 12.3755 15.1305 11.6089 15.4815 10.7685C15.8417 9.9188 16.0171 9.01371 15.9987 8.09014C15.9987 4.28506 12.7385 1.18188 8.56399 1.18188C4.38948 1.18188 1 4.28506 1 8.09014C1 11.8952 4.38948 14.9984 8.57322 14.9984C9.31208 14.9984 10.0509 14.8968 10.7713 14.7029C10.9837 14.8876 11.2146 15.0631 11.464 15.2201C12.443 15.8573 13.4958 16.1806 14.6041 16.1806C14.8073 16.1806 14.9735 16.079 15.0474 15.9127C15.0844 15.8388 15.1028 15.7557 15.0936 15.6634C15.0936 15.5802 15.0566 15.4971 15.0105 15.4325C14.4748 14.7121 14.1054 13.8717 13.9391 12.985V13.0035H13.9299Z" stroke="#6B6B6B" style="" stroke-width="1.5" stroke-linejoin="round"></path>
-            </svg>
-            <span class="reply-button">Répondre</span>
-        </div>        
+    <div>
+        <p class="archor">${commentaire.archor}</p>
     </div>
-    ${commentaire.isEditable ? editDiv : ''}
-</div>
-`
+    </div>
+    <div class="comment-solo enter-other-comment">
+    <div>
+        <div class="comment byuser comment-author-Kazer20 odd alt thread-odd thread-alt depth-1  single-comment" id="comment-${commentaire.id}">
+            <div class="comment-main">
+                <div>
+                    <div class="comment-content" id="comment-content-${commentaire.id}">
+                        <div class="comment-text-content">${commentaire.content}</div>        
+                    </div>
+                    <div style="display:none;" class="add-comment" id="editor-wrap-${commentaire.id}"></div>
+                    <div class="editor-wrap" id="editor-subwrap-${commentaire.id}"></div>
+                </div>
+                <div class="button-reply-and-edit">
+                    <div class="reply-and-edit" id="reply-and-edit-${commentaire.id}">
+                        <div class="reply" id="reply-${commentaire.id}" cid="${commentaire.id}">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.9299 13.0035C14.5949 12.3755 15.1305 11.6089 15.4815 10.7685C15.8417 9.9188 16.0171 9.01371 15.9987 8.09014C15.9987 4.28506 12.7385 1.18188 8.56399 1.18188C4.38948 1.18188 1 4.28506 1 8.09014C1 11.8952 4.38948 14.9984 8.57322 14.9984C9.31208 14.9984 10.0509 14.8968 10.7713 14.7029C10.9837 14.8876 11.2146 15.0631 11.464 15.2201C12.443 15.8573 13.4958 16.1806 14.6041 16.1806C14.8073 16.1806 14.9735 16.079 15.0474 15.9127C15.0844 15.8388 15.1028 15.7557 15.0936 15.6634C15.0936 15.5802 15.0566 15.4971 15.0105 15.4325C14.4748 14.7121 14.1054 13.8717 13.9391 12.985V13.0035H13.9299Z" stroke="#6B6B6B" style="" stroke-width="1.5" stroke-linejoin="round"></path>
+                            </svg>
+                            <span class="reply-button">Répondre</span>
+                        </div>
+                    </div>
+                    ${commentaire.isEditable ? editDiv : ''}
+                    <div class="emoji-react" id="emoji-react-${commentaire.id}" open="0" cid="${commentaire.id}">
+                        <svg width="100%" height="100%" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                            <path d="M14.4,27.6c-7.285,0 -13.2,-5.915 -13.2,-13.2c-0,-7.285 5.915,-13.2 13.2,-13.2c7.285,-0 13.2,5.915 13.2,13.2" style="fill:none;stroke:#000;stroke-width:2px;"></path>
+                            <path d="M15.84,16.32l-8.867,-0c-0.009,0.119 -0.013,0.239 -0.013,0.36c-0,3.025 2.803,5.519 6.401,5.844" style="fill:none;stroke:#000;stroke-width:1.5px;"></path>
+                            <path d="M6.24,9.84l2.4,-2.4l2.36,2.36" style="fill:none;stroke:#000;stroke-width:1.5px;"></path>
+                            <path d="M17.52,9.84l2.4,-2.4l2.36,2.36" style="fill:none;stroke:#000;stroke-width:1.5px;"></path>
+                            <path d="M22.08,18.336l-0,7.488" style="fill:none;stroke:#000;stroke-width:1.5px;"></path>
+                            <path d="M18.336,22.08l7.488,-0" style="fill:none;stroke:#000;stroke-width:1.5px;"></path>
+                            <circle cx="22.08" cy="22.08" r="6.24" style="fill:none;stroke:#000;stroke-width:1.5px;"></circle>
+                        </svg>                    
+                        <span class="emoji-react-button">Réagir</span>
+                    </div>
+                </div>
+                <div class="emoji-reaction-list hiding-emojis" id="emoji-react-list-${commentaire.id}" cid="${commentaire.id}">                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
+
+
+    div.querySelector('.emoji-react')?.addEventListener('click', buttonReagirClick);
     return div;
 }
 

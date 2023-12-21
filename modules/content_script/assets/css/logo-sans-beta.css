@@ -1,3 +1,3 @@
-body.logo-sans-beta .next svg path:nth-last-child(-n+4) {
+body.logo-sans-beta #next-impact-nav-left > a > svg path:nth-last-child(-n+4) {
     display: none;
 }
