@@ -1,9 +1,7 @@
 # Gestion de l'Agora
 
-Il existe maintenant une option pour compacter l'Agora. Elle prend ainsi moins de place sur l'écran.
+L'extension propose 2 fonctionnalités autour de l'Agora :
+- un mode pour le rendre plus compact ;
+- la possibilité de l'avoir replié par défaut.
 
-## Version de base
-![normal](../assets/screenshots/agora-normal.webp)
-
-## Version compacte
-![compact](../assets/screenshots/agora-compact.webp)
+![Animation des modes de l'Agora](../assets/screenshots/agora.webp)

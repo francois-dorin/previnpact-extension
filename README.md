@@ -1,45 +1,31 @@
-# Personnalisation du thème pour la bêta de Next INpact
+# Description du projet
 
-Beaucoup le demandais, le voici sous forme d'une extension ! 
+Cette extension pour les navigateurs Chrome / Firefox offre des fonctionnalités de personnalisation supplémentaires pour le site Next (anciennement NextINpact), et notamment :
+- [x] [gestion de l'alignement du texte (justifié / avec césure / aligné à gauche)](docs/alignement-texte.md) ;
+- [x] [gestion des écrans larges](docs/ecran-large.md) ;
+- [x] changement de la taille de la police (15px comme sur l'ancien site) ;
+- [x] [condensation de l'Agora](docs/agora.md) ;
+- [x] [condensation de la liste des articles](docs/liste-article.md) ;
+- [x] navigation dans les commentaires non-lu en utilisant les flèches gauche et droite ;
+- [x] navigation dans les commentaires par ordre chronologique en utilisant les touches < et > ;
 
-Les personnalisations possibles sont cochées, les autres sont prévues dans les jours qui viennent (et si j'en ai le courage) :
-- [x] l'activation / désactivation du mode sombre
-- [x] l'activation / désactivation de la justification
-- [x] l'activation / désactivation de la gestion de la césure lors la justification est activée
-- [x] changement de police (mode avec / sans Sérif)
-- [x] gestion des écrans larges
-- [x] changement de la taille de la police (15px comme sur l'ancien site)
-- [x] le retour de Travolta
-- [x] condensation de l'Agora
-- [x] condensation de la liste des articles
-- [x] navigation dans les commentaires non-lu en utilisant les flèches gauche et droite
-- [x] navigation dans les commentaires par ordre chronologique en utilisant les touches < et >
+Ce projet est un projet personnel, aucunement lié à l'équipe de Next.
 
-Il pourrait y en avoir d'autres. Mais pour l'instant, c'est la feuille de route.
+Vous pouvez également retrouver la liste des [fonctionnalités abandonnées ici](docs/fonctionnalites-abandonnees.md).
 
-# Note sur la version v1.0.12 et supérieure
+# Genèse du projet
 
-La gestion des écrans larges est de retour avec la version 1.0.12 ! Elle avait été désactivé avec la version 1.0.8 faute de compatiblité suite à la mise à jour du site.
+A la base, le projet avait surtout une vertue pédagogique : créer une extension pour navigateur, qui sorte du cadre du classique "Hello World!".
 
-Il est maintenant possible de choisir entre :
-- normal : 1210px de large (la dimension de base proposée par Next)
-- XL : 1400px de large
-- XXL : 1600px de large
-- Fluid (= toute la largeur)
+Cela faisait un certain temps que je souhaitais mettre un peu le nez la-dedans, sans vraiment avoir eu l'occasion de le faire. La reprise de NextINpact, le changement d'identité, ce fut pour moi l'occasion de le faire.
 
+Le nom de l'extension, PrevINpact, est un trait d'esprit faisant référence au nom de NextINpact bien évidemment, mais marquant aussi une certaine résistance au changement fasse à certaines fonctionnalités manquantes lors des premières versions du nouveau site (je dois l'avouer), comme le thème sombre (qui a été officiellement ajouté depuis, merci aux équipes de Next !).
 
-# Screenshots
+Le projet a plus à certains membre, qui l'on "adopté". J'en ai alors profité pour y inclure d'autres suggestions lorsque cela me paraissait tout à fait pertinent.
 
-Quelques captures d'écran :
+# Support
 
-## Page d'accueil
-![page d'accueil](assets/screenshots/page-accueil.webp)
-
-## Visualisation d'un article
-![article](assets/screenshots/article.webp)
-
-## Liste des commentaires
-![commentaires](assets/screenshots/commentaire.webp)
+Attention, les fonctionnalités de l'extension peuvent se retrouver cassées à n'importe quel moment. N'étant pas une extension officielle, toute mise-à-jour du site de Next est susceptible d'entrainer l'arrêt et / ou des bogues d'une ou de plusieurs fonctionnalités.
 
 # Installation
 ## Via le store
@@ -78,3 +64,9 @@ Rapidement :
 - sélectionner le répertoire où se trouve l'extension (cf étape Télécharger l'extension)
 
 Et voilà !
+
+# Liste des contributeurs
+
+Un grand merci aux différents contributeurs :
+- [Artist-on-line](https://github.com/Artist-on-line) (DantonQ-Robespierre sur Next)
+- [Seb](https://github.com/Wivik) (SebGF sur Next)
